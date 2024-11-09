@@ -1,0 +1,14 @@
+
+[
+    {
+      "id": 1,
+      "name": "Next.js Portfolio",
+      "description": "A portfolio website built with Next.js showcasing my projects and skills."
+    },
+    {
+      "id": 2,
+      "name": "AI-Based App for Stomach Disease Diagnosis",
+      "description": "An AI-powered application for diagnosing stomach-related diseases."
+    }
+  ]
+  
