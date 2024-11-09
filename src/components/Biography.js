@@ -5,7 +5,7 @@ const Biography = () => {
           Biography
         </h2>
         <p className="text-gray-700 leading-relaxed">
-          <span className="text-2xl">Hi there!</span> I’m Rahman Azizur Ayan, a dedicated software engineer with a passion for the cosmos. Welcome to my space where technology meets the stars! I have a strong foundation in data structures, algorithms, and object-oriented programming, and I thrive on tackling complex challenges to bring innovative ideas to life.
+          <span className="text-2xl">Hi there!</span>  Hi there! I&apos;m Rahman Azizur Ayan,, a dedicated software engineer with a passion for the cosmos. Welcome to my space where technology meets the stars! I have a strong foundation in data structures, algorithms, and object-oriented programming, and I thrive on tackling complex challenges to bring innovative ideas to life.
         </p>
         <p className="text-gray-700 leading-relaxed mt-4">
           My experience spans diverse domains, from developing advanced eCommerce platforms using Django, React, MySQL, and Machine Learning to implementing optimized algorithms in high-performance software solutions. I’m driven by a desire to innovate and explore, continuously learning to stay at the forefront of technology trends, especially in AI, data science, and web development.
