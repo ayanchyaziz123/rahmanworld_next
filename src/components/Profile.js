@@ -8,17 +8,17 @@ const Profile = () => {
 
         {/* Cover Photo on the Left Side */}
         <div
-  className="w-full md:w-1/2 h-48 md:h-[400px] bg-cover bg-center rounded-sm relative"
-  style={{ backgroundImage: "url('/images/cover.jpeg')" }}
->
-  {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent rounded-sm"></div>
-</div>
+          className="w-full md:w-1/2 h-48 md:h-[400px] bg-cover bg-center rounded-sm relative"
+          style={{ backgroundImage: "url('/images/cover.jpeg')" }}
+        >
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent rounded-sm"></div>
+        </div>
 
         {/* Text and Links on the Right Side */}
         <div className="w-full md:w-1/2 mt-4 md:mt-0 text-gray-900 text-center md:text-left space-y-4 p-6">
           <h1 className="text-3xl md:text-4xl font-bold" style={{ color: '#996232' }}>
-            Hi, I amm Rahman – a software engineer specializing in web development and AI
+            Hi, I&apos;m Rahman – a software engineer specializing in web development and AI
           </h1>
           <a
             href="https://leetcode.com/u/Eclipsewolf28/"
