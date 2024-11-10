@@ -35,7 +35,7 @@ const BlogsPage = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredBlogs.map((blog, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg p-6">
+          <div key={index} className="bg-white shadow-sm rounded-sm p-3">
             <h2 className="text-xl font-semibold mb-2 text-gray-800">
               <Link href={`/blogs/${blog.slug}`}>
                 {blog.title}

@@ -1,7 +1,41 @@
 export const projects = [
     {
-      slug: 'e-commerce-website',
-      title: 'E-Commerce Website',
+      slug: 'personal-online-coding-judge',
+      title: 'Personal Online Coding Judge',
+      date: 'November 2024',
+      content: `
+        <p>A dynamic coding judge platform built with Node.js and Express.js for the backend and React.js for the frontend. Key features include:</p>
+        <h3>Features:</h3>
+        <ul>
+          <li>Authentication system for secure user management and session handling</li>
+          <li>API handling using the MVC pattern for clean, organized backend code</li>
+          <li>Interactive, intuitive UI built with React.js for seamless coding experience</li>
+          <li>Responsive design with Tailwind CSS for compatibility across devices</li>
+        </ul>
+        <h3>Technologies Used:</h3>
+        <ul>
+          <li>Node.js (Backend)</li>
+          <li>Express.js (Backend)</li>
+          <li>React.js (Frontend)</li>
+          <li>Tailwind CSS (UI)</li>
+        </ul>
+        <h3>Links:</h3>
+        <ul>
+          <li><a href="https://github.com/ayanchyaziz123/codingjudge" target="_blank" class="text-blue-500 underline">GitHub Repository</a></li>
+          <li><a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" class="text-blue-500 underline">YouTube Demo</a></li>
+          <li><a href="https://codingjudge.com" target="_blank" class="text-blue-500 underline">Live Demo</a></li>
+        </ul>
+      `,
+      image: 'https://github.com/ayanchyaziz123/codingjudge/blob/master/coding_judge_frontend/public/home.png?raw=true',
+      image2: 'https://github.com/ayanchyaziz123/codingjudge/blob/master/coding_judge_frontend/public/accepted.png?raw=true',
+      image3: 'https://github.com/ayanchyaziz123/codingjudge/blob/master/coding_judge_frontend/public/Register.png?raw=true',
+      description: 'A platform that lets users solve coding problems and receive real-time feedback on their code submissions.',
+      technologies: ['Node.js', 'Express.js', 'React.js', 'Tailwind CSS'],
+      link: '/projects/personal-online-coding-judge',
+    },
+    {
+      slug: 'django-react-e-commerce',
+      title: 'Django & React E-commerce',
       date: 'January 2024',
       content: `
         <p>This is an e-commerce platform built with Django, React, and MySQL that allows users to browse and purchase products.</p>
@@ -19,109 +53,54 @@ export const projects = [
           <li>MySQL (Database)</li>
           <li>Bootstrap (UI)</li>
         </ul>
+        <h3>Links:</h3>
+        <ul>
+          <li><a href="https://github.com/ayanchyaziz123/final-year-project-main" target="_blank" class="text-blue-500 underline">GitHub Repository</a></li>
+          <li><a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" class="text-blue-500 underline">YouTube Demo</a></li>
+          <li><a href="https://your-live-site.com" target="_blank" class="text-blue-500 underline">Live Demo</a></li>
+        </ul>
       `,
-      image: 'https://raw.githubusercontent.com/ayanchyaziz123/final-year-project-main/master/screenshoot/1.Home%20page.png',  // Path to image (optional)
+      image: 'https://raw.githubusercontent.com/ayanchyaziz123/final-year-project-main/master/screenshoot/1.Home%20page.png',
       image2: 'https://github.com/ayanchyaziz123/final-year-project-main/raw/master/screenshoot/2.Product%20page.png?raw=true',
       image3: 'https://github.com/ayanchyaziz123/final-year-project-main/raw/master/screenshoot/3.Compare%202%20laptops.png?raw=true',
       description: 'An online store that allows users to browse, search, and purchase products.',
       technologies: ['Django', 'React', 'MySQL', 'Bootstrap'],
-      link: '/projects/e-commerce-website', // Link to project page
+      link: '/projects/django-react-e-commerce',
     },
     {
-      slug: 'ai-house-price-prediction',
-      title: 'AI House Price Prediction',
-      date: 'February 2024',
-      content: `
-        <p>This machine learning project predicts house prices based on various features using a regression model.</p>
-        <h3>Features:</h3>
-        <ul>
-          <li>Predict house prices based on square footage, location, and other features</li>
-          <li>Data preprocessing and model evaluation</li>
-        </ul>
-        <h3>Technologies Used:</h3>
-        <ul>
-          <li>Python</li>
-          <li>Scikit-Learn</li>
-          <li>Pandas</li>
-          <li>Matplotlib</li>
-        </ul>
-      `,
-      image: '/images/ai-house.jpg',
-      description: 'A machine learning model that predicts the price of houses based on input features.',
-      technologies: ['Python', 'Scikit-Learn', 'Pandas', 'Matplotlib'],
-      link: '/projects/ai-house-price-prediction',
-    },
-    {
-      slug: 'oop-gym-management',
-      title: 'OOP Gym Management System',
-      date: 'March 2024',
-      content: `
-        <p>This project is a Gym Management System developed using Object-Oriented Programming (OOP) principles with Java Swing.</p>
-        <h3>Features:</h3>
-        <ul>
-          <li>User management (memberships, attendance, etc.)</li>
-          <li>Activity scheduling and management</li>
-          <li>Admin and member dashboards</li>
-        </ul>
-        <h3>Technologies Used:</h3>
-        <ul>
-          <li>Java Swing</li>
-          <li>MySQL</li>
-        </ul>
-      `,
-      image: '/images/gym-management.jpg',
-      description: 'A system to manage gym memberships, schedules, and activities.',
-      technologies: ['Java Swing', 'MySQL'],
-      link: '/projects/oop-gym-management',
-    },
-    {
-      slug: 'mobile-store-project',
-      title: 'Mobile Store Project',
-      date: 'April 2024',
-      content: `
-        <p>This is a mobile store e-commerce platform where users can browse and purchase mobile phones, with an integration of machine learning and deep learning concepts for product recommendations.</p>
-        <h3>Features:</h3>
-        <ul>
-          <li>Product search and filtering</li>
-          <li>Product recommendations based on user behavior</li>
-          <li>Payment gateway integration</li>
-        </ul>
-        <h3>Technologies Used:</h3>
-        <ul>
-          <li>Python</li>
-          <li>Flask</li>
-          <li>TensorFlow (for product recommendations)</li>
-          <li>Stripe API (for payments)</li>
-        </ul>
-      `,
-      image: '/images/mobile-store.jpg',
-      description: 'A mobile phone e-commerce platform with personalized recommendations.',
-      technologies: ['Python', 'Flask', 'TensorFlow', 'Stripe API'],
-      link: '/projects/mobile-store-project',
-    },
-    {
-      slug: 'house-price-prediction-system',
-      title: 'House Price Prediction System',
-      date: 'May 2024',
-      content: `
-        <p>An AI-powered house price prediction system using machine learning algorithms to forecast the price based on various input features.</p>
-        <h3>Features:</h3>
-        <ul>
-          <li>Predictions based on location, square footage, number of rooms, etc.</li>
-          <li>Model evaluation and performance analysis</li>
-        </ul>
-        <h3>Technologies Used:</h3>
-        <ul>
-          <li>Python</li>
-          <li>Scikit-Learn</li>
-          <li>Pandas</li>
-          <li>Seaborn</li>
-        </ul>
-      `,
-      image: '/images/house-price.jpg',
-      description: 'Predict the price of houses based on various factors using machine learning.',
-      technologies: ['Python', 'Scikit-Learn', 'Pandas', 'Seaborn'],
-      link: '/projects/house-price-prediction-system',
-    },
-  ];
-  
+        slug: 'algorithm-visualizer',
+        title: 'Interactive Algorithm Visualizer',
+        date: 'December 2024',
+        content: `
+            <p>This interactive tool visualizes various data structures and algorithms, providing an engaging learning experience.</p>
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Real-time visualization of sorting, searching, and graph algorithms.</li>
+                <li>Interactive controls to manipulate data and see algorithm processing.</li>
+                <li>Customizable settings for speed and data size for tailored learning.</li>
+                <li>Responsive design with Tailwind CSS for all devices.</li>
+            </ul>
+            <h3>Technologies Used:</h3>
+            <ul>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+                <li>Tailwind CSS</li>
+                <li>GitHub</li>
+            </ul>
+            <h3>Links:</h3>
+            <ul>
+                <li><a href="https://github.com/ayanchyaziz123/algorithm-visualizer" target="_blank" class="text-blue-500 underline">GitHub Repository</a></li>
+                <li><a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" class="text-blue-500 underline">YouTube Demo</a></li>
+                <li><a href="https://your-live-site.com" target="_blank" class="text-blue-500 underline">Live Demo</a></li>
+            </ul>
+        `,
+        image: 'https://github.com/ayanchyaziz123/algorithm-visualizer/blob/master/public/bs.png?raw=true',
+        image2: 'https://github.com/ayanchyaziz123/algorithm-visualizer/blob/master/public/sort.png?raw=true',
+        image3: 'https://github.com/ayanchyaziz123/algorithm-visualizer/blob/master/public/pn.png?raw=true',
+        description: 'A tool to visualize data structures and algorithms in real-time, allowing users to interact with the algorithm processing.',
+        technologies: ['JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
+        link: '/projects/algorithm-visualizer',
+    }
+];
+
+export default projects;

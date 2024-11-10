@@ -1,54 +1,71 @@
-// pages/projects.js (or wherever your ProjectsPage component is located)
-
 import { projects } from "@/data/projects"; // Import the project data
 import Project from "@/components/Project"; // Ensure your Project component is properly imported
 
 const ProjectsPage = () => {
   return (
-    <div className="container mx-auto mt-2 p-4 sm:p-6  max-w-6xl">
-      <h1 className="text-3xl font-semibold text-center mb-8" style={{ color: '#996232' }}>My Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="container mx-auto mt-4 p-4 sm:p-6 max-w-6xl">
+      <h1 className="text-4xl font-extrabold text-center mb-10" style={{ color: '#996232' }}>My Projects</h1>
+      
+      {/* Project Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <Project key={index} project={project} />
+          <div key={index} className="transform transition-transform hover:scale-105">
+            <Project project={project} />
+          </div>
         ))}
       </div>
 
       {/* Additional Projects Section */}
-      <section id="more-projects" className="fade-in mt-10 px-4">
-        <h2 className="text-2xl font-bold mb-4 text-yellow-700" >More Projects</h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-3">
-          <li>
-            <a
-              href="https://github.com/ayanchyaziz123/mobile_store_project_300_django"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 underline hover:text-blue-700"
-            >
-              mobile_store_project_300_django
-            </a>
-            – A mobile store project where users can purchase mobile phones. Includes some deep learning and machine learning concepts.
+      <section id="more-projects" className="fade-in mt-16">
+        <h2 className="text-3xl font-semibold mb-6 text-yellow-700 text-center">More Projects</h2>
+        <ul className="list-none space-y-6 text-gray-800">
+          <li className="flex items-start space-x-4">
+            <span className="text-blue-500 mt-1">
+              <i className="fas fa-laptop-code fa-lg"></i>
+            </span>
+            <div>
+              <a
+                href="https://github.com/ayanchyaziz123/mobile_store_project_300_django"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 font-medium hover:underline"
+              >
+                mobile_store_project_300_django
+              </a>
+              <p className="text-gray-600">A mobile store project with some deep learning and machine learning concepts.</p>
+            </div>
           </li>
-          <li>
-            <a
-              href="https://github.com/ayanchyaziz123/house-price-prediction-system"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 underline hover:text-blue-700"
-            >
-              house-price-prediction-system
-            </a>
-            – An AI-powered house price prediction system that allows users to predict house prices.
+          <li className="flex items-start space-x-4">
+            <span className="text-blue-500 mt-1">
+              <i className="fas fa-house-user fa-lg"></i>
+            </span>
+            <div>
+              <a
+                href="https://github.com/ayanchyaziz123/house-price-prediction-system"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 font-medium hover:underline"
+              >
+                house-price-prediction-system
+              </a>
+              <p className="text-gray-600">An AI-powered system for predicting house prices.</p>
+            </div>
           </li>
-          <li>
-            <a
-              href="https://github.com/ayanchyaziz123/OOP-project-gym-management-system"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 underline hover:text-blue-700"
-            >
-              OOP-project-gym-management-system
-            </a>
-            – A gym management system developed in Java Swing.
+          <li className="flex items-start space-x-4">
+            <span className="text-blue-500 mt-1">
+              <i className="fas fa-dumbbell fa-lg"></i>
+            </span>
+            <div>
+              <a
+                href="https://github.com/ayanchyaziz123/OOP-project-gym-management-system"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 font-medium hover:underline"
+              >
+                OOP-project-gym-management-system
+              </a>
+              <p className="text-gray-600">A gym management system developed with Java Swing.</p>
+            </div>
           </li>
           {/* Add more projects as needed */}
         </ul>

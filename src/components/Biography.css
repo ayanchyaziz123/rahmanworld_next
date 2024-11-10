@@ -1,0 +1,20 @@
+
+/* Biography.css */
+
+/* Fade-in + Slide-up Animation */
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Class that applies the animation when the section is in view */
+  .animate-slide-in {
+    animation: slideIn 1s ease-out forwards;
+  }
+  
