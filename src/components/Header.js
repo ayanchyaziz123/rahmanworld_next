@@ -37,7 +37,7 @@ const Header = () => {
           <Link href="/" className={`text-lg font-semibold ${isActive('/')}`}>Home</Link>
           <Link href="/blogs" className={`text-lg font-semibold ${isActive('/blogs')}`}>Blogs</Link>
           <Link href="/projects" className={`text-lg font-semibold ${isActive('/projects')}`}>Projects</Link>
-          <Link href="/about" className={`text-lg font-semibold ${isActive('/about_me')}`}>Portfolio</Link>
+          <Link href="/about" className={`text-lg font-semibold ${isActive('/about')}`}>Portfolio</Link>
           <Link href="/contact" className={`text-lg font-semibold ${isActive('/contact')}`}>Contact</Link>
         </div>
       </div>

@@ -5,9 +5,9 @@ import Project from "@/components/Project"; // Ensure your Project component is 
 
 const ProjectsPage = () => {
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-semibold text-center mb-8">My Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="container mx-auto mt-2 p-4 sm:p-6  max-w-6xl">
+      <h1 className="text-3xl font-semibold text-center mb-8" style={{ color: '#996232' }}>My Projects</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <Project key={index} project={project} />
         ))}
@@ -15,7 +15,7 @@ const ProjectsPage = () => {
 
       {/* Additional Projects Section */}
       <section id="more-projects" className="fade-in mt-10 px-4">
-        <h2 className="text-2xl font-bold mb-4 text-yellow-700">More Projects</h2>
+        <h2 className="text-2xl font-bold mb-4 text-yellow-700" >More Projects</h2>
         <ul className="list-disc list-inside text-gray-700 space-y-3">
           <li>
             <a

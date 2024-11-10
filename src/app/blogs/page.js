@@ -45,7 +45,7 @@ const BlogsPage = () => {
             <p className="text-gray-700 mb-4">{blog.description}</p>
             <Link
               href={`/blogs/${blog.slug}`}
-              className="text-blue-500 hover:text-blue-700 underline"
+              className="hover:text-blue-700 underline" style={{ color: '#996232' }}
             >
               Read More
             </Link>

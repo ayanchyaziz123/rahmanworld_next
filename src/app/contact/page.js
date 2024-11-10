@@ -33,7 +33,7 @@ const ContactPage = () => {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6 text-yellow-700">Contact Us</h1>
+      <h1 className="text-3xl font-bold mb-6 text-yellow-700">Contact Me</h1>
 
       {/* Display status after form submission */}
       {submissionStatus && (
@@ -94,7 +94,7 @@ const ContactPage = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-600 disabled:bg-gray-400"
+          className="w-full bg-yellow-700 text-white p-3 rounded disabled:bg-gray-400"
         >
           {isSubmitting ? 'Submitting...' : 'Send Message'}
         </button>
