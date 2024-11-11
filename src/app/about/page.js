@@ -59,7 +59,7 @@ export default function AboutPage() {
 
         {/* Experience 4: SQA Engineer */}
         <div className="">
-            <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}> Software + SQA Engineer - Inverse AI, Bangladesh</h3>
+            <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}>Software + SQA Engineer - Inverse AI, Bangladesh</h3>
             <p className="text-gray-700 mb-2">2022 - 2023</p>
             <p className="text-gray-700 mb-4">Automation Testing: Developed and maintained automated test scripts using Selenium and Python for quality assurance.</p>
             <p className="text-gray-700 mb-4">Android Video Editor App: Conducted functional and performance testing on a video editor application for Android.</p>

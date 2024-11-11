@@ -4,7 +4,7 @@ import Project from "@/components/Project"; // Ensure your Project component is 
 const ProjectsPage = () => {
   return (
     <div className="container mx-auto mt-4 p-4 sm:p-6 max-w-6xl">
-      <h1 className="text-4xl font-extrabold text-center mb-10" style={{ color: '#996232' }}>My Projects</h1>
+      <h1 className="text-3xl font-extrabold text-center mb-10" style={{ color: '#996232' }}>My Projects</h1>
 
       {/* Project Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
