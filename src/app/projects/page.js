@@ -20,9 +20,7 @@ const ProjectsPage = () => {
         <h2 className="text-3xl font-semibold mb-6 text-yellow-700 text-center">More Projects</h2>
         <ul className="list-none space-y-6 text-gray-800">
           <li className="flex items-start space-x-4">
-            <span className="text-blue-500 mt-1">
-              <i className="fas fa-laptop-code fa-lg"></i>
-            </span>
+          
             <div>
               <a
                 href="https://github.com/ayanchyaziz123/mobile_store_project_300_django"
@@ -36,9 +34,7 @@ const ProjectsPage = () => {
             </div>
           </li>
           <li className="flex items-start space-x-4">
-            <span className="text-blue-500 mt-1">
-              <i className="fas fa-house-user fa-lg"></i>
-            </span>
+        
             <div>
               <a
                 href="https://github.com/ayanchyaziz123/house-price-prediction-system"
@@ -52,9 +48,7 @@ const ProjectsPage = () => {
             </div>
           </li>
           <li className="flex items-start space-x-4">
-            <span className="text-blue-500 mt-1">
-              <i className="fas fa-dumbbell fa-lg"></i>
-            </span>
+            
             <div>
               <a
                 href="https://github.com/ayanchyaziz123/OOP-project-gym-management-system"
