@@ -1,3 +1,4 @@
+import Achievements from "@/components/Achievements";
 import Biography from "@/components/Biography";
 import Profile from "@/components/Profile";
 
@@ -23,7 +24,8 @@ export default function AboutPage() {
                             <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}>Master of Science in Computer Science and Artificial Intelligence</h3>
                             <p className="text-gray-700 mb-2">Indiana Wesleyan University</p>
                             <p className="text-gray-500 mb-4">2024 - Present</p>
-                            <p className="text-gray-700">Advanced coursework in software architecture, machine learning, and AI applications...</p>
+                            <p className="text-gray-700">Advanced coursework in software architecture, machine learning, and
+                        cloud-based solutions. Engaged in research and capstone projects.</p>
                         </div>
 
                         {/* Education 2: Bachelor's */}
@@ -31,42 +33,43 @@ export default function AboutPage() {
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThojYZr_EOQlsW3U_UlbcConqVxaxyzsTpvw&s" alt="Your University" className="w-32 h-20 mb-4 rounded" />
                             <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}>Bachelor of Science in Computer Science and Engineering</h3>
                             <p className="text-gray-700 mb-2">Metropolitan University</p>
-                            <p className="text-gray-500 mb-4">2022</p>
-                            <p className="text-gray-700">Focused on core computer science principles, software development, and engineering practices...</p>
+                            <p className="text-gray-500 mb-4">2018 - 2022</p>
+                            <p className="text-gray-700">Specialized in backend development and software engineering, with a focus
+                        on programming languages, algorithms, and database management.</p>
                         </div>
 
                     </div>
                 </section>
 
                 {/* Experience Section */}
-                <section id="experience" className="py-12 fade-in">
-                    <h2 className="text-3xl font-extrabold mb-6 text-center" style={{ color: '#996232' }}>Experience</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<section id="experience" className="py-12 fade-in">
+    <h2 className="text-3xl font-extrabold mb-6 text-center" style={{ color: '#996232' }}>Experience</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                        {/* Experience 3: Coding Mentor */}
-                        <div className="">
-                            <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}>Coding Mentor - CUNY Queens College</h3>
-                            <p className="text-gray-700 mb-2">2023 - 2024</p>
-                            <p className="text-gray-700 mb-4">Guidance: Supported students and aspiring developers in learning programming languages and concepts.</p>
-                            <p className="text-gray-700 mb-4">OOP Principles: Assisted in understanding and applying object-oriented programming principles.</p>
-                            <p className="text-gray-700 mb-4">Debugging: Helped with debugging, troubleshooting code, and improving efficiency.</p>
-                            <p className="text-gray-700 mb-4">Best Practices: Encouraged clean code, modularization, and proper documentation.</p>
-                            <p className="text-gray-700 mb-4">Career Advice: Provided insights into the software development industry and technical interview preparation.</p>
-                        </div>
+        {/* Experience 3: Coding Mentor */}
+        <div className="">
+            <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}>Coding Mentor - CUNY Queens College</h3>
+            <p className="text-gray-700 mb-2">2023 - 2024</p>
+            <p className="text-gray-700 mb-4">Guidance: Supported students and aspiring developers in learning programming languages and concepts.</p>
+            <p className="text-gray-700 mb-4">OOP Principles: Assisted in understanding and applying object-oriented programming principles.</p>
+            <p className="text-gray-700 mb-4">Debugging: Helped with debugging, troubleshooting code, and improving efficiency.</p>
+            <p className="text-gray-700 mb-4">Best Practices: Encouraged clean code, modularization, and proper documentation.</p>
+            <p className="text-gray-700 mb-4">Career Advice: Provided insights into the software development industry and technical interview preparation.</p>
+        </div>
 
-                        {/* Experience 4: Assistant Manager */}
-                        <div className="">
-                            <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}>Assistant Manager - Kennedy Fried Chicken & Pizza</h3>
-                            <p className="text-gray-700 mb-2">Jan 2023 - Aug 2023 · Part-time</p>
-                            <p className="text-gray-700 mb-4">Managed day-to-day operations, supervised staff, and ensured excellent customer service. Coordinated with team members to optimize workflows and enhance operational efficiency.</p>
-                            <ul className="text-gray-700 list-disc ml-6 space-y-2">
-                                <li>Oversaw daily operations and staff performance.</li>
-                                <li>Handled customer inquiries and resolved issues promptly.</li>
-                                <li>Implemented operational improvements to enhance service quality.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+        {/* Experience 4: SQA Engineer */}
+        <div className="">
+            <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}> Software + SQA Engineer - Inverse AI, Bangladesh</h3>
+            <p className="text-gray-700 mb-2">2022 - 2023</p>
+            <p className="text-gray-700 mb-4">Automation Testing: Developed and maintained automated test scripts using Selenium and Python for quality assurance.</p>
+            <p className="text-gray-700 mb-4">Android Video Editor App: Conducted functional and performance testing on a video editor application for Android.</p>
+            <p className="text-gray-700 mb-4">Video Compressor Feature: Tested video compression functionality, ensuring optimized performance and quality output.</p>
+            <p className="text-gray-700 mb-4">Bug Tracking: Documented bugs and collaborated with developers to troubleshoot and resolve issues effectively.</p>
+            <p className="text-gray-700 mb-4">Quality Standards: Ensured software met high standards by implementing thorough testing procedures and best practices.</p>
+        </div>
+    </div>
+</section>
+
 
                 {/* Skills Section */}
                 {/* Skills Section */}
@@ -133,12 +136,7 @@ export default function AboutPage() {
 
 
                 {/* Achievements Section */}
-                <section id="achievements" className="mb-12 fade-in">
-                    <h2 className="text-3xl font-extrabold text-center mb-6" style={{ color: '#996232' }}>Achievement</h2>
-                    <div className="flex justify-center items-center space-x-6">
-                        {/* Achievement Items */}
-                    </div>
-                </section>
+                <Achievements/>
             </div>
         </div>
     );
