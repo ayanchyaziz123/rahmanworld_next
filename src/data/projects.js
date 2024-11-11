@@ -63,7 +63,7 @@ export const projects = [
       image: 'https://raw.githubusercontent.com/ayanchyaziz123/final-year-project-main/master/screenshoot/1.Home%20page.png',
       image2: 'https://github.com/ayanchyaziz123/final-year-project-main/raw/master/screenshoot/2.Product%20page.png?raw=true',
       image3: 'https://github.com/ayanchyaziz123/final-year-project-main/raw/master/screenshoot/3.Compare%202%20laptops.png?raw=true',
-      description: 'An online store that allows users to browse, search, and purchase products.',
+      description: 'An online store that allows users to browse, search, and purchase products. And users can predict the price',
       technologies: ['Django', 'React', 'MySQL', 'Bootstrap'],
       link: '/projects/django-react-e-commerce',
     },
