@@ -10,8 +10,8 @@ const Profile = () => {
 
                 {/* Cover Photo on the Left Side with Fade-in Animation */}
                 <div
-                    className="w-full md:w-1/2 h-48 md:h-[400px] bg-cover bg-center rounded-sm relative fade-in border-dotted border-2"
-                    style={{ backgroundImage: "url('/images/cover3.jpeg')" }}
+                    className="w-full md:w-1/2 h-48 md:h-[400px] bg-cover bg-center rounded-sm relative fade-in"
+                    style={{ backgroundImage: "url('/images/cover.jpeg')" }}
                 >
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent rounded-sm"></div>
