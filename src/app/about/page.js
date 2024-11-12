@@ -127,16 +127,24 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-
-
-
-
-               
-                
-
-
                 {/* Achievements Section */}
                 <Achievements/>
+                {/* Interests / Hobbies Section */}
+<section id="interests" className="py-12 fade-in">
+    <h2 className="text-3xl font-extrabold mb-6 text-center" style={{ color: '#996232' }}>Interests & Hobbies</h2>
+    <div className="space-y-4">
+        <p className="text-gray-700 text-lg">I have a deep interest in the following fields:</p>
+        <ul className="list-disc pl-6 text-gray-700">
+            <li>Machine Learning</li>
+            <li>Artificial Intelligence</li>
+            <li>Coding and Software Development</li>
+            <li>Space Engineering</li>
+            <li>Astronomy</li>
+            <li>Quantum Computing</li> {/* Added Quantum Computing */}
+        </ul>
+    </div>
+</section>
+
             </div>
         </div>
     );

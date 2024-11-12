@@ -19,9 +19,10 @@ const Profile = () => {
 
                 {/* Text and Links on the Right Side with Slide-in Animation */}
                 <div className="w-full md:w-1/2 mt-4 md:mt-0 text-gray-900 text-center md:text-left space-y-4 p-6 slide-in-right">
-                    <h1 className="text-3xl md:text-4xl font-bold" style={{ color: "#996232" }}>
-                        Hi, I&apos;m Rahman – a software engineer specializing in web development and AI
-                    </h1>
+                <h1 className="text-3xl md:text-4xl font-bold" style={{ color: "#996232" }}>
+  Hi, I&apos;m Rahman – a software engineer specializing in AI
+</h1>
+
                     <a
                         href="https://leetcode.com/u/Eclipsewolf28/"
                         className="text-lg font-bold text-yellow-500 underline"
