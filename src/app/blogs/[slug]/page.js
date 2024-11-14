@@ -34,7 +34,7 @@ const BlogPost = ({ params }) => {
             .map((relatedBlog) => (
               <li
                 key={relatedBlog.slug}
-                className="hover:bg-white transition duration-200 ease-in-out p-4 rounded-lg shadow-sm"
+                className="hover:bg-white p-4 rounded-lg shadow-sm"
               >
                 <Link href={`/blogs/${relatedBlog.slug}`} className="block">
                   <h3 className="text-lg font-bold text-gray-800 hover:text-yellow-600">
