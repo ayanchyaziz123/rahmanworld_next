@@ -16,7 +16,7 @@ const Project = ({ project }) => {
               className="font-semibold hover:text-gray-900"
               style={{ color: '#996232' }}
             >
-              View Project →
+              View  →
             </Link>
         </div>
       </div>

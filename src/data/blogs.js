@@ -31,7 +31,7 @@ export const blogs = [
       category: "Machine Learning",
       content: `
         <p>Machine learning is a branch of artificial intelligence that enables systems to learn from data. Some common types of machine learning include supervised, unsupervised, and reinforcement learning.</p>
-        <p>Here's an example of linear regression in Python:</p>
+        <h1>Here's an example of linear regression in Python:</h1>
         <pre><code>
           from sklearn.linear_model import LinearRegression
           import numpy as np

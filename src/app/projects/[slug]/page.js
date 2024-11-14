@@ -36,7 +36,19 @@ const ProjectPost = ({ params }) => {
       </div>
 
       {/* Project Content with Links */}
-      <div className="prose prose-lg max-w-none text-gray-800" dangerouslySetInnerHTML={{ __html: project.content }} />
+      <div
+      className="prose prose-lg max-w-none text-gray-800"
+      dangerouslySetInnerHTML={{ __html: project.content }}
+    />
+
+<a 
+  href={project.github} 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="text-blue-500 hover:text-blue-700 font-semibold underline"
+>
+ Project Github link
+</a>
 
       <div className="mt-8">
         <h2 className="text-2xl font-semibold mb-4">More Projects</h2>
