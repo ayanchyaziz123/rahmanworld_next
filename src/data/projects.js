@@ -141,40 +141,132 @@ export const projects = [
         github: 'https://github.com/ayanchyaziz123/codingjudge'
       },
         
-    // {
-    //     slug: 'algorithm-visualizer',
-    //     title: 'Interactive Algorithm Visualizer',
-    //     date: 'December 2024',
-    //     content: `
-    //         <p>This interactive tool visualizes various data structures and algorithms, providing an engaging learning experience.</p>
-    //         <h3>Key Features:</h3>
-    //         <ul>
-    //             <li>Real-time visualization of sorting, searching, and graph algorithms.</li>
-    //             <li>Interactive controls to manipulate data and see algorithm processing.</li>
-    //             <li>Customizable settings for speed and data size for tailored learning.</li>
-    //             <li>Responsive design with Tailwind CSS for all devices.</li>
-    //         </ul>
-    //         <h3>Technologies Used:</h3>
-    //         <ul>
-    //             <li>JavaScript</li>
-    //             <li>HTML/CSS</li>
-    //             <li>Tailwind CSS</li>
-    //             <li>GitHub</li>
-    //         </ul>
-    //         <h3>Links:</h3>
-    //         <ul>
-    //             <li><a href="https://github.com/ayanchyaziz123/algorithm-visualizer" target="_blank" class="text-blue-500 underline">GitHub Repository</a></li>
-    //             <li><a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" class="text-blue-500 underline">YouTube Demo</a></li>
-    //             <li><a href="https://your-live-site.com" target="_blank" class="text-blue-500 underline">Live Demo</a></li>
-    //         </ul>
-    //     `,
-    //     image: 'https://github.com/ayanchyaziz123/algorithm-visualizer/blob/master/public/bs.png?raw=true',
-    //     image2: 'https://github.com/ayanchyaziz123/algorithm-visualizer/blob/master/public/sort.png?raw=true',
-    //     image3: 'https://github.com/ayanchyaziz123/algorithm-visualizer/blob/master/public/pn.png?raw=true',
-    //     description: 'A tool to visualize data structures and algorithms in real-time, allowing users to interact with the algorithm processing.',
-    //     technologies: ['JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
-    //     link: '/projects/algorithm-visualizer',
-    // }
+      {
+        slug: 'algorithm-visualizer',
+        title: 'Interactive Algorithm Visualizer',
+        date: 'December 2024',
+        content: `
+          <p>This project is an engaging tool to visualize various data structures and algorithms, making it an ideal resource for learners and educators.</p>
+          
+          <h3>Artifact Description</h3>
+          <h4>Objective</h4>
+          <p>The aim of this project is to provide an interactive way to learn and teach algorithms through real-time visualizations and user interaction.</p>
+          
+          <h4>Process</h4>
+          <p>The project was developed using JavaScript for logic, with a responsive UI built using HTML, CSS, and Tailwind CSS. I focused on ensuring that the visualizations were intuitive and that the UI was accessible across devices.</p>
+          
+          <h4>Tools and Technologies Used</h4>
+          <ul>
+            <li>Core Logic: JavaScript</li>
+            <li>UI: HTML, CSS, Tailwind CSS</li>
+            <li>Others: GitHub for version control</li>
+          </ul>
+          
+          <h4>Artifact-Specific Value Proposition</h4>
+          <h5>Unique Value</h5>
+          <p>The tool provides real-time visualization of complex algorithms, helping users understand the step-by-step process of various data structures and algorithms.</p>
+          
+          <h5>Relevance</h5>
+          <p>This project is particularly useful for educators and students in computer science, as it simplifies the learning process for algorithms.</p>
+    
+          <h4>Customization for Audience</h4>
+          <h5>Adaptations Made</h5>
+          <p>The project includes customizable features like speed adjustments, input size variation, and user controls to make it suitable for different levels of learners.</p>
+          
+          <h5>Relevance</h5>
+          <p>Its interactive nature caters to beginners and advanced learners alike, making it a versatile educational tool.</p>
+          
+          <h4>Reflection</h4>
+          <h5>Significance</h5>
+          <p>This project stands out as a practical demonstration of my front-end development skills and my understanding of algorithmic processes.</p>
+          
+          <h5>Lessons Learned</h5>
+          <p>Building this tool deepened my understanding of algorithms and data visualization techniques, as well as responsive UI design.</p>
+          
+          <h4>Feedback and Revisions</h4>
+          <h5>Feedback</h5>
+          <p>Suggestions included adding more algorithms and providing detailed explanations alongside the visualizations.</p>
+          
+          <h5>Revisions</h5>
+          <p>I incorporated additional algorithms like graph traversals and pathfinding algorithms, and added a tooltip feature to enhance learning.</p>
+          
+          <h4>References</h4>
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">JavaScript Documentation</a></li>
+            <li><a href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">Tailwind CSS Documentation</a></li>
+          </ul>
+        `,
+        image: 'https://github.com/ayanchyaziz123/algorithm-visualizer/blob/master/public/bs.png?raw=true',
+        image2: 'https://github.com/ayanchyaziz123/algorithm-visualizer/blob/master/public/sort.png?raw=true',
+        image3: 'https://github.com/ayanchyaziz123/algorithm-visualizer/blob/master/public/pn.png?raw=true',
+        description: 'A tool to visualize data structures and algorithms in real-time, allowing users to interact with the algorithm processing.',
+        technologies: ['JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
+        link: '/projects/algorithm-visualizer',
+        github: 'https://github.com/ayanchyaziz123/algorithm-visualizer'
+    },
+    {
+      slug: 'makeup-store',
+      title: 'Express.js and React Makeup Store',
+      date: 'December 2024',
+      content: `
+        <p>This project is a comprehensive full-stack application for an online makeup store, combining advanced technologies and user-friendly design to deliver a seamless shopping experience.</p>
+        
+        <h3>Artifact Description</h3>
+        <h4>Objective</h4>
+        <p>The aim of this project was to build a robust e-commerce platform for makeup products with personalized recommendations using machine learning.</p>
+        
+        <h4>Process</h4>
+        <p>The backend, built with Express.js, follows an MVC architecture for structured development. React was used for the frontend, paired with Redux for efficient state management.</p>
+        
+        <h4>Tools and Technologies Used</h4>
+        <ul>
+          <li>Backend: Express.js, Node.js</li>
+          <li>Frontend: React, Redux</li>
+          <li>Machine Learning: Python for recommendation algorithms</li>
+          <li>Database: MongoDB</li>
+        </ul>
+        
+        <h4>Artifact-Specific Value Proposition</h4>
+        <h5>Unique Value</h5>
+        <p>The integration of machine learning algorithms sets this project apart by providing users with tailored product suggestions based on their preferences and browsing history.</p>
+        
+        <h5>Relevance</h5>
+        <p>This project showcases the application of machine learning in e-commerce, emphasizing the synergy between full-stack development and AI.</p>
+  
+        <h4>Customization for Audience</h4>
+        <h5>Adaptations Made</h5>
+        <p>Features like a dynamic shopping cart, responsive design, and user-specific recommendations enhance the user experience for diverse audiences.</p>
+        
+        <h5>Relevance</h5>
+        <p>The platform caters to makeup enthusiasts and professional retailers alike, making it highly versatile.</p>
+        
+        <h4>Reflection</h4>
+        <h5>Significance</h5>
+        <p>This project highlights my ability to integrate cutting-edge technology into real-world applications, demonstrating skills in full-stack development and AI integration.</p>
+        
+        <h5>Lessons Learned</h5>
+        <p>Developing this platform deepened my understanding of state management with Redux and the implementation of recommendation systems.</p>
+        
+        <h4>Feedback and Revisions</h4>
+        <h5>Feedback</h5>
+        <p>Suggestions included enhancing the recommendation algorithm and improving the UI for mobile devices.</p>
+        
+        <h5>Revisions</h5>
+        <p>I optimized the recommendation system by incorporating collaborative filtering and improved the UI to be fully responsive.</p>
+        
+        <h4>References</h4>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">Express.js Documentation</a></li>
+          <li><a href="https://react-redux.js.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">Redux Documentation</a></li>
+        </ul>
+      `,
+      image: 'https://path/to/makeup-store-image.jpg', // Replace with an actual image URL
+      description: 'A full-stack application for a makeup store, featuring personalized recommendations through machine learning and a responsive frontend.',
+      technologies: ['Express.js', 'React', 'Redux', 'MongoDB', 'Machine Learning'],
+      link: '/projects/makeup-store',
+      github: 'https://github.com/ayanchyaziz123/Express-js-Makeup-store'
+  }
+  
 ];
 
 export default projects;

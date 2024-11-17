@@ -19,21 +19,7 @@ const ProjectsPage = () => {
       <section id="more-projects" className="fade-in mt-16">
         <h2 className="text-3xl font-semibold mb-6 text-yellow-700 text-center">More Projects</h2>
         <ul className="list-none space-y-6 text-gray-800">
-        <li className="flex items-start space-x-4 py-2">
-  <div>
-    <a
-      href="https://github.com/ayanchyaziz123/Express-js-Makeup-store"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 font-medium hover:underline"
-    >
-      Express.js and React Makeup Store
-    </a>
-    <p className="text-gray-700 mt-1">
-      A full-stack makeup store application using Express.js with an MVC (Model-View-Controller) architecture for the backend and React with Redux for state management on the frontend. This project integrates deep learning and machine learning concepts to provide personalized recommendations.
-    </p>
-  </div>
-</li>
+        
           <li className="flex items-start space-x-4">
 
             <div>
