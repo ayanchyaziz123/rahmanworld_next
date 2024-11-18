@@ -1,68 +1,139 @@
-// src/components/Header.js
-'use client'
+'use client';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { Menu, X, ChevronRight, Home, BookOpen, Code, User, Mail } from 'lucide-react';
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();  // Use usePathname instead of useRouter
+    const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
 
-  // Function to check if the link is active
-  const isActive = (path) => pathname === path ? 'text-yellow-600' : 'text-gray-700';
+    const navigationItems = [
+        { path: '/', label: 'Home', icon: Home },
+        { path: '/blogs', label: 'Blogs', icon: BookOpen },
+        { path: '/projects', label: 'Projects', icon: Code },
+        { path: '/about', label: 'Portfolio', icon: User },
+        { path: '/contact', label: 'Contact', icon: Mail },
+    ];
 
-  return (
-    <nav id="navbar" className="text-gray-800 p-4 sticky top-0 z-50 transition-shadow duration-300 ease-in-out bg-[#f8f6f3]">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo/Name */}
-        <div className="text-xl font-bold">
-          <Link href="/">
-            <span className="hover:underline transition duration-300 ease-in-out" style={{ color: '#996232' }}>
-              Rahman Azizur
-            </span>
-          </Link>
-        </div>
-        
-        {/* Hamburger Menu for Mobile */}
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-gray-800 focus:outline-none">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-          </button>
-        </div>
-        
-        {/* Navigation Links for Desktop */}
-        <div className={`hidden md:flex space-x-6`}>
-          <Link href="/" className={`text-lg font-semibold ${isActive('/')}`}>Home</Link>
-          <Link href="/blogs" className={`text-lg font-semibold ${isActive('/blogs')}`}>Blogs</Link>
-          <Link href="/projects" className={`text-lg font-semibold ${isActive('/projects')}`}>Projects</Link>
-          <Link href="/about" className={`text-lg font-semibold ${isActive('/about')}`}>Portfolio</Link>
-          <Link href="/contact" className={`text-lg font-semibold ${isActive('/contact')}`}>Contact</Link>
-        </div>
-      </div>
-      
-      {/* Slide-in Navigation Menu for Mobile */}
-      <div
-        className={`fixed inset-y-0 left-0 w-3/4 bg-white text-gray-800 p-4 transform transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        } md:hidden`}
-      >
-        <button onClick={() => setIsOpen(false)} className="text-gray-800 focus:outline-none mb-4">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-        <nav className="flex flex-col space-y-4">
-          <Link href="/" className={`text-lg font-semibold ${isActive('/')}`} onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/blogs" className={`text-lg font-semibold ${isActive('/blogs')}`} onClick={() => setIsOpen(false)}>Blogs</Link>
-          <Link href="/projects" className={`text-lg font-semibold ${isActive('/projects')}`} onClick={() => setIsOpen(false)}>Projects</Link>
-          <Link href="/about" className={`text-lg font-semibold ${isActive('/about_me')}`} onClick={() => setIsOpen(false)}>Portfolio</Link>
-          <Link href="/contact" className={`text-lg font-semibold ${isActive('/contact')}`} onClick={() => setIsOpen(false)}>Contact</Link>
-        </nav>
-      </div>
-    </nav>
-  );
+    // Handle scroll effect
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Close mobile menu when route changes
+    useEffect(() => {
+        setIsOpen(false);
+    }, [pathname]);
+
+    const isActive = (path) => pathname === path;
+
+    return (
+        <>
+            <nav 
+                className={`top-0 w-full  z-50 transition-all duration-300 ${
+                    scrolled 
+                        ? 'bg-white/80 backdrop-blur-md shadow-lg' 
+                        : 'bg-[#f8f6f3]'
+                }`}
+            >
+                <div className="container mx-auto px-4">
+                    <div className="flex items-center justify-between h-16">
+                        {/* Logo */}
+                        <Link 
+                            href="/" 
+                            className="relative group"
+                        >
+                            <span className="text-xl font-bold bg-gradient-to-r from-yellow-800 to-yellow-600 bg-clip-text text-transparent">
+                                Rahman Azizur
+                            </span>
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all group-hover:w-full"></span>
+                        </Link>
+
+                        {/* Desktop Navigation */}
+                        <div className="hidden md:flex items-center space-x-1">
+                            {navigationItems.map((item) => (
+                                <Link
+                                    key={item.path}
+                                    href={item.path}
+                                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                                        isActive(item.path)
+                                            ? 'text-yellow-600 bg-yellow-50'
+                                            : 'text-gray-700 hover:text-yellow-600 hover:bg-gray-50'
+                                    }`}
+                                >
+                                    {item.label}
+                                </Link>
+                            ))}
+                        </div>
+
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={() => setIsOpen(true)}
+                            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none"
+                        >
+                            <Menu className="w-6 h-6" />
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            {/* Mobile Navigation Overlay */}
+            {isOpen && (
+                <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 md:hidden" onClick={() => setIsOpen(false)} />
+            )}
+
+            {/* Mobile Navigation Menu */}
+            <div
+                className={`fixed top-0 right-0 w-64 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${
+                    isOpen ? 'translate-x-0' : 'translate-x-full'
+                } md:hidden`}
+            >
+                <div className="flex flex-col h-full">
+                    {/* Mobile Menu Header */}
+                    <div className="flex items-center justify-between p-4 border-b">
+                        <span className="font-semibold text-gray-900">Menu</span>
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            className="p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none"
+                        >
+                            <X className="w-5 h-5" />
+                        </button>
+                    </div>
+
+                    {/* Mobile Menu Items */}
+                    <nav className="flex-1 overflow-y-auto py-4">
+                        {navigationItems.map((item) => {
+                            const Icon = item.icon;
+                            return (
+                                <Link
+                                    key={item.path}
+                                    href={item.path}
+                                    className={`flex items-center justify-between px-4 py-3 text-sm font-medium transition-colors duration-200 ${
+                                        isActive(item.path)
+                                            ? 'text-yellow-600 bg-yellow-50'
+                                            : 'text-gray-700 hover:bg-gray-50'
+                                    }`}
+                                >
+                                    <div className="flex items-center space-x-3">
+                                        <Icon className="w-5 h-5" />
+                                        <span>{item.label}</span>
+                                    </div>
+                                    <ChevronRight className="w-4 h-4" />
+                                </Link>
+                            );
+                        })}
+                    </nav>
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default Header;
