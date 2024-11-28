@@ -3,9 +3,15 @@ import Image from 'next/image';
 const Achievements = () => {
   return (
     <section id="achievements" className="mb-12 fade-in">
-      <h2 className="text-3xl font-extrabold text-center mb-6" style={{ color: '#996232' }}>
-        Achievement
-      </h2>
+               {/* Header */}
+               <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+                       Achievements
+                        </span>
+                    </h2>
+                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+                </div>
       <div className="flex justify-center items-center space-x-6">
         
         {/* LeetCode 100 Days Badge */}

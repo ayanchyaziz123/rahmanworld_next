@@ -3,9 +3,17 @@ import React from "react";
 const ValueProposition = () => {
   return (
     <section id="value-proposition" className="container mx-auto mt-2 p-4 sm:p-6 max-w-6xl">
-      <h2 className="text-3xl font-extrabold text-center mb-6" style={{ color: '#996232' }}>
-      Personal Value Proposition
-        </h2>
+  
+
+        <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+                        Personal Value Proposition
+                        </span>
+                    </h2>
+                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+                </div>
+        
       <p>
         My portfolio showcases my journey as a software engineer and problem
         solver. The unique value I bring to the table lies in my ability to

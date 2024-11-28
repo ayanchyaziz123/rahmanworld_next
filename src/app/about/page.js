@@ -15,7 +15,17 @@ export default function AboutPage() {
             <ValueProposition />
             <TargetAudience />
 
-            <h1 className="text-3xl font-extrabold text-center mb-10 mt-4" style={{ color: '#996232' }}>Artifacts</h1>
+            
+                       {/* Header */}
+           <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+                        Artifacts
+                        </span>
+                    </h2>
+                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+                </div>
+            
 
             {/* Project Cards */}
             <div className="container mx-auto mt-5 p-4 sm:p-6 max-w-6xl ">
@@ -34,7 +44,16 @@ export default function AboutPage() {
 
                 {/* Education Section */}
                 <section id="education" className="py-12 fade-in">
-                    <h2 className="text-3xl font-extrabold mb-6 text-center" style={{ color: '#996232' }}>Education</h2>
+                  
+                     {/* Header */}
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+                        Education
+                        </span>
+                    </h2>
+                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+                </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                         {/* Education 1: Master's */}
@@ -62,7 +81,15 @@ export default function AboutPage() {
 
                 {/* Experience Section */}
                 <section id="experience" className="py-12 fade-in">
-                    <h2 className="text-3xl font-extrabold mb-6 text-center" style={{ color: '#996232' }}>Experience</h2>
+                      {/* Header */}
+           <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+                        Experience
+                        </span>
+                    </h2>
+                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+                </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                         {/* Experience 3: Coding Mentor */}
@@ -93,7 +120,15 @@ export default function AboutPage() {
                 {/* Skills Section */}
                 {/* Skills Section */}
                 <section id="skills" className="mb-12 fade-in">
-                    <h2 className="text-3xl font-extrabold text-center mb-6" style={{ color: '#996232' }}>Skills</h2>
+                      {/* Header */}
+           <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+                        Skill
+                        </span>
+                    </h2>
+                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+                </div>
                     <div className="flex flex-wrap justify-center items-center space-x-8">
 
                         {/* Programming Languages */}
@@ -150,7 +185,16 @@ export default function AboutPage() {
                 <Achievements />
                 {/* Interests / Hobbies Section */}
                 <section id="interests" className="py-12 fade-in">
-                    <h2 className="text-3xl font-extrabold mb-6 text-center" style={{ color: '#996232' }}>Interests & Hobbies</h2>
+               
+                      {/* Header */}
+           <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+                        Interests & Hobbies
+                        </span>
+                    </h2>
+                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+                </div>
                     <div className="space-y-4">
                         <p className="text-gray-700 text-lg">I have a deep interest in the following fields:</p>
                         <ul className="list-disc pl-6 text-gray-700">
