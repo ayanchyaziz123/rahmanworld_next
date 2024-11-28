@@ -6,7 +6,7 @@ import ValueProposition from "@/components/ValueProposition";
 const HomePage = () => {
   return(
     <div>
-      <Profile/>
+      
       <Biography/>
       <ValueProposition/>
       <TargetAudience/>
