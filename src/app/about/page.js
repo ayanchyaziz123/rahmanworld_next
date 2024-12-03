@@ -1,5 +1,8 @@
 import Achievements from "@/components/Achievements";
 import Biography from "@/components/Biography";
+import Education from "@/components/Education";
+import Experience from "@/components/Experience";
+import Interests from "@/components/Interestes";
 import Profile from "@/components/Profile";
 import Project from "@/components/Project";
 import TargetAudience from "@/components/TargetAudience";
@@ -43,78 +46,10 @@ export default function AboutPage() {
 
 
                 {/* Education Section */}
-                <section id="education" className="py-12 fade-in">
-                  
-                     {/* Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
-                        Education
-                        </span>
-                    </h2>
-                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
-                </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                        {/* Education 1: Master's */}
-                        <div className="">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Masterlogo.png" alt="Indiana Wesleyan University" className="w-32 h-20 mb-4 rounded" />
-                            <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}>Master of Science in Computer Science and Artificial Intelligence</h3>
-                            <p className="text-gray-700 mb-2">Indiana Wesleyan University</p>
-                            <p className="text-gray-500 mb-4">2024 - Present</p>
-                            <p className="text-gray-700">Advanced coursework in software architecture, machine learning, and
-                                cloud-based solutions. Engaged in research and capstone projects.</p>
-                        </div>
-
-                        {/* Education 2: Bachelor's */}
-                        <div className="">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThojYZr_EOQlsW3U_UlbcConqVxaxyzsTpvw&s" alt="Your University" className="w-32 h-20 mb-4 rounded" />
-                            <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}>Bachelor of Science in Computer Science and Engineering</h3>
-                            <p className="text-gray-700 mb-2">Metropolitan University</p>
-                            <p className="text-gray-500 mb-4">2018 - 2022</p>
-                            <p className="text-gray-700">Specialized in backend development and software engineering, with a focus
-                                on programming languages, algorithms, and database management.</p>
-                        </div>
-
-                    </div>
-                </section>
+               <Education/>
 
                 {/* Experience Section */}
-                <section id="experience" className="py-12 fade-in">
-                      {/* Header */}
-           <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
-                        Experience
-                        </span>
-                    </h2>
-                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
-                </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                        {/* Experience 3: Coding Mentor */}
-                        <div className="">
-                            <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}>Coding Mentor - CUNY Queens College</h3>
-                            <p className="text-gray-700 mb-2">2023 - 2024</p>
-                            <p className="text-gray-700 mb-4">Guidance: Supported students and aspiring developers in learning programming languages and concepts.</p>
-                            <p className="text-gray-700 mb-4">OOP Principles: Assisted in understanding and applying object-oriented programming principles.</p>
-                            <p className="text-gray-700 mb-4">Debugging: Helped with debugging, troubleshooting code, and improving efficiency.</p>
-                            <p className="text-gray-700 mb-4">Best Practices: Encouraged clean code, modularization, and proper documentation.</p>
-                            <p className="text-gray-700 mb-4">Career Advice: Provided insights into the software development industry and technical interview preparation.</p>
-                        </div>
-
-                        {/* Experience 4: SQA Engineer */}
-                        <div className="">
-                            <h3 className="text-xl font-bold mb-2" style={{ color: '#996232' }}>Software + SQA Engineer - Inverse AI, Bangladesh</h3>
-                            <p className="text-gray-700 mb-2">2022 - 2023</p>
-                            <p className="text-gray-700 mb-4">Automation Testing: Developed and maintained automated test scripts using Selenium and Python for quality assurance.</p>
-                            <p className="text-gray-700 mb-4">Android Video Editor App: Conducted functional and performance testing on a video editor application for Android.</p>
-                            <p className="text-gray-700 mb-4">Video Compressor Feature: Tested video compression functionality, ensuring optimized performance and quality output.</p>
-                            <p className="text-gray-700 mb-4">Bug Tracking: Documented bugs and collaborated with developers to troubleshoot and resolve issues effectively.</p>
-                            <p className="text-gray-700 mb-4">Quality Standards: Ensured software met high standards by implementing thorough testing procedures and best practices.</p>
-                        </div>
-                    </div>
-                </section>
+                <Experience/>
 
 
                 {/* Skills Section */}
@@ -184,29 +119,7 @@ export default function AboutPage() {
                 {/* Achievements Section */}
                 <Achievements />
                 {/* Interests / Hobbies Section */}
-                <section id="interests" className="py-12 fade-in">
-               
-                      {/* Header */}
-           <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
-                        Interests & Hobbies
-                        </span>
-                    </h2>
-                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
-                </div>
-                    <div className="space-y-4">
-                        <p className="text-gray-700 text-lg">I have a deep interest in the following fields:</p>
-                        <ul className="list-disc pl-6 text-gray-700">
-                            <li>Machine Learning</li>
-                            <li>Artificial Intelligence</li>
-                            <li>Coding and Software Development</li>
-                            <li>Space Engineering</li>
-                            <li>Astronomy</li>
-                            <li>Quantum Computing</li> {/* Added Quantum Computing */}
-                        </ul>
-                    </div>
-                </section>
+               <Interests/>
 
             </div>
         </div>
