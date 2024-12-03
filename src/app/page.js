@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Rocket, ArrowRight } from 'lucide-react';
 import TargetAudience from '@/components/TargetAudience';
@@ -24,19 +25,19 @@ const HomePage = () => {
                             Passionate about transforming complex challenges into elegant, scalable applications.
                         </p>
                         <div className="flex justify-center space-x-4">
-                            <a 
-                                href="#projects" 
+                            <Link
+                                href="/projects" 
                                 className="flex items-center bg-yellow-600 text-white px-6 py-3 rounded-lg hover:bg-yellow-700 transition-colors duration-300"
                             >
                                 View Projects
                                 <ArrowRight className="ml-2 w-5 h-5" />
-                            </a>
-                            <a 
-                                href="#contact" 
+                            </Link>
+                            <Link
+                                href="/contact" 
                                 className="flex items-center border border-yellow-600 text-yellow-600 px-6 py-3 rounded-lg hover:bg-yellow-50 transition-colors duration-300"
                             >
                                 Contact Me
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
