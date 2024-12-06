@@ -23,7 +23,7 @@ const Profile = () => {
                         <div className="relative group">
                             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-3xl">
                                 <img
-                                    src="/images/cover4.jpg"
+                                    src="/images/cover.jpeg"
                                     alt="Rahman's Profile"
                                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                 />

@@ -10,31 +10,39 @@ const HomePage = () => {
             <div className="container mx-auto px-4 max-w-6xl">
                 <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
                     {/* Content */}
-                    <div className="text-center">
-                        <div className="flex items-center justify-center space-x-3 mb-4">
-                            <Rocket className="w-8 h-8 text-yellow-600" />
-                            <span className="text-gray-600 text-lg">Software Engineer & Tech Innovator</span>
+                    <div className="mt-4">
+                        
+                        <div className="space-y-6">
+                            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900">
+                                Hi, I&apos;m Rahman
+                                <span className="text-yellow-600">.</span>
+                            </h1>
+                            <h2 className="text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-yellow-600 to-yellow-800 text-transparent bg-clip-text">
+                                AI Software Engineer
+                            </h2>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                I am Rahman Azizur Ayan. I have a strong interest in machine learning and its applications in astronomy. Here are some of my
+                                <Link href="/research_papers" target="_blank" className="text-yellow-600 hover:text-yellow-800 underline"> research papers</Link>.
+                                I have also worked on several exciting
+                                <Link href="/projects" target="_blank" className="text-yellow-600 hover:text-yellow-800 underline"> projects</Link>.
+                                You can check out my
+                                <Link href="/achievements" target="_blank" className="text-yellow-600 hover:text-yellow-800 underline"> achievements</Link> as well.
+                                Additionally, I have solved over
+                                <Link href="https://leetcode.com/u/Eclipsewolf28/" target="_blank" className="text-yellow-600 hover:text-yellow-800 underline font-semibold"> 500 LeetCode problems</Link>, focusing on data structures and algorithms.
+                                You can also explore my 
+                                <Link href="#education"  className="text-yellow-600 hover:text-yellow-800 underline"> educational background</Link> and 
+                                <Link href="#experience"  className="text-yellow-600 hover:text-yellow-800 underline"> professional experience</Link>.
+                            </p>
+
+
+
                         </div>
-                        <h1 className="text-5xl font-bold mb-4 leading-tight">
-                            <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
-                                Rahman Azizur Ayan
-                            </span>
-                        </h1>
-                        <p className="text-gray-700 text-xl leading-relaxed mb-6 max-w-3xl mx-auto">
-                            Crafting innovative software solutions at the intersection of technology and creativity. 
-                            Passionate about transforming complex challenges into elegant, scalable applications.
-                        </p>
-                        <div className="flex justify-center space-x-4">
-                            <Link
-                                href="/projects" 
-                                className="flex items-center bg-yellow-600 text-white px-6 py-3 rounded-lg hover:bg-yellow-700 transition-colors duration-300"
-                            >
-                                View Projects
-                                <ArrowRight className="ml-2 w-5 h-5" />
-                            </Link>
+
+                        <div className="flex  space-x-4">
+                          
                             <Link
                                 href="/contact" 
-                                className="flex items-center border border-yellow-600 text-yellow-600 px-6 py-3 rounded-lg hover:bg-yellow-50 transition-colors duration-300"
+                                className="flex items-center border border-yellow-600 text-yellow-600 px-6 py-3 rounded-lg hover:bg-yellow-50 transition-colors duration-300 mt-4"
                             >
                                 Contact Me
                             </Link>
