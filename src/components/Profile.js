@@ -21,7 +21,7 @@ const Profile = () => {
                     {/* Left Column - Profile Image & Info */}
                     <div className="w-full lg:w-1/2 space-y-8">
                         <div className="relative group">
-                            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+                            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-3xl">
                                 <img
                                     src="/images/cover4.jpg"
                                     alt="Rahman's Profile"
@@ -84,15 +84,19 @@ const Profile = () => {
                                 AI Software Engineer
                             </h2>
                             <p className="text-lg text-gray-700 leading-relaxed">
-                                I am Rahman. I have a strong interest in machine learning and its applications in astronomy. Here are some of my
-                                <Link  href="/research_papers" target="_blank"  className="text-blue-500 hover:text-blue-700 underline"> research papers</Link>.
+                                I am Rahman Azizur Ayan. I have a strong interest in machine learning and its applications in astronomy. Here are some of my
+                                <Link href="/research_papers" target="_blank" className="text-yellow-600 hover:text-yellow-800 underline"> research papers</Link>.
                                 I have also worked on several exciting
-                                <Link  href="/projects" target="_blank" className="text-green-500 hover:text-green-700 underline"> projects</Link>.
+                                <Link href="/projects" target="_blank" className="text-yellow-600 hover:text-yellow-800 underline"> projects</Link>.
                                 You can check out my
-                                <Link  href="/achievements" target="_blank" className="text-purple-500 hover:text-purple-700 underline"> achievements</Link> as well.
+                                <Link href="/achievements" target="_blank" className="text-yellow-600 hover:text-yellow-800 underline"> achievements</Link> as well.
                                 Additionally, I have solved over
-                                <Link  href="https://leetcode.com/u/Eclipsewolf28/" target="_blank"  className="text-red-500 hover:text-red-700 underline font-semibold"> 500 LeetCode problems</Link>, focusing on data structures and algorithms.
+                                <Link href="https://leetcode.com/u/Eclipsewolf28/" target="_blank" className="text-yellow-600 hover:text-yellow-800 underline font-semibold"> 500 LeetCode problems</Link>, focusing on data structures and algorithms.
+                                You can also explore my 
+                                <Link href="#education"  className="text-yellow-600 hover:text-yellow-800 underline"> educational background</Link> and 
+                                <Link href="#experience"  className="text-yellow-600 hover:text-yellow-800 underline"> professional experience</Link>.
                             </p>
+
 
 
                         </div>
