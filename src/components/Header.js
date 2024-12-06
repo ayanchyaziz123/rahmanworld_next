@@ -14,7 +14,7 @@ const Header = () => {
         { path: '/blogs', label: 'Blogs', icon: BookOpen },
         { path: '/projects', label: 'Projects', icon: Code },
         { path: '/research_papers', label: 'Papers', icon: Code },
-        { path: '/certificates', label: 'Certificates', icon: Code },
+        { path: '/achievements', label: 'Achievements', icon: Code },
         { path: '/about', label: 'Portfolio', icon: User },
         { path: '/contact', label: 'Contact', icon: Mail },
     ];

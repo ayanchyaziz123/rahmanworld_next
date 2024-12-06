@@ -1,8 +1,21 @@
 import React from 'react';
-import { BookUser, Shield } from 'lucide-react';
+import { BookUser, Shield, Code } from 'lucide-react';
 
 const Experience = () => {
     const experienceDetails = [
+        {
+            icon: <Code className="w-6 h-6 text-yellow-600" />,
+            title: "Software Engineer Intern",
+            company: "Next Generation Innovation LLC",
+            period: "2024 - Present",
+            responsibilities: [
+                "Participating in software development projects as part of Curricular Practical Training (CPT) for international student experience.",
+                "Gaining hands-on experience in software engineering practices and industry workflows.",
+                "Collaborating with team members to develop and improve software solutions.",
+                "Applying academic knowledge to real-world software development challenges.",
+                "Contributing to the company's technological innovation and growth."
+            ]
+        },
         {
             icon: <BookUser className="w-6 h-6 text-yellow-600" />,
             title: "Coding Mentor",

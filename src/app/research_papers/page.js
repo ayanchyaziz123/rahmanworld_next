@@ -6,7 +6,8 @@ import {
   Globe, 
   Download, 
   Award, 
-  ArrowRight 
+  ArrowRight,
+  Eye 
 } from 'lucide-react';
 
 const ResearchPublications = () => {
@@ -23,26 +24,7 @@ const ResearchPublications = () => {
       pdfLink: "/papers/healthcare-ml-2023.pdf",
       citations: 24
     },
-    // {
-    //   title: "Optimization of Deep Neural Networks for Real-time Image Recognition",
-    //   authors: ["Rahman Azizur Ayan", "Research Collaborators"],
-    //   year: 2022,
-    //   conference: "IEEE Computer Vision Symposium",
-    //   category: "Computer Vision",
-    //   abstract: "Investigates novel architectural approaches to improve computational efficiency and accuracy in deep learning image recognition models across multiple domains.",
-    //   pdfLink: "/papers/neural-optimization-2022.pdf",
-    //   citations: 37
-    // },
-    // {
-    //   title: "Ethical Considerations in Artificial Intelligence Development",
-    //   authors: ["Rahman Azizur Ayan"],
-    //   year: 2023,
-    //   conference: "Global AI Ethics Conference",
-    //   category: "AI Ethics",
-    //   abstract: "A critical analysis of ethical frameworks and guidelines necessary for responsible AI development, addressing potential societal impacts and mitigation strategies.",
-    //   pdfLink: "/papers/ai-ethics-2023.pdf",
-    //   citations: 18
-    // }
+    // Previous commented-out papers remain the same
   ];
 
   const publicationCategories = [
@@ -130,15 +112,26 @@ const ResearchPublications = () => {
                 <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">
                   {paper.category}
                 </span>
-                <a 
-                  href={paper.pdfLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-yellow-600 hover:text-yellow-800 transition-colors"
-                >
-                  <Download className="mr-2 w-4 h-4" />
-                  Download Paper
-                </a>
+                <div className="flex items-center space-x-4">
+                  <a 
+                    href={paper.pdfLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-yellow-600 hover:text-yellow-800 transition-colors"
+                  >
+                    <Download className="mr-2 w-4 h-4" />
+                    Download
+                  </a>
+                  <a 
+                    href={paper.pdfLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-green-600 hover:text-green-800 transition-colors"
+                  >
+                    <Eye className="mr-2 w-4 h-4" />
+                    View
+                  </a>
+                </div>
               </div>
             </div>
           ))}

@@ -1,3 +1,4 @@
+import AboutPageSectionNavbar from "@/components/AboutPageSectionNavbar";
 import Achievements from "@/components/Achievements";
 import Biography from "@/components/Biography";
 import Education from "@/components/Education";
@@ -13,10 +14,13 @@ import { projects } from '@/data/projects';
 export default function AboutPage() {
     return (
         <div>
+        
             <Profile />
-            <Biography />
-            <ValueProposition />
-            <TargetAudience />
+            <ValueProposition/>
+            <TargetAudience/>
+            <Experience/>
+            <Education/>
+    
 
             
                        {/* Header */}
@@ -43,16 +47,6 @@ export default function AboutPage() {
 
             {/* Main Content */}
             <div className="container mx-auto mt-2 p-4 sm:p-6 max-w-6xl">
-
-
-                {/* Education Section */}
-               <Education/>
-
-                {/* Experience Section */}
-                <Experience/>
-
-
-                {/* Skills Section */}
                 {/* Skills Section */}
                 <section id="skills" className="mb-12 fade-in">
                       {/* Header */}
@@ -116,10 +110,8 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* Achievements Section */}
-                <Achievements />
-                {/* Interests / Hobbies Section */}
-               <Interests/>
+        
+     
 
             </div>
         </div>
