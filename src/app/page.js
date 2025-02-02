@@ -30,8 +30,8 @@ const HomePage = () => {
                                 Additionally, I have solved over
                                 <Link href="https://leetcode.com/u/Eclipsewolf28/" target="_blank" className="text-yellow-600 hover:text-yellow-800 underline font-semibold"> 500 LeetCode problems</Link>, focusing on data structures and algorithms.
                                 You can also explore my 
-                                <Link href="#education"  className="text-yellow-600 hover:text-yellow-800 underline"> educational background</Link> and 
-                                <Link href="#experience"  className="text-yellow-600 hover:text-yellow-800 underline"> professional experience</Link>.
+                                <Link href="/about#education"  className="text-yellow-600 hover:text-yellow-800 underline"> educational background</Link> and 
+                                <Link href="/about#experience"  className="text-yellow-600 hover:text-yellow-800 underline"> professional experience</Link>.
                             </p>
 
 
