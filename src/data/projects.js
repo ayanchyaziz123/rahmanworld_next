@@ -124,7 +124,7 @@ export const projects = [
     <h5>Revisions</h5>
     <p>I updated the document to include more practical case studies and refined the strategies for conflict resolution and stakeholder management to provide a more robust framework for leading AI projects.</p>
   `,
-  image: 'https://path_to_image_or_screenshot.jpg',
+  image: 'https://opexsociety.org/wp-content/uploads/2015/02/leader-2206099_960_720.jpg',
   description: 'This assignment demonstrates leadership in managing AI projects in a multi-disciplinary team environment, focusing on communication, stakeholder alignment, and the successful integration of AI solutions.',
   technologies: ['AI Leadership', 'Project Management', 'Machine Learning', 'Cross-Functional Collaboration'],
   link: '/projects/ai-project-collaboration-strategies',
