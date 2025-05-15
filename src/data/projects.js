@@ -70,7 +70,7 @@ export const projects = [
         image3: 'https://github.com/ayanchyaziz123/final-year-project-main/raw/master/screenshoot/3.Compare%202%20laptops.png?raw=true',
         description: 'An online store that allows users to browse, search, and purchase products. Includes a machine learning feature for laptop price predictions.',
         technologies: ['Django', 'React', 'MySQL', 'Bootstrap', 'Scikit-Learn', 'Statsmodels'],
-        link: '/projects/django-react-e-commerce',
+        link: '/pages/artifacts/django-react-e-commerce',
         github: 'https://github.com/ayanchyaziz123/final-year-project-main'
       }
       
@@ -114,7 +114,7 @@ export const projects = [
   "image": "https://opexsociety.org/wp-content/uploads/2015/02/leader-2206099_960_720.jpg",
   "description": "This assignment demonstrates leadership in managing AI projects in a multi-disciplinary team environment, focusing on communication, stakeholder alignment, and the successful integration of AI solutions.",
   "technologies": ["AI Leadership", "Project Management", "Machine Learning", "Cross-Functional Collaboration"],
-  "link": "/projects/ai-development-strategy",
+  "link": "/pages/artifacts/ai-development-strategy",
   "github": "https://github.com/ayanchyaziz123/ai-project-collaboration-strategies"
 }
 ,
@@ -180,7 +180,7 @@ export const projects = [
         image3: 'https://github.com/ayanchyaziz123/codingjudge/blob/master/coding_judge_frontend/public/Register.png?raw=true',
         description: 'A platform that lets users solve coding problems and receive real-time feedback on their code submissions.',
         technologies: ['Node.js', 'Express.js', 'React.js', 'Tailwind CSS'],
-        link: '/projects/personal-online-coding-judge',
+        link: '/pages/artifacts/personal-online-coding-judge',
         github: 'https://github.com/ayanchyaziz123/codingjudge'
       },
         
@@ -244,7 +244,7 @@ export const projects = [
         image3: 'https://github.com/ayanchyaziz123/algorithm-visualizer/blob/master/public/pn.png?raw=true',
         description: 'A tool to visualize data structures and algorithms in real-time, allowing users to interact with the algorithm processing.',
         technologies: ['JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
-        link: '/projects/algorithm-visualizer',
+        link: '/pages/artifacts/algorithm-visualizer',
         github: 'https://github.com/ayanchyaziz123/algorithm-visualizer'
     },
     {
@@ -306,7 +306,7 @@ export const projects = [
       image: 'https://path/to/makeup-store-image.jpg', // Replace with an actual image URL
       description: 'A full-stack application for a makeup store, featuring personalized recommendations through machine learning and a responsive frontend.',
       technologies: ['Express.js', 'React', 'Redux', 'MongoDB', 'Machine Learning'],
-      link: '/projects/makeup-store',
+      link: '/pages/artifacts/makeup-store',
       github: 'https://github.com/ayanchyaziz123/Express-js-Makeup-store'
   },
   {
@@ -378,7 +378,7 @@ export const projects = [
       "Multilingual support for Bangla and English",
       "Server-side rendering for SEO optimization"
     ],
-    "link": "/projects/abroad-bd",
+    "link": "/pages/artifacts/abroad-bd",
     "github": "https://github.com/ayanchyaziz123/abroad-bd"
   }
   
