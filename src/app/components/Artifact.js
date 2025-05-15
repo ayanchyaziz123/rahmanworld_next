@@ -12,7 +12,11 @@ const Project = ({ project }) => {
         </div>
         <div className="p-6">
           <h3 className="text-xl font-bold mb-2 text-gray-800">{project.title}</h3>
-          <p className="mt-2 text-gray-600 text-md mb-4">{project.description}</p>
+          <p className="mt-2 text-gray-600 text-md mb-4">
+  {project.description.length > 100
+    ? project.description.slice(0, 150) + '...'
+    : project.description}
+</p>
           <Link
             href={project.link}
             className="inline-flex items-center font-semibold hover:text-opacity-80 transition-all duration-300 text-blue-800"

@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronRight, Home, BookOpen, Code, User, Mail } from 'lucide-react';
+import { Menu, X, ChevronRight, Home, BookOpen, Code, User, Mail, Trophy  } from 'lucide-react';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ const Header = () => {
         { path: '/', label: 'Home', icon: Home },
         { path: '/pages/blogs', label: 'Blogs', icon: BookOpen },
         { path: '/pages/artifacts', label: 'Artifacts', icon: Code },
-        { path: '/achievements', label: 'Achievements', icon: Code },
+        { path: '/achievements', label: 'Achievements', icon: Trophy },
         { path: '/pages/about', label: 'Portfolio', icon: User },
         { path: '/pages/contact', label: 'Contact', icon: Mail },
     ];

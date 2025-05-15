@@ -25,11 +25,11 @@ export default function AboutPage() {
                        {/* Header */}
            <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                         Artifacts
                         </span>
                     </h2>
-                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+                    <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
                 </div>
             
 
@@ -51,11 +51,11 @@ export default function AboutPage() {
                       {/* Header */}
            <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                         Skill
                         </span>
                     </h2>
-                    <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+                    <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
                 </div>
                     <div className="flex flex-wrap justify-center items-center space-x-8">
 
