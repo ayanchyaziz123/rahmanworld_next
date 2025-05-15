@@ -10,12 +10,12 @@ const Profile = () => {
 
     const stats = [
         { label: "Projects", value: "50+" },
-        { label: "LeetCode", value: "300+" },
+        { label: "LeetCode", value: "500+" },
         { label: "Experience", value: "3+ Years" }
     ];
 
     return (
-        <div className=" bg-gradient-to-b from-gray-50 to-gray-100">
+        <div className=" bg-gradient-to-b from-gray-100 to-gray-200">
             <div className="container mx-auto px-4 py-16 max-w-7xl">
                 <div className="flex flex-col lg:flex-row items-start gap-12">
                     {/* Left Column - Profile Image & Info */}
