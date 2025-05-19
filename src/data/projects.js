@@ -76,6 +76,214 @@ export const projects = [
       
 , 
 {
+  "slug": "machine-learning-algorithms-classification",
+  "title": "Machine Learning Algorithms Classification Framework",
+  "date": "May 2025",
+  "content": `
+  <p>This artifact presents a comprehensive visual framework that categorizes and explains key machine learning algorithms across different domains. It classifies algorithms by their learning style (supervised vs. unsupervised) and illustrates their primary application areas in tabular data, computer vision, natural language processing, and generative AI. Each algorithm is accompanied by explanations of its functionality and real-world use cases, providing a valuable reference for selecting appropriate approaches to various machine learning challenges.</p>
+  <h3>Artifact Description</h3>
+  <h4>Objective</h4>
+  <p>The objective of this project was to create a clear, visually compelling classification system for machine learning algorithms that serves both as an educational resource and a professional portfolio piece. The framework aims to help practitioners identify suitable algorithms for specific problem domains while demonstrating my understanding of machine learning concepts and applications.</p>
+  
+  <h4>Process</h4>
+  <p>I began by researching the most widely-used and influential algorithms across different ML domains. For each algorithm, I identified its learning style, primary application domains, and notable use cases. I then developed a visual organization system that clearly illustrates the relationships between algorithms while maintaining clarity and accessibility. The final infographic was designed to be both informative for ML practitioners and understandable to those with basic technical knowledge.</p>
+  
+  <h4>Tools and Technologies Used</h4>
+  <ul>
+    <li>Design: Adobe Illustrator for creating the infographic</li>
+    <li>Research: Academic papers, technical documentation, and industry resources</li>
+    <li>Classification Framework:
+      <ul>
+        <li>Learning Style: Supervised, Unsupervised, and Semi-Supervised algorithms</li>
+        <li>Application Domains: Tabular Data, Computer Vision, NLP, and Generative AI</li>
+        <li>Task Functionality: Classification, Regression, Clustering, etc.</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h4>Artifact-Specific Value Proposition</h4>
+  <h5>Unique Value</h5>
+  <p>This artifact demonstrates my comprehensive understanding of machine learning algorithms and their practical applications. It showcases my ability to synthesize complex technical information into an accessible visual framework, highlighting my skills in both machine learning theory and information design. The framework serves as both an educational tool and a demonstration of my technical knowledge in AI/ML domains.</p>
+  
+  <h5>Relevance</h5>
+  <p>This artifact aligns with my personal value proposition by emphasizing my technical understanding of machine learning algorithms and my ability to clearly communicate complex concepts. It is relevant to potential employers in AI/ML fields who need professionals with both technical depth and the ability to translate technical concepts into accessible formats for diverse stakeholders.</p>
+  
+  <h4>Customization for Audience</h4>
+  <h5>Adaptations Made</h5>
+  <p>To make this framework accessible to both technical and non-technical audiences, I incorporated visual cues and color-coding to enhance understanding. The infographic uses a hierarchical structure that allows viewers to quickly identify algorithm types and their applications, with more detailed explanations available for those seeking deeper understanding.</p>
+  
+  <h5>Relevance</h5>
+  <p>These customizations make the framework valuable for diverse audiences, from machine learning engineers seeking algorithm recommendations to business stakeholders wanting to understand the capabilities of different ML approaches for their specific domains.</p>
+  
+  <h4>Machine Learning Algorithm Classification</h4>
+  
+  <h5>Supervised Learning Algorithms</h5>
+  <ul>
+    <li><strong>Linear Regression</strong>
+      <ul>
+        <li>Type: Supervised Learning</li>
+        <li>Domains: Tabular Data</li>
+        <li>Explanation: Models the relationship between variables by fitting a linear equation to observed data.</li>
+        <li>Use Cases: Price prediction, sales forecasting, quantitative relationship analysis</li>
+      </ul>
+    </li>
+    <li><strong>Decision Trees</strong>
+      <ul>
+        <li>Type: Supervised Learning</li>
+        <li>Domains: Tabular Data, Computer Vision (basic)</li>
+        <li>Explanation: Creates a model that predicts the value of a target variable based on several input variables through a tree-like structure of decisions.</li>
+        <li>Use Cases: Customer churn prediction, medical diagnosis, risk assessment</li>
+      </ul>
+    </li>
+    <li><strong>Random Forest</strong>
+      <ul>
+        <li>Type: Supervised Learning (Ensemble)</li>
+        <li>Domains: Tabular Data, Computer Vision (feature importance)</li>
+        <li>Explanation: Constructs multiple decision trees during training and outputs the class that is the mode of the classes or mean prediction of the individual trees.</li>
+        <li>Use Cases: Feature selection, classification problems, fraud detection</li>
+      </ul>
+    </li>
+    <li><strong>Support Vector Machines (SVM)</strong>
+      <ul>
+        <li>Type: Supervised Learning</li>
+        <li>Domains: Tabular Data, Computer Vision, NLP (text classification)</li>
+        <li>Explanation: Finds a hyperplane that best divides a dataset into classes by maximizing the margin between the closest points.</li>
+        <li>Use Cases: Image classification, text categorization, handwriting recognition</li>
+      </ul>
+    </li>
+    <li><strong>Convolutional Neural Networks (CNNs)</strong>
+      <ul>
+        <li>Type: Supervised Learning</li>
+        <li>Domains: Computer Vision, NLP (with adaptations)</li>
+        <li>Explanation: Neural network architecture designed to process pixel data through convolution layers that recognize spatial hierarchies of features.</li>
+        <li>Use Cases: Image recognition, object detection, facial recognition systems</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h5>Unsupervised Learning Algorithms</h5>
+  <ul>
+    <li><strong>K-means Clustering</strong>
+      <ul>
+        <li>Type: Unsupervised Learning</li>
+        <li>Domains: Tabular Data, Computer Vision (image segmentation)</li>
+        <li>Explanation: Groups similar data points into predetermined number (k) of clusters based on feature similarity.</li>
+        <li>Use Cases: Customer segmentation, anomaly detection, image compression</li>
+      </ul>
+    </li>
+    <li><strong>Principal Component Analysis (PCA)</strong>
+      <ul>
+        <li>Type: Unsupervised Learning</li>
+        <li>Domains: Tabular Data, Computer Vision (dimensionality reduction)</li>
+        <li>Explanation: Reduces dimensionality by transforming data to a new coordinate system while maintaining maximum variance.</li>
+        <li>Use Cases: Feature extraction, noise reduction, visualization of high-dimensional data</li>
+      </ul>
+    </li>
+    <li><strong>Autoencoders</strong>
+      <ul>
+        <li>Type: Unsupervised Learning</li>
+        <li>Domains: Computer Vision, NLP, Generative AI</li>
+        <li>Explanation: Neural networks that learn efficient codings of input data by attempting to reconstruct their inputs through an internal representation.</li>
+        <li>Use Cases: Anomaly detection, image denoising, dimensionality reduction</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h5>Natural Language Processing Algorithms</h5>
+  <ul>
+    <li><strong>Recurrent Neural Networks (RNNs)</strong>
+      <ul>
+        <li>Type: Supervised Learning</li>
+        <li>Domains: NLP, Time Series Data</li>
+        <li>Explanation: Neural networks with loops that allow information to persist, capturing sequential dependencies in data.</li>
+        <li>Use Cases: Machine translation, sentiment analysis, speech recognition</li>
+      </ul>
+    </li>
+    <li><strong>Transformer Models</strong>
+      <ul>
+        <li>Type: Supervised Learning</li>
+        <li>Domains: NLP, Generative AI, Computer Vision (adapted)</li>
+        <li>Explanation: Neural network architecture that uses self-attention mechanisms to process sequential data without recurrence.</li>
+        <li>Use Cases: Language translation, text summarization, large language models like GPT and BERT</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h5>Generative AI Algorithms</h5>
+  <ul>
+    <li><strong>Generative Adversarial Networks (GANs)</strong>
+      <ul>
+        <li>Type: Unsupervised Learning</li>
+        <li>Domains: Computer Vision, Generative AI</li>
+        <li>Explanation: System of two neural networks (generator and discriminator) that contest with each other to generate realistic synthetic data.</li>
+        <li>Use Cases: Image generation, style transfer, data augmentation</li>
+      </ul>
+    </li>
+    <li><strong>Variational Autoencoders (VAEs)</strong>
+      <ul>
+        <li>Type: Unsupervised Learning</li>
+        <li>Domains: Computer Vision, Generative AI</li>
+        <li>Explanation: Generative models that learn latent representations of input data with probabilistic encoders and decoders.</li>
+        <li>Use Cases: Image generation, anomaly detection, drug discovery</li>
+      </ul>
+    </li>
+    <li><strong>Diffusion Models</strong>
+      <ul>
+        <li>Type: Unsupervised Learning</li>
+        <li>Domains: Computer Vision, Generative AI</li>
+        <li>Explanation: Models that learn to reverse a gradual noising process, generating data by denoising random noise step by step.</li>
+        <li>Use Cases: High-quality image generation, text-to-image systems, video generation</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h4>Application Domain Overview</h4>
+  
+  <h5>Tabular Data</h5>
+  <p>For structured data organized in rows and columns, algorithms like Linear Regression, Decision Trees, Random Forests, and Gradient Boosting excel. These algorithms are particularly effective for prediction, classification, and regression tasks in business intelligence, finance, and healthcare.</p>
+  
+  <h5>Computer Vision</h5>
+  <p>Image and video processing relies heavily on Convolutional Neural Networks (CNNs), which have revolutionized object detection, image classification, and facial recognition. For more advanced applications, architectures like R-CNN, YOLO, and Vision Transformers have pushed the boundaries of what's possible in computer vision.</p>
+  
+  <h5>Natural Language Processing</h5>
+  <p>Text and language data are primarily processed using RNNs, LSTMs, and Transformer models. These algorithms enable applications like machine translation, sentiment analysis, text generation, and question-answering systems. The evolution from word-based models to contextual embeddings has dramatically improved NLP capabilities.</p>
+  
+  <h5>Generative AI</h5>
+  <p>The creation of new content leverages GANs, VAEs, Diffusion Models, and Large Language Models. These algorithms power applications like image synthesis, text generation, creative design tools, and conversational AI. The field continues to advance rapidly with multimodal models that can process and generate across different data types.</p>
+  
+  <h4>Reflection</h4>
+  <h5>Significance</h5>
+  <p>I chose this project as an artifact because it demonstrates my ability to organize and communicate complex technical concepts in an accessible format. The framework showcases my understanding of machine learning algorithms across different domains and my skill in creating educational materials that bridge the gap between technical and non-technical audiences.</p>
+  
+  <h5>Lessons Learned</h5>
+  <p>Developing this artifact deepened my understanding of the relationships between different machine learning algorithms and their specific applications. I gained insights into how algorithms can be adapted across domains and learned to effectively communicate technical concepts through visual frameworks. The process also helped me identify areas where I want to further expand my knowledge, particularly in emerging generative AI techniques.</p>
+  
+  <h4>Feedback and Revisions</h4>
+  <h5>Feedback</h5>
+  <p>Initial feedback suggested adding more real-world examples and including emerging algorithms like diffusion models. Reviewers also recommended enhancing the visual hierarchy to make relationships between algorithms more apparent and improving the explanations of complex algorithms for non-technical audiences.</p>
+  
+  <h5>Revisions</h5>
+  <p>Based on the feedback, I expanded the framework to include cutting-edge algorithms like diffusion models and transformers for computer vision. I also refined the visual design to better illustrate relationships between algorithms and their applications, and revised the explanations to be more accessible while maintaining technical accuracy.</p>
+  
+  <h4>References</h4>
+  <ul>
+    <li><a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">Scikit-Learn Documentation</a></li>
+    <li><a href="https://pytorch.org/docs/stable/index.html" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">PyTorch Documentation</a></li>
+    <li><a href="https://www.tensorflow.org/guide" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">TensorFlow Documentation</a></li>
+    <li><a href="https://paperswithcode.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">Papers with Code</a></li>
+    <li><a href="https://huggingface.co/docs" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">Hugging Face Documentation</a></li>
+  </ul>
+  `,
+  "image": "/images/project/ml.svg",
+  "image2": "https://miro.medium.com/max/2000/1*OeJzOSyJlFu_Z77ux4it1A.png",
+  "image3": "https://miro.medium.com/max/2000/1*jdR42Krscupp3Rytx-unFg.png",
+  "description": "A comprehensive visual framework classifying machine learning algorithms by type and application domain across tabular data, computer vision, NLP, and generative AI.",
+  "technologies": ["Machine Learning", "AI", "Data Science", "Information Design", "Visual Framework"],
+  "link": "/pages/artifacts/machine-learning-algorithms-classification",
+  "github": "https://github.com/yourusername/ml-algorithms-classification"
+  }
+,
+{
   "slug": "ai-development-strategy",
   "title": "AI Development Strategy",
   "date": "March 2025",

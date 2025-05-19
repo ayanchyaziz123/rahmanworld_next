@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="800" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="600" y="60" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#2d3748">
+    Machine Learning Algorithms Classification
+  </text>
+  
+  <!-- Main Categories Section -->
+  <g id="categories">
+    <!-- Supervised Learning -->
+    <rect x="80" y="100" width="500" height="320" rx="10" ry="10" fill="#d3e9f7" stroke="#3182ce" stroke-width="2" />
+    <text x="330" y="130" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c5282">
+      Supervised Learning
+    </text>
+    
+    <!-- Unsupervised Learning -->
+    <rect x="620" y="100" width="500" height="320" rx="10" ry="10" fill="#e9d8fd" stroke="#805ad5" stroke-width="2" />
+    <text x="870" y="130" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#553c9a">
+      Unsupervised Learning
+    </text>
+    
+    <!-- Application Domains -->
+    <rect x="80" y="450" width="1040" height="320" rx="10" ry="10" fill="#f0fff4" stroke="#38a169" stroke-width="2" />
+    <text x="600" y="480" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2f855a">
+      Application Domains
+    </text>
+  </g>
+  
+  <!-- Supervised Learning Algorithms -->
+  <g id="supervised-algorithms">
+    <!-- Linear Regression -->
+    <rect x="100" y="150" width="200" height="80" rx="5" ry="5" fill="#bee3f8" stroke="#3182ce" stroke-width="1" />
+    <text x="200" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c5282">
+      Linear Regression
+    </text>
+    <text x="200" y="205" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c5282">
+      Tabular Data
+    </text>
+    
+    <!-- Decision Trees -->
+    <rect x="100" y="250" width="200" height="80" rx="5" ry="5" fill="#bee3f8" stroke="#3182ce" stroke-width="1" />
+    <text x="200" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c5282">
+      Decision Trees
+    </text>
+    <text x="200" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c5282">
+      Tabular Data, CV
+    </text>
+    
+    <!-- Random Forest -->
+    <rect x="100" y="350" width="200" height="80" rx="5" ry="5" fill="#bee3f8" stroke="#3182ce" stroke-width="1" opacity="0" />
+    
+    <!-- Support Vector Machines -->
+    <rect x="320" y="150" width="220" height="80" rx="5" ry="5" fill="#bee3f8" stroke="#3182ce" stroke-width="1" />
+    <text x="430" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c5282">
+      Support Vector Machines
+    </text>
+    <text x="430" y="205" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c5282">
+      Tabular Data, CV, NLP
+    </text>
+    
+    <!-- Convolutional Neural Networks -->
+    <rect x="320" y="250" width="220" height="80" rx="5" ry="5" fill="#bee3f8" stroke="#3182ce" stroke-width="1" />
+    <text x="430" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c5282">
+      CNNs
+    </text>
+    <text x="430" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c5282">
+      Computer Vision
+    </text>
+    
+    <!-- Recurrent Neural Networks -->
+    <rect x="320" y="350" width="220" height="80" rx="5" ry="5" fill="#bee3f8" stroke="#3182ce" stroke-width="1" opacity="0" />
+  </g>
+  
+  <!-- Unsupervised Learning Algorithms -->
+  <g id="unsupervised-algorithms">
+    <!-- K-means Clustering -->
+    <rect x="640" y="150" width="200" height="80" rx="5" ry="5" fill="#d6bcfa" stroke="#805ad5" stroke-width="1" />
+    <text x="740" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#553c9a">
+      K-means Clustering
+    </text>
+    <text x="740" y="205" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#553c9a">
+      Tabular Data, CV
+    </text>
+    
+    <!-- Principal Component Analysis -->
+    <rect x="640" y="250" width="200" height="80" rx="5" ry="5" fill="#d6bcfa" stroke="#805ad5" stroke-width="1" />
+    <text x="740" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#553c9a">
+      PCA
+    </text>
+    <text x="740" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#553c9a">
+      Tabular Data, CV
+    </text>
+    
+    <!-- Autoencoders -->
+    <rect x="640" y="350" width="200" height="80" rx="5" ry="5" fill="#d6bcfa" stroke="#805ad5" stroke-width="1" opacity="0" />
+    
+    <!-- Generative Adversarial Networks -->
+    <rect x="860" y="150" width="220" height="80" rx="5" ry="5" fill="#d6bcfa" stroke="#805ad5" stroke-width="1" />
+    <text x="970" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#553c9a">
+      GANs
+    </text>
+    <text x="970" y="205" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#553c9a">
+      Generative AI, CV
+    </text>
+    
+    <!-- Variational Autoencoders -->
+    <rect x="860" y="250" width="220" height="80" rx="5" ry="5" fill="#d6bcfa" stroke="#805ad5" stroke-width="1" />
+    <text x="970" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#553c9a">
+      VAEs
+    </text>
+    <text x="970" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#553c9a">
+      Generative AI, CV
+    </text>
+    
+    <!-- Diffusion Models -->
+    <rect x="860" y="350" width="220" height="80" rx="5" ry="5" fill="#d6bcfa" stroke="#805ad5" stroke-width="1" opacity="0" />
+  </g>
+  
+  <!-- Application Domains -->
+  <g id="application-domains">
+    <!-- Tabular Data -->
+    <rect x="100" y="510" width="220" height="200" rx="5" ry="5" fill="#c6f6d5" stroke="#38a169" stroke-width="1" />
+    <text x="210" y="540" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#2f855a">
+      Tabular Data
+    </text>
+    <text x="210" y="570" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      Linear Regression
+    </text>
+    <text x="210" y="595" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      Decision Trees
+    </text>
+    <text x="210" y="620" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      Random Forest
+    </text>
+    <text x="210" y="645" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      K-means Clustering
+    </text>
+    <text x="210" y="670" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      PCA
+    </text>
+    
+    <!-- Computer Vision -->
+    <rect x="360" y="510" width="220" height="200" rx="5" ry="5" fill="#c6f6d5" stroke="#38a169" stroke-width="1" />
+    <text x="470" y="540" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#2f855a">
+      Computer Vision
+    </text>
+    <text x="470" y="570" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      CNNs
+    </text>
+    <text x="470" y="595" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      SVMs
+    </text>
+    <text x="470" y="620" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      GANs
+    </text>
+    <text x="470" y="645" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      K-means (segmentation)
+    </text>
+    <text x="470" y="670" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      Diffusion Models
+    </text>
+    
+    <!-- Natural Language Processing -->
+    <rect x="620" y="510" width="220" height="200" rx="5" ry="5" fill="#c6f6d5" stroke="#38a169" stroke-width="1" />
+    <text x="730" y="540" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#2f855a">
+      NLP
+    </text>
+    <text x="730" y="570" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      RNNs
+    </text>
+    <text x="730" y="595" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      LSTMs
+    </text>
+    <text x="730" y="620" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      Transformer Models
+    </text>
+    <text x="730" y="645" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      Word Embeddings
+    </text>
+    <text x="730" y="670" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      SVMs (Classification)
+    </text>
+    
+    <!-- Generative AI -->
+    <rect x="880" y="510" width="220" height="200" rx="5" ry="5" fill="#c6f6d5" stroke="#38a169" stroke-width="1" />
+    <text x="990" y="540" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#2f855a">
+      Generative AI
+    </text>
+    <text x="990" y="570" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      GANs
+    </text>
+    <text x="990" y="595" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      VAEs
+    </text>
+    <text x="990" y="620" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      Diffusion Models
+    </text>
+    <text x="990" y="645" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      Transformers
+    </text>
+    <text x="990" y="670" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2f855a">
+      Autoregressive Models
+    </text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="80" y="750" width="20" height="20" fill="#bee3f8" stroke="#3182ce" stroke-width="1" />
+    <text x="110" y="765" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">Supervised Learning</text>
+    
+    <rect x="250" y="750" width="20" height="20" fill="#d6bcfa" stroke="#805ad5" stroke-width="1" />
+    <text x="280" y="765" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">Unsupervised Learning</text>
+    
+    <rect x="450" y="750" width="20" height="20" fill="#c6f6d5" stroke="#38a169" stroke-width="1" />
+    <text x="480" y="765" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">Application Domains</text>
+    
+    <text x="1050" y="765" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#718096">
+      © 2025 Your Portfolio
+    </text>
+  </g>
+  
+  <!-- Lines connecting supervised algorithms to domains -->
+  <g id="connections" stroke="#a0aec0" stroke-width="1" stroke-dasharray="5,3">
+    <!-- Linear Regression to Tabular Data -->
+    <path d="M200,230 Q200,370 210,510" fill="none" />
+    
+    <!-- CNNs to Computer Vision -->
+    <path d="M430,330 Q430,420 470,510" fill="none" />
+    
+    <!-- GANs to Generative AI -->
+    <path d="M970,230 Q970,370 990,510" fill="none" />
+    
+    <!-- Transformers to NLP (implied connection) -->
+    <path d="M600,300 Q665,400 730,620" fill="none" opacity="0.5" />
+  </g>
+</svg>
