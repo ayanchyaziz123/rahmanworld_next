@@ -29,76 +29,99 @@ const BlogsPage = () => {
   }, [selectedCategory, searchQuery]);
 
   return (
-    <div className="container mx-auto py-6 px-4 sm:py-8 sm:px-6 md:py-10 md:px-8">
-      <h1 className="text-3xl sm:text-4xl font-extrabold mb-6 sm:mb-8 text-gray-900">
-        Our Blog
-        <span className="text-blue-600">.</span>
-      </h1>
-
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
-        {/* Category Filter */}
-        <div className="flex items-center w-full sm:w-auto">
-          <label className="font-medium text-gray-700 mr-4">Category:</label>
-          <select
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className="w-full sm:w-auto border border-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-          >
-            {categories.map((category) => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-5xl mx-auto px-6 py-12">
+        {/* Header */}
+        <div className="bg-white mb-8">
+          <header className="mb-6">
+            <h1 className="text-3xl font-light text-gray-900 border-b border-gray-200 pb-3">
+              Blog Posts
+            </h1>
+          </header>
         </div>
 
-        {/* Search Bar */}
-        <div className="relative w-full sm:w-64">
-          <input
-            type="text"
-            placeholder="Search blogs..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full border border-gray-300 rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-          />
-          <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-        </div>
-      </div>
+        {/* Filters */}
+        <div className="bg-white border border-gray-200 p-6 mb-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            {/* Category Filter */}
+            <div className="flex items-center gap-3">
+              <label className="text-sm font-medium text-gray-700">Category:</label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:border-blue-600 transition-colors duration-200"
+              >
+                {categories.map((category) => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-      {filteredBlogs.length === 0 ? (
-        <div className="text-center py-12">
-          <p className="text-gray-600 text-lg">No blogs found matching your criteria.</p>
+            {/* Search Bar */}
+            <div className="relative flex-1 max-w-sm">
+              <input
+                type="text"
+                placeholder="Search blogs..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full border border-gray-300 px-3 py-2 pr-10 text-sm focus:outline-none focus:border-blue-600 transition-colors duration-200"
+              />
+              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+            </div>
+          </div>
         </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredBlogs.map((blog, index) => (
-            <div
-              key={index}
-              className="group bg-white shadow-md rounded-lg overflow-hidden transform hover:shadow-xl transition duration-300 ease-in-out"
-            >
-              <div className="p-6">
-                <div className="inline-block px-3 py-1 mb-4 text-sm font-medium text-blue-600 bg-blue-50 rounded-full">
-                  {blog.category}
+
+        {/* Blog Content */}
+        {filteredBlogs.length === 0 ? (
+          <div className="bg-white border border-gray-200 p-12 text-center">
+            <p className="text-gray-600">No blog posts found matching your criteria.</p>
+          </div>
+        ) : (
+          <div className="space-y-6">
+            {filteredBlogs.map((blog, index) => (
+              <article
+                key={index}
+                className="bg-white border border-gray-200 p-6 hover:shadow-sm transition-shadow duration-200"
+              >
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <div className="flex-1">
+                    <h2 className="text-xl font-medium text-gray-900 mb-2">
+                      <Link 
+                        href={`/blogs/${blog.slug}`}
+                        className="hover:text-blue-600 transition-colors duration-200"
+                      >
+                        {blog.title}
+                      </Link>
+                    </h2>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-gray-500">
+                    <span className="bg-blue-100 text-blue-700 px-2 py-1 text-xs">
+                      {blog.category}
+                    </span>
+                    <span>{blog.date}</span>
+                  </div>
                 </div>
-                <h2 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-blue-600 transition">
-                  <Link href={`/blogs/${blog.slug}`}>
-                    {blog.title}
-                  </Link>
-                </h2>
-                <p className="text-sm text-gray-500 mb-4">{blog.date}</p>
-                <p className="text-gray-700 leading-relaxed mb-4 line-clamp-3">{blog.description}</p>
+                
+                <div className="prose max-w-none mb-4">
+                  <p className="text-gray-700 leading-relaxed">
+                    {blog.description}
+                  </p>
+                </div>
+                
                 <Link
                   href={`/blogs/${blog.slug}`}
-                  className="inline-flex items-center font-semibold text-blue-600 group-hover:text-blue-700"
+                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors duration-200"
                 >
-                  Read More 
-                  <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
+                  Read More
+                  <span>→</span>
                 </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+              </article>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

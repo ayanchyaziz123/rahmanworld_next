@@ -71,114 +71,117 @@ const AchievementsPage = () => {
     };
 
     return (
-        <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
+        <div className="min-h-screen">
             {/* Achievements Section */}
-            <section className="py-16">
-                <div className="container mx-auto px-4 max-w-7xl">
-                    {/* Header */}
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold mb-4">
-                            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                                Achievements
-                            </span>
-                        </h2>
-                        <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
-                    </div>
+            <section className="max-w-5xl mx-auto px-6 py-12">
+                <div className="bg-white mb-12">
+                    <header className="mb-6">
+                        <h1 className="text-3xl font-light text-gray-900 border-b border-gray-200 pb-3">
+                            Key Achievements
+                        </h1>
+                    </header>
 
-                    {/* Achievements Row */}
-                    <div className="flex flex-nowrap overflow-x-auto space-x-6 pb-6">
+                    <div className="space-y-8">
                         {achievements.map((achievement, index) => (
-                            <div 
+                            <article 
                                 key={index}
-                                className="flex-shrink-0 w-96 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                                className="bg-white border-b border-gray-100 last:border-0 pb-8 last:pb-0"
                             >
-                                <div className="flex items-center space-x-4 mb-4">
-                                    <div className="p-3 bg-blue-50 rounded-lg">
+                                <div className="flex items-start gap-4">
+                                    <div className="p-2 bg-blue-50 rounded">
                                         {achievement.icon}
                                     </div>
-                                    <h3 className="text-xl font-bold text-blue-800">
-                                        {achievement.title}
-                                    </h3>
+                                    <div className="flex-1">
+                                        <h3 className="text-xl font-medium text-gray-900 mb-2">
+                                            {achievement.title}
+                                        </h3>
+                                        <div className="prose max-w-none mb-3">
+                                            <p className="text-gray-700 leading-relaxed">
+                                                {achievement.description}
+                                            </p>
+                                        </div>
+                                        <div className="bg-blue-50 px-3 py-2 inline-block">
+                                            <span className="text-blue-700 font-medium text-sm">
+                                                {achievement.highlight}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p className="text-gray-700 mb-4">
-                                    {achievement.description}
-                                </p>
-                                <div className="bg-blue-50 p-3 rounded-lg">
-                                    <span className="text-blue-800 font-semibold">
-                                        {achievement.highlight}
-                                    </span>
-                                </div>
-                            </div>
+                            </article>
                         ))}
                     </div>
                 </div>
             </section>
 
             {/* Certificates Section */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4 max-w-6xl">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-blue-600">
-                        Professional Certifications
-                    </h1>
+            <section className="max-w-5xl mx-auto px-6 pb-12">
+                <div className="bg-white">
+                    <header className="mb-6">
+                        <h2 className="text-2xl font-light text-gray-900 border-b border-gray-200 pb-3">
+                            Professional Certifications
+                        </h2>
+                    </header>
                     
-                    <div className="flex flex-col md:grid md:grid-cols-2 gap-6 sm:gap-8">
+                    <div className="grid md:grid-cols-2 gap-8">
                         {/* Certificates List */}
-                        <div className="space-y-4 sm:space-y-6">
+                        <div className="space-y-4">
                             {certificatesData.map((cert, index) => (
                                 <div 
                                     key={index} 
                                     onClick={() => handleCertificateClick(cert)}
                                     className={`
-                                        p-4 sm:p-6 rounded-xl border cursor-pointer transition-all duration-300
+                                        p-4 border cursor-pointer transition-colors duration-200
                                         ${selectedCertificate === cert 
-                                            ? 'bg-blue-50 border-blue-600 shadow-lg' 
+                                            ? 'bg-blue-50 border-blue-600' 
                                             : 'bg-white border-gray-200 hover:bg-gray-50'}
                                     `}
                                 >
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <h3 className="text-lg sm:text-xl font-semibold text-gray-800">{cert.title}</h3>
-                                            <p className="text-sm sm:text-base text-gray-600">{cert.issuer} • {cert.date}</p>
+                                            <h3 className="text-lg font-medium text-gray-900">{cert.title}</h3>
+                                            <p className="text-sm text-gray-600">{cert.issuer} • {cert.date}</p>
                                         </div>
-                                        <FileText className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
+                                        <FileText className="w-5 h-5 text-blue-600" />
                                     </div>
                                 </div>
                             ))}
                         </div>
 
                         {/* Certificate Preview */}
-                        <div className="bg-white rounded-xl border p-6 sm:p-8 flex flex-col items-center justify-center mt-6 md:mt-0">
+                        <div className="bg-slate-50 border border-gray-200 p-6 flex flex-col items-center justify-center">
                             {selectedCertificate ? (
                                 <div className="text-center">
-                                    <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-blue-600">
+                                    <h3 className="text-xl font-medium mb-3 text-gray-900">
                                         {selectedCertificate.title}
-                                    </h2>
-                                    <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
+                                    </h3>
+                                    <p className="text-sm text-gray-600 mb-6">
                                         Issued by {selectedCertificate.issuer} on {selectedCertificate.date}
                                     </p>
                                     
-                                    <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 justify-center">
+                                    <div className="flex flex-col sm:flex-row gap-3">
                                         <Link 
                                             href={selectedCertificate.pdfUrl} 
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center justify-center bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                                            className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
                                         >
-                                            <FileText className="mr-2 w-4 h-4 sm:w-5 sm:h-5" /> View Certificate
+                                            <FileText className="w-4 h-4" /> 
+                                            View Certificate
                                         </Link>
                                         <Link 
                                             href={selectedCertificate.pdfUrl} 
                                             download
-                                            className="flex items-center justify-center border border-blue-600 text-blue-600 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-50 transition-colors"
+                                            className="inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-4 py-2 text-sm font-medium hover:bg-blue-50 transition-colors duration-200"
                                         >
-                                            <Download className="mr-2 w-4 h-4 sm:w-5 sm:h-5" /> Download PDF
+                                            <Download className="w-4 h-4" /> 
+                                            Download PDF
                                         </Link>
                                     </div>
                                 </div>
                             ) : (
                                 <div className="text-center text-gray-500">
-                                    <FileText className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 text-gray-300" />
-                                    <p className="text-sm sm:text-base">Select a certificate to preview</p>
+                                    <FileText className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                                    <p className="text-sm">Select a certificate to preview</p>
                                 </div>
                             )}
                         </div>

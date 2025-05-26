@@ -1,45 +1,32 @@
 import Link from 'next/link';
+import { ExternalLink } from 'lucide-react';
 
 const Project = ({ project }) => {
     return (
-      <div className="bg-white p-4 border-dotted border-2 border-gray-400 text-center rounded-md transition-all duration-300 hover:shadow-lg">
-        <div className="relative overflow-hidden rounded-t-lg">
+      <article className="bg-white border border-gray-200 rounded overflow-hidden hover:shadow-sm transition-shadow duration-200">
+        <div className="relative overflow-hidden">
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105"
+            className="w-full h-48 object-cover"
           />
         </div>
         <div className="p-6">
-          <h3 className="text-xl font-bold mb-2 text-gray-800">{project.title}</h3>
-          <p className="mt-2 text-gray-600 text-md mb-4">
-  {project.description.length > 100
-    ? project.description.slice(0, 150) + '...'
-    : project.description}
-</p>
+          <h3 className="text-xl font-medium text-gray-900 mb-2">{project.title}</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            {project.description.length > 100
+              ? project.description.slice(0, 150) + '...'
+              : project.description}
+          </p>
           <Link
             href={project.link}
-            className="inline-flex items-center font-semibold hover:text-opacity-80 transition-all duration-300 text-blue-800"
-            
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors duration-200"
           >
             View Project 
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-4 w-4 ml-2 inline" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M14 5l7 7m0 0l-7 7m7-7H3" 
-              />
-            </svg>
+            <ExternalLink className="w-4 h-4" />
           </Link>
         </div>
-      </div>
+      </article>
     );
 };
   

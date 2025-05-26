@@ -45,48 +45,40 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="py-16 bg-gradient-to-b from-white to-gray-50">
-            <div className="container mx-auto px-4 max-w-6xl">
-                {/* Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                            Experience
-                        </span>
+        <section id="experience" className="max-w-5xl mx-auto px-6 py-12">
+            <div className="bg-white">
+                <header className="mb-6">
+                    <h2 className="text-2xl font-light text-gray-900 border-b border-gray-200 pb-3">
+                        Professional Experience
                     </h2>
-                    <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
-                </div>
+                </header>
 
-                {/* Experience Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-8">
                     {experienceDetails.map((exp, index) => (
-                        <div 
-                            key={index}
-                            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-                        >
-                            <div className="flex items-start space-x-4 mb-4">
-                                <div className="p-3 bg-blue-50 rounded-lg">
+                        <article key={index} className="bg-white border-b border-gray-100 last:border-0 pb-8 last:pb-0">
+                            <div className="flex items-start gap-4 mb-4">
+                                <div className="p-2 bg-blue-50 rounded">
                                     {exp.icon}
                                 </div>
-                                <div>
-                                    <h3 className="text-xl font-bold mb-2 text-blue-800">
+                                <div className="flex-1">
+                                    <h3 className="text-xl font-medium text-gray-900 mb-1">
                                         {exp.title}
                                     </h3>
-                                    <p className="text-gray-700">{exp.company}</p>
-                                    <p className="text-gray-500 mb-4">{exp.period}</p>
+                                    <p className="text-blue-600 font-medium mb-1">{exp.company}</p>
+                                    <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2">
-                                {exp.responsibilities.map((responsibility, idx) => (
-                                    <li 
-                                        key={idx} 
-                                        className="text-gray-700 text-md before:content-['•'] before:text-blue-600 before:mr-2 before:font-bold"
-                                    >
-                                        {responsibility}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                            
+                            <div className="prose max-w-none">
+                                <ul className="text-gray-700 space-y-2">
+                                    {exp.responsibilities.map((responsibility, idx) => (
+                                        <li key={idx} className="leading-relaxed">
+                                            {responsibility}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </article>
                     ))}
                 </div>
             </div>

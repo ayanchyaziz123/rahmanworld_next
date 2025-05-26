@@ -38,33 +38,34 @@ const Header = () => {
     return (
         <>
             <nav 
-                className={`top-0 w-full  z-50 transition-all duration-300 ${
+                className={`top-0 w-full z-50 transition-all duration-300 ${
                     scrolled 
-                        ? 'bg-white/80 backdrop-blur-md shadow-lg' 
-                        : 'bg-[#f8f6f3]'
+                        ? 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200' 
+                        : 'bg-white border-b border-gray-200'
                 }`}
             >
-                <div className="container mx-auto px-4">
+                <div className="max-w-5xl mx-auto px-6">
                     <div className="flex items-center justify-between h-16">
-                        {/* Logo */}
+                        {/* Logo - matching original style */}
                         <Link 
                             href="/" 
-                            className="relative group"
+                            className="group"
                         >
-                          <span className="text-xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">Azizur Rahman</span>
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                            <span className="text-xl font-light text-gray-900 tracking-wide">
+                                AZIZUR RAHMAN
+                            </span>
                         </Link>
 
-                        {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center space-x-1">
+                        {/* Desktop Navigation - minimal style */}
+                        <div className="hidden md:flex items-center space-x-8">
                             {navigationItems.map((item) => (
                                 <Link
                                     key={item.path}
                                     href={item.path}
-                                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                                    className={`text-sm font-normal transition-colors duration-200 ${
                                         isActive(item.path)
-                                            ? 'text-blue-600 bg-blue-50'
-                                            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                                            ? 'text-blue-600'
+                                            : 'text-gray-600 hover:text-blue-600'
                                     }`}
                                 >
                                     {item.label}
@@ -75,7 +76,7 @@ const Header = () => {
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsOpen(true)}
-                            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none"
+                            className="md:hidden p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
                         >
                             <Menu className="w-6 h-6" />
                         </button>
@@ -85,50 +86,56 @@ const Header = () => {
 
             {/* Mobile Navigation Overlay */}
             {isOpen && (
-                <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 md:hidden" onClick={() => setIsOpen(false)} />
+                <div className="fixed inset-0 bg-black/20 z-50 md:hidden" onClick={() => setIsOpen(false)} />
             )}
 
-            {/* Mobile Navigation Menu */}
+            {/* Mobile Navigation Menu - matching original sidebar style */}
             <div
-                className={`fixed top-0 right-0 w-64 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${
+                className={`fixed top-0 right-0 w-72 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out shadow-xl ${
                     isOpen ? 'translate-x-0' : 'translate-x-full'
                 } md:hidden`}
             >
                 <div className="flex flex-col h-full">
                     {/* Mobile Menu Header */}
-                    <div className="flex items-center justify-between p-4 border-b">
-                        <span className="font-semibold text-gray-900">Menu</span>
+                    <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-slate-50">
+                        <span className="text-lg font-light text-gray-900">Navigation</span>
                         <button
                             onClick={() => setIsOpen(false)}
-                            className="p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none"
+                            className="p-1 text-gray-600 hover:text-gray-900 focus:outline-none"
                         >
                             <X className="w-5 h-5" />
                         </button>
                     </div>
 
-                    {/* Mobile Menu Items */}
-                    <nav className="flex-1 overflow-y-auto py-4">
-                        {navigationItems.map((item) => {
-                            const Icon = item.icon;
-                            return (
-                                <Link
-                                    key={item.path}
-                                    href={item.path}
-                                    className={`flex items-center justify-between px-4 py-3 text-sm font-medium transition-colors duration-200 ${
-                                        isActive(item.path)
-                                            ? 'text-blue-600 bg-blue-50'
-                                            : 'text-gray-700 hover:bg-gray-50'
-                                    }`}
-                                >
-                                    <div className="flex items-center space-x-3">
-                                        <Icon className="w-5 h-5" />
+                    {/* Mobile Menu Items - matching original link style */}
+                    <nav className="flex-1 overflow-y-auto py-6">
+                        <div className="space-y-1 px-6">
+                            {navigationItems.map((item) => {
+                                const Icon = item.icon;
+                                return (
+                                    <Link
+                                        key={item.path}
+                                        href={item.path}
+                                        className={`flex items-center gap-3 px-3 py-3 text-sm font-normal transition-colors duration-200 rounded ${
+                                            isActive(item.path)
+                                                ? 'text-blue-600 bg-blue-50'
+                                                : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
+                                        }`}
+                                    >
+                                        <Icon className="w-4 h-4" />
                                         <span>{item.label}</span>
-                                    </div>
-                                    <ChevronRight className="w-4 h-4" />
-                                </Link>
-                            );
-                        })}
+                                    </Link>
+                                );
+                            })}
+                        </div>
                     </nav>
+
+                    {/* Mobile Menu Footer - matching original style */}
+                    <div className="p-6 border-t border-gray-200 bg-slate-50">
+                        <div className="text-xs text-gray-500 text-center">
+                            AI Software Engineer
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

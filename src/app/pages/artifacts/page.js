@@ -2,98 +2,85 @@ import { projects } from "@/data/projects"; // Import the project data
 import Project from "@/app/components/Artifact"; // Ensure your Project component is properly imported
 
 const ProjectsPage = () => {
+  const additionalProjects = [
+    {
+      title: "mobile_store_project_300_django",
+      url: "https://github.com/ayanchyaziz123/mobile_store_project_300_django",
+      description: "A mobile store project with some deep learning and machine learning concepts."
+    },
+    {
+      title: "house-price-prediction-system",
+      url: "https://github.com/ayanchyaziz123/house-price-prediction-system",
+      description: "An AI-powered system for predicting house prices."
+    },
+    {
+      title: "OpenGl-Traffic-Signal-Project",
+      url: "https://github.com/ayanchyaziz123/OpenGl-Traffic-Signal-Project",
+      description: "C++, A traffic control system where vehicles will follow the traffic signal as like real life. In this project there are 3 vehicles. If click on the right button of mouse then the vehicles will be stopped on the other hand if click on right button afterwards the vehicles will go. And it shows on traffic signal 3 lights."
+    },
+    {
+      title: "OOP-project-gym-management-system with java swing",
+      url: "https://github.com/ayanchyaziz123/OOP-project-gym-management-system",
+      description: "A gym management system developed with Java Swing."
+    },
+    {
+      title: "laravel-Gym-management-Project",
+      url: "https://github.com/ayanchyaziz123/laravel-Gym-management-Project-",
+      description: "A Gym management project with laravel and bootstrap 4."
+    }
+  ];
+
   return (
-    <div className="container mx-auto mt-4 p-4 sm:p-6 max-w-6xl">
-      <h1 className="text-3xl font-extrabold text-center text-blue-700 mb-10" >Artifacts</h1>
+    <div className="min-h-screen">
+      <div className="max-w-5xl mx-auto px-6 py-12">
+        {/* Main Projects Section */}
+        <section className="bg-white mb-12">
+          <header className="mb-6">
+            <h1 className="text-3xl font-light text-gray-900 border-b border-gray-200 pb-3">
+              Featured Artifacts
+            </h1>
+          </header>
 
-      {/* Project Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <div key={index} className="transform transition-transform hover:scale-105">
-            <Project project={project} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <div key={index}>
+                <Project project={project} />
+              </div>
+            ))}
           </div>
-        ))}
+        </section>
+
+        {/* Additional Projects Section */}
+        <section className="bg-white">
+          <header className="mb-6">
+            <h2 className="text-2xl font-light text-gray-900 border-b border-gray-200 pb-3">
+              Additional Projects
+            </h2>
+          </header>
+
+          <div className="space-y-6">
+            {additionalProjects.map((project, index) => (
+              <article key={index} className="bg-white border-b border-gray-100 last:border-0 pb-6 last:pb-0">
+                <h3 className="text-lg font-medium text-gray-900 mb-2">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                  >
+                    {project.title}
+                  </a>
+                </h3>
+                <div className="prose max-w-none">
+                  <p className="text-gray-700 leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       </div>
-
-      {/* Additional Projects Section */}
-      <section id="more-projects" className="fade-in mt-16">
-        <h2 className="text-3xl font-semibold mb-6 text-blue-700 text-center">More</h2>
-        <ul className="list-none space-y-6 text-gray-800">
-        
-          <li className="flex items-start space-x-4">
-
-            <div>
-              <a
-                href="https://github.com/ayanchyaziz123/mobile_store_project_300_django"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 font-medium hover:underline"
-              >
-                mobile_store_project_300_django
-              </a>
-              <p className="text-gray-600">A mobile store project with some deep learning and machine learning concepts.</p>
-            </div>
-          </li>
-          <li className="flex items-start space-x-4">
-
-            <div>
-              <a
-                href="https://github.com/ayanchyaziz123/house-price-prediction-system"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 font-medium hover:underline"
-              >
-                house-price-prediction-system
-              </a>
-              <p className="text-gray-600">An AI-powered system for predicting house prices.</p>
-            </div>
-          </li>
-          <li className="flex items-start space-x-4">
-
-            <div>
-              <a
-                href="https://github.com/ayanchyaziz123/OpenGl-Traffic-Signal-Project"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 font-medium hover:underline"
-              >
-                OpenGl-Traffic-Signal-Project
-
-              </a>
-              <p className="text-gray-600">C++, A traffic control system where vehicles will follow the traffic signal as like real life.In this project There are 3 vehicles. If click on the right button of mouse then the vehicles will be stoped on the other hand if click on right button afterwards the vehicles will go.And it shows on trafiic signal 3 lights</p>
-            </div>
-          </li>
-          <li className="flex items-start space-x-4">
-
-            <div>
-              <a
-                href="https://github.com/ayanchyaziz123/OOP-project-gym-management-system"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 font-medium hover:underline"
-              >
-                OOP-project-gym-management-system with java swing
-              </a>
-              <p className="text-gray-600">A gym management system developed with Java Swing.</p>
-            </div>
-          </li>
-          <li className="flex items-start space-x-4">
-
-            <div>
-              <a
-                href="https://github.com/ayanchyaziz123/laravel-Gym-management-Project-"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 font-medium hover:underline"
-              >
-                laravel-Gym-management-Project
-              </a>
-              <p className="text-gray-600">A Gym management project with laravel and bootstrap 4</p>
-            </div>
-          </li>
-          {/* Add more projects as needed */}
-        </ul>
-      </section>
     </div>
   );
 };

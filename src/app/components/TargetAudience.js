@@ -26,39 +26,36 @@ const TargetAudience = () => {
     ];
 
     return (
-        <section id="target-audience" className="py-16 bg-gradient-to-b from-white to-gray-50">
-            <div className="container mx-auto px-4 max-w-6xl">
-                {/* Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                            Target Audience
-                        </span>
+        <section id="target-audience" className="max-w-5xl mx-auto px-6 py-12">
+            <div className="bg-white">
+                <header className="mb-6">
+                    <h2 className="text-2xl font-light text-gray-900 border-b border-gray-200 pb-3">
+                        Target Audience
                     </h2>
-                    <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
-                </div>
+                </header>
 
-                {/* Audience Categories */}
-                <div className="space-y-6">
+                <div className="space-y-8">
                     {audienceCategories.map((category, index) => (
-                        <div 
+                        <article 
                             key={index}
-                            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                            className="bg-white border-b border-gray-100 last:border-0 pb-8 last:pb-0"
                         >
-                            <div className="flex items-start space-x-4">
-                                <div className="p-3 bg-blue-50 rounded-lg">
+                            <div className="flex items-start gap-4">
+                                <div className="p-2 bg-blue-50 rounded">
                                     {category.icon}
                                 </div>
-                                <div>
-                                    <h3 className="font-semibold text-lg text-gray-900 mb-2">
+                                <div className="flex-1">
+                                    <h3 className="text-xl font-medium text-gray-900 mb-3">
                                         {category.title}
                                     </h3>
-                                    <p className="text-gray-600 text-lg">
-                                        {category.description}
-                                    </p>
+                                    <div className="prose max-w-none">
+                                        <p className="text-gray-700 leading-relaxed">
+                                            {category.description}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>
