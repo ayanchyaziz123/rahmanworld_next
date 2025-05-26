@@ -13,7 +13,7 @@ const HomePage = () => {
                     <div className="space-y-8">
                         <div className="space-y-4">
                             <h1 className="text-4xl lg:text-5xl font-light text-gray-900 tracking-wide">
-                                Hi, I'm Rahman
+                                Hi, I&apos;m Rahman
                                 <span className="text-blue-600">.</span>
                             </h1>
                             <h2 className="text-2xl lg:text-3xl text-blue-600 font-normal">
