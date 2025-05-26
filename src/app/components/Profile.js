@@ -98,7 +98,7 @@ const Profile = () => {
                                 <p className="text-gray-700 leading-relaxed mb-4">
                                     Hi, I&apos;m Rahman! I have a strong interest in machine learning and its applications in astronomy. 
                                     My passion lies in exploring the intersection of artificial intelligence and space science, 
-                                    developing innovative solutions that push the boundaries of what's possible.
+                                    developing innovative solutions that push the boundaries of what&apos;s possible.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed">
                                     Here are some highlights of my work and achievements:
