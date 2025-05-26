@@ -284,6 +284,190 @@ export const projects = [
   }
 ,
 {
+  "slug": "neural-networks-structure-functions",
+  "title": "Neural Networks: Structure and Functions - Interactive Visual",
+  "date": "May 2025",
+  "content": `
+  <p>This artifact presents an interactive visual presentation that explains the fundamental components and architecture of neural networks. Through animated diagrams, mathematical formulations, and clear explanations, it breaks down complex neural network concepts into accessible, engaging content suitable for both technical and non-technical audiences.</p>
+  
+  <h3>Artifact Description</h3>
+  <h4>Objective</h4>
+  <p>The objective of this project was to create an interactive educational resource that demystifies neural network architecture and functionality. This presentation aims to bridge the gap between theoretical understanding and practical visualization, demonstrating my ability to communicate complex AI concepts through interactive web-based media while showcasing deep technical knowledge of neural network components.</p>
+  
+  <h4>Process</h4>
+  <p>I began by experimenting with the Neural Network Playground to gain hands-on experience with how different parameters affect network performance. This practical exploration informed my approach to explaining each component's role and importance. I then designed an interactive presentation that guides users through neural network architecture layer by layer, incorporating mathematical formulations, visual diagrams, and real-world applications. The presentation was built using modern web technologies to ensure smooth animations and responsive design.</p>
+  
+  <img src="/images/project/nnc.svg" alt="NN diagram"  />
+
+  <h4>Tools and Technologies Used</h4>
+  <ul>
+    <li>Frontend: HTML5, CSS3, JavaScript for interactive elements and animations</li>
+    <li>Design: CSS Grid and Flexbox for responsive layouts</li>
+    <li>Visualization: Custom SVG animations and CSS transforms</li>
+    <li>Mathematical Notation: Formatted equations and formulas</li>
+    <li>Interactive Elements:
+      <ul>
+        <li>Animated neural network diagrams</li>
+        <li>Smooth scrolling navigation</li>
+        <li>Hover effects and transitions</li>
+        <li>Color-coded component explanations</li>
+      </ul>
+    </li>
+  </ul>
+
+
+
+  
+  <h4>Artifact-Specific Value Proposition</h4>
+  <h5>Unique Value</h5>
+  <p>This artifact demonstrates my ability to translate complex technical concepts into engaging, interactive educational content. It showcases both my deep understanding of neural network architecture and my web development skills. The interactive nature of the presentation sets it apart from static educational materials, providing an immersive learning experience that enhances comprehension through visual and interactive elements.</p>
+  
+  <h5>Relevance</h5>
+  <p>This artifact aligns with my value proposition by highlighting my dual expertise in AI/ML concepts and technical communication. It demonstrates my ability to create educational resources that can be used for training teams, explaining concepts to stakeholders, or onboarding new team members in AI/ML projects. This skill is particularly valuable in roles that require both technical depth and the ability to communicate complex ideas clearly.</p>
+  
+  <h4>Customization for Audience</h4>
+  <h5>Adaptations Made</h5>
+  <p>The presentation is designed with progressive disclosure, allowing users to navigate at their own pace while providing multiple levels of detail. Mathematical formulations are clearly presented alongside intuitive explanations, making the content accessible to audiences with varying technical backgrounds. Interactive elements and animations help visual learners grasp complex concepts more effectively.</p>
+  
+  <h5>Relevance</h5>
+  <p>These adaptations make the presentation valuable for diverse use cases, from technical team training to executive briefings about AI capabilities. The modular structure allows different sections to be used independently based on audience needs and technical background.</p>
+  
+  <h4>Neural Network Components Explained</h4>
+  
+  <h5>Network Architecture</h5>
+  <ul>
+    <li><strong>Input Layer</strong>
+      <ul>
+        <li>Function: Receives and processes raw input data</li>
+        <li>Characteristics: Number of neurons equals input features, no computation</li>
+        <li>Visualization: Interactive diagram showing data flow from inputs</li>
+        <li>Real-world Application: Image pixels, text tokens, or sensor readings</li>
+      </ul>
+    </li>
+    <li><strong>Hidden Layers</strong>
+      <ul>
+        <li>Function: Extract and transform features through weighted computations</li>
+        <li>Characteristics: Multiple layers enable deep learning and complex pattern recognition</li>
+        <li>Visualization: Animated connections showing information processing</li>
+        <li>Design Considerations: Layer depth affects model complexity and training time</li>
+      </ul>
+    </li>
+    <li><strong>Output Layer</strong>
+      <ul>
+        <li>Function: Produces final predictions or classifications</li>
+        <li>Characteristics: Architecture depends on task type (regression vs classification)</li>
+        <li>Activation Functions: Specific functions like sigmoid or softmax for different outputs</li>
+        <li>Interpretation: Converting neural outputs to meaningful predictions</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h5>Core Components</h5>
+  <ul>
+    <li><strong>Neurons</strong>
+      <ul>
+        <li>Mathematical Model: Output = Activation(Σ(Input × Weight) + Bias)</li>
+        <li>Processing Steps: Input aggregation, weighted summation, activation transformation</li>
+        <li>Biological Inspiration: Simplified model of brain neurons</li>
+        <li>Interactive Element: Animated neuron showing computation process</li>
+      </ul>
+    </li>
+    <li><strong>Weights and Biases</strong>
+      <ul>
+        <li>Learning Parameters: Adjusted during training to minimize errors</li>
+        <li>Initialization: Strategic starting values to ensure successful training</li>
+        <li>Update Process: Gradient descent optimization with learning rate control</li>
+        <li>Visualization: Color-coded connections showing weight strengths</li>
+      </ul>
+    </li>
+    <li><strong>Activation Functions</strong>
+      <ul>
+        <li>ReLU: Most common for hidden layers, simple and effective</li>
+        <li>Sigmoid: Outputs between 0-1, useful for binary classification</li>
+        <li>Softmax: Probability distributions for multi-class problems</li>
+        <li>Mathematical Formulations: Clear equations with practical examples</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h5>Training Components</h5>
+  <ul>
+    <li><strong>Loss Functions</strong>
+      <ul>
+        <li>Mean Squared Error: Regression problems measuring prediction accuracy</li>
+        <li>Cross-Entropy: Classification problems measuring probability distributions</li>
+        <li>Purpose: Quantify difference between predictions and actual values</li>
+        <li>Optimization Target: Minimize loss through parameter adjustment</li>
+      </ul>
+    </li>
+    <li><strong>Optimization Algorithms</strong>
+      <ul>
+        <li>Gradient Descent: Foundation algorithm for parameter updates</li>
+        <li>Stochastic Gradient Descent: Faster updates with mini-batch processing</li>
+        <li>Adam Optimizer: Advanced algorithm combining momentum and adaptive learning</li>
+        <li>Training Process: Forward pass, loss calculation, backpropagation, weight update</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h4>Interactive Features</h4>
+  
+  <h5>Visual Elements</h5>
+  <p>The presentation includes animated neural network diagrams that demonstrate information flow through the network architecture. Connections between neurons are visualized with flowing animations that represent data propagation, while mathematical formulas are clearly formatted and positioned for optimal understanding.</p>
+  
+  <h5>Navigation and User Experience</h5>
+  <p>A fixed navigation menu allows users to jump between sections, while smooth scrolling and progressive animations enhance the viewing experience. Each component is introduced systematically, building understanding from basic concepts to complex interactions.</p>
+  
+  <h5>Technical Implementation</h5>
+  <p>The presentation uses modern CSS animations, responsive design principles, and interactive JavaScript elements to create an engaging user experience across different devices and screen sizes. The modular structure allows for easy updates and customization for different audiences.</p>
+  
+  <h4>Reflection</h4>
+  <h5>Significance</h5>
+  <p>I chose this project as an artifact because it demonstrates my ability to create educational technology that makes complex AI concepts accessible and engaging. Unlike my first artifact which focused on breadth across ML algorithms, this presentation showcases depth in neural networks while highlighting my web development and interactive design skills. It represents the intersection of technical knowledge and effective communication.</p>
+  
+  <h5>Lessons Learned</h5>
+  <p>Creating this interactive presentation deepened my understanding of how visual and mathematical representations can enhance learning. I gained insights into the importance of progressive disclosure in technical education and learned to balance mathematical rigor with accessibility. The process also reinforced the value of hands-on experimentation with tools like Neural Network Playground in building intuitive understanding before creating educational content.</p>
+  
+  <h4>Learning from Neural Network Playground</h4>
+  <h5>Practical Insights</h5>
+  <p>Experimenting with different datasets, noise levels, and network architectures in the Neural Network Playground provided valuable hands-on experience that informed the presentation's content. I observed how adding layers affects training time and performance, how different activation functions impact learning, and how hyperparameter choices influence convergence.</p>
+  
+  <h5>Application to Presentation</h5>
+  <p>These practical insights shaped how I explained each component's role and importance. The interactive elements in my presentation mirror the exploratory nature of the Playground, encouraging users to think about how changes to network architecture affect performance and behavior.</p>
+  
+  <h4>Feedback and Revisions</h4>
+  <h5>Feedback</h5>
+  <p>Initial feedback emphasized the need for clearer mathematical notation and suggested adding more real-world context for each component. Reviewers also recommended enhancing the visual hierarchy and ensuring the presentation works effectively across different devices and browsers.</p>
+  
+  <h5>Revisions</h5>
+  <p>Based on feedback, I refined the mathematical formulations for clarity, added more practical examples connecting neural network components to real applications, and improved the responsive design to ensure consistent performance across platforms. I also enhanced the color scheme and visual organization to improve accessibility and comprehension.</p>
+  
+  <h4>Integration with Portfolio</h4>
+  <h5>Complementary Value</h5>
+  <p>This artifact complements my ML Classification Framework by demonstrating depth where the first artifact showed breadth. Together, they showcase my ability to understand machine learning from both high-level strategic perspectives and detailed technical implementation levels.</p>
+  
+  <h5>Skill Demonstration</h5>
+  <p>While my first artifact demonstrated research, organization, and visual design skills, this neural networks presentation adds web development, interactive design, mathematical communication, and educational technology creation to my demonstrated skill set.</p>
+  
+  <h4>References</h4>
+  <ul>
+    <li><a href="https://playground.tensorflow.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">Neural Network Playground - TensorFlow</a></li>
+    <li><a href="https://pytorch.org/tutorials/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">PyTorch Tutorials</a></li>
+    <li><a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">Deep Learning Book - Ian Goodfellow</a></li>
+    <li><a href="https://cs231n.github.io/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">CS231n: Convolutional Neural Networks - Stanford</a></li>
+    <li><a href="https://distill.pub/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 font-semibold">Distill - Machine Learning Research</a></li>
+  </ul>
+  `,
+  "image": "/images/project/nn.svg",
+  "image2": "https://miro.medium.com/max/2000/1*3fA77_mLNiJTSgZFhYnU0Q.png",
+  "image3": "/images/project/nnc.svg",
+
+  "description": "Interactive web-based presentation explaining neural network architecture through visual diagrams, mathematical formulations, and animated illustrations for enhanced learning.",
+  "technologies": ["Neural Networks", "Interactive Visualization", "HTML/CSS/JavaScript", "Mathematical Modeling", "Educational Design", "Web Development"],
+  "link": "/pages/artifacts/neural-networks-structure-functions",
+  "github": "https://github.com/yourusername/neural-networks-presentation"
+},
+{
   "slug": "ai-development-strategy",
   "title": "AI Development Strategy",
   "date": "March 2025",
