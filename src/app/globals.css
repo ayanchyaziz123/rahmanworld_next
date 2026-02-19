@@ -6,3 +6,12 @@
 .nav-background-color{
     background-color: '#f8f6f3';
 }
+
+/* Blog content: code inside pre should be light, not amber */
+.prose pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.9em;
+}

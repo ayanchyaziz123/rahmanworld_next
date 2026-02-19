@@ -88,8 +88,8 @@ const BlogsPage = () => {
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <div className="flex-1">
                     <h2 className="text-xl font-medium text-gray-900 mb-2">
-                      <Link 
-                        href={`/blogs/${blog.slug}`}
+                      <Link
+                        href={`/pages/blogs/${blog.slug}`}
                         className="hover:text-blue-600 transition-colors duration-200"
                       >
                         {blog.title}
@@ -111,7 +111,7 @@ const BlogsPage = () => {
                 </div>
                 
                 <Link
-                  href={`/blogs/${blog.slug}`}
+                  href={`/pages/blogs/${blog.slug}`}
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors duration-200"
                 >
                   Read More

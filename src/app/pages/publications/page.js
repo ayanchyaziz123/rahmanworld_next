@@ -3,7 +3,49 @@ import React, { useState } from 'react';
 import { FileText, Globe, Download, Calendar, Users, ArrowRight, Github } from 'lucide-react';
 import Link from 'next/link';
 
-const publications = [
+const publications = [{
+    title: "Enhancing Online Recruitment Fraud Detection: A Comparative Analysis of Gradient Boosting and Transformer Architectures Under Severe Class Imbalance",
+    authors: ["Azizur Rahman"],
+    year: 2024,
+    venue: "International Journal of Computer Applications",
+    venueShort: "IJCA 2024",
+    category: "Machine Learning",
+    abstract:
+        "Through the exponent rise in online recruitment services, the job hunting process has been simplified to a great extent, but has also created a breed of online job ads, which are extremely dangerous to job seekers in terms of data security and finances. This research paper is a comparative and in-depth analysis of Machine Learning (ML), Deep Learning (DL), and Transformer-based architectures in detecting fraudulent job postings automatically. Using a dataset of 17,883 records with SMOTE to address class imbalance, we compared classifiers including Random Forest, SVM, XGBoost, BERT, and RoBERTa. XGBoost delivered the best results of 99.44% accuracy and 0.99 F1-score, followed by Random Forest (99.37%) and RoBERTa (99.04%).",
+    pdfLink: null,
+    status: "Published",
+    pdfLink: "/papers/Enhancing Online Recruitment Fraud Detection.pdf",
+    github: "https://github.com/ayanchyaziz123/Enhancing-Online-Recruitment-Fraud-Detection",
+    keywords: ["Online Recruitment Fraud", "NLP", "SMOTE", "XGBoost", "BERT", "Deep Learning"],
+},
+{
+    title: "Predicting Housing Affordability in New York City: A Neighborhood-Level Machine Learning Analysis Across 239 NTAs (2012–2022)",
+    authors: ["Azizur Rahman"],
+    year: 2025,
+    venue: "IEEE",
+    venueShort: "IEEE 2025",
+    category: "Machine Learning",
+    abstract:
+        "Housing affordability remains a defining challenge for low- and middle-income renters in New York City. This paper presents an IEEE-standard machine learning pipeline applied to a novel NTA-level panel dataset spanning 239 Neighborhood Tabulation Areas across four NYC boroughs (2012–2022), comprising 2,512 observations and 49 features sourced from the U.S. Census Bureau ACS 5-year estimates, NYC eviction records, and the Zillow Observed Rent Index (ZORI). Four ensemble models — Random Forest, XGBoost, LightGBM, and a Stacking Ensemble — are evaluated using temporal train/val/test splits and 5-fold TimeSeriesSplit cross-validation. XGBoost achieves the best performance (Test R²=0.891, RMSE=0.031). SHAP analysis identifies rent burden at the 30% threshold, renter-to-household income ratio, and median gross rent as the top predictive features. Moran's I spatial autocorrelation test (I=0.241, p=0.038) reveals statistically significant clustering of residuals, motivating future spatially-explicit modeling. Borough-level forecasts project continued affordability deterioration in the Bronx and Brooklyn through 2025.",
+    pdfLink: null,
+    status: "Pending",
+    github: "https://github.com/ayanchyaziz123/Exoplanet_Classification",
+    keywords: ["Housing Affordability", "XGBoost", "SHAP", "New York City", "NTA", "ACS", "Ensemble Learning", "Spatial Autocorrelation", "Rent Burden", "Time-Series CV"],
+},
+{
+    title: "Exoplanet Classification Using Machine Learning: A Comparative Study of Random Forest, XGBoost, and Neural Networks",
+    authors: ["Azizur Rahman"],
+    year: 2025,
+    venue: "NASA Exoplanet Archive Research",
+    venueShort: "NASA 2025",
+    category: "AI & Astronomy",
+    abstract:
+        "This study presents a machine learning pipeline for classifying exoplanets by their detection method using orbital and physical characteristics from the NASA Exoplanet Archive (38,090 records, 100 features). Key features include orbital period, planetary mass, equilibrium temperature, and insolation flux. After KNN imputation and feature standardization, three models were evaluated: Random Forest, XGBoost, and a Keras/TensorFlow Neural Network. XGBoost achieved the highest accuracy of ~95.3% across 11 discovery-method categories. SHAP analysis was applied for feature importance interpretation.",
+    pdfLink: null,
+    status: "Working",
+    keywords: ["Exoplanet", "NASA Exoplanet Archive", "XGBoost", "Random Forest", "Neural Networks", "SHAP", "Astronomy"],
+    github: "https://github.com/ayanchyaziz123/Exoplanet_Classification",
+},
     {
         title: "Precision Maternal Health: Robust High Risk Pregnancy Prediction Via Ensemble Learning and Explainable AI",
         authors: ["Azizur Rahman"],
@@ -14,61 +56,9 @@ const publications = [
         abstract:
             "This paper presents a robust machine learning framework for predicting high-risk pregnancies using ensemble learning and Explainable AI (XAI) techniques. By leveraging clinical and demographic features from maternal health datasets, the study compares multiple ensemble models to identify expectant mothers at elevated risk of adverse outcomes. SHAP-based explainability is applied to provide clinically interpretable predictions, bridging the gap between model performance and healthcare practitioner trust. The framework aims to support early intervention strategies and precision maternal care.",
         pdfLink: null,
-        status: "Published",
+        status: "Pending",
         keywords: ["Maternal Health", "High-Risk Pregnancy", "Ensemble Learning", "Explainable AI", "SHAP", "Healthcare ML", "Precision Medicine"],
-    },
-    {
-        title: "Predicting Housing Affordability in New York City: A Neighborhood-Level Machine Learning Analysis Across 239 NTAs (2012–2022)",
-        authors: ["Azizur Rahman"],
-        year: 2025,
-        venue: "IEEE",
-        venueShort: "IEEE 2025",
-        category: "Machine Learning",
-        abstract:
-            "Housing affordability remains a defining challenge for low- and middle-income renters in New York City. This paper presents an IEEE-standard machine learning pipeline applied to a novel NTA-level panel dataset spanning 239 Neighborhood Tabulation Areas across four NYC boroughs (2012–2022), comprising 2,512 observations and 49 features sourced from the U.S. Census Bureau ACS 5-year estimates, NYC eviction records, and the Zillow Observed Rent Index (ZORI). Four ensemble models — Random Forest, XGBoost, LightGBM, and a Stacking Ensemble — are evaluated using temporal train/val/test splits and 5-fold TimeSeriesSplit cross-validation. XGBoost achieves the best performance (Test R²=0.891, RMSE=0.031). SHAP analysis identifies rent burden at the 30% threshold, renter-to-household income ratio, and median gross rent as the top predictive features. Moran's I spatial autocorrelation test (I=0.241, p=0.038) reveals statistically significant clustering of residuals, motivating future spatially-explicit modeling. Borough-level forecasts project continued affordability deterioration in the Bronx and Brooklyn through 2025.",
-        pdfLink: null,
-        status: "Published",
-        keywords: ["Housing Affordability", "XGBoost", "SHAP", "New York City", "NTA", "ACS", "Ensemble Learning", "Spatial Autocorrelation", "Rent Burden", "Time-Series CV"],
-    },
-    {
-        title: "Exoplanet Classification Using Machine Learning: A Comparative Study of Random Forest, XGBoost, and Neural Networks",
-        authors: ["Azizur Rahman"],
-        year: 2025,
-        venue: "NASA Exoplanet Archive Research",
-        venueShort: "NASA 2025",
-        category: "AI & Astronomy",
-        abstract:
-            "This study presents a machine learning pipeline for classifying exoplanets by their detection method using orbital and physical characteristics from the NASA Exoplanet Archive (38,090 records, 100 features). Key features include orbital period, planetary mass, equilibrium temperature, and insolation flux. After KNN imputation and feature standardization, three models were evaluated: Random Forest, XGBoost, and a Keras/TensorFlow Neural Network. XGBoost achieved the highest accuracy of ~95.3% across 11 discovery-method categories. SHAP analysis was applied for feature importance interpretation.",
-        pdfLink: null,
-        status: "Published",
-        keywords: ["Exoplanet", "NASA Exoplanet Archive", "XGBoost", "Random Forest", "Neural Networks", "SHAP", "Astronomy"],
-        github: "https://github.com/ayanchyaziz123/Exoplanet_Classification",
-    },
-    {
-        title: "Enhancing Online Recruitment Fraud Detection: A Comparative Analysis of Gradient Boosting and Transformer Architectures Under Severe Class Imbalance",
-        authors: ["Azizur Rahman"],
-        year: 2024,
-        venue: "International Journal of Computer Applications",
-        venueShort: "IJCA 2024",
-        category: "Machine Learning",
-        abstract:
-            "Through the exponent rise in online recruitment services, the job hunting process has been simplified to a great extent, but has also created a breed of online job ads, which are extremely dangerous to job seekers in terms of data security and finances. This research paper is a comparative and in-depth analysis of Machine Learning (ML), Deep Learning (DL), and Transformer-based architectures in detecting fraudulent job postings automatically. Using a dataset of 17,883 records with SMOTE to address class imbalance, we compared classifiers including Random Forest, SVM, XGBoost, BERT, and RoBERTa. XGBoost delivered the best results of 99.44% accuracy and 0.99 F1-score, followed by Random Forest (99.37%) and RoBERTa (99.04%).",
-        pdfLink: null,
-        status: "Published",
-        keywords: ["Online Recruitment Fraud", "NLP", "SMOTE", "XGBoost", "BERT", "Deep Learning"],
-    },
-    {
-        title: "Planet Classification Using Machine Learning: A Data-Driven Approach",
-        authors: ["Azizur Rahman", "Dr. Santanu Das"],
-        year: 2023,
-        venue: "International Conference on Medical AI",
-        venueShort: "ICMAI 2023",
-        category: "Machine Learning",
-        abstract:
-            "A comprehensive study exploring cutting-edge machine learning techniques for predictive healthcare diagnostics, focusing on early disease detection and personalized treatment recommendations. The work applies supervised classification models to astronomical datasets to distinguish planetary bodies from stellar objects.",
         pdfLink: "/papers/planet-classification-2023.pdf",
-        status: "Published",
-        keywords: [],
     },
 ];
 

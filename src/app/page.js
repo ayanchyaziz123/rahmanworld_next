@@ -90,7 +90,7 @@ const HomePage = () => {
                             <div className="absolute inset-0 bg-blue-100 rounded-full translate-x-3 translate-y-3" />
                             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
                                 <img
-                                    src="/images/cover.jpeg"
+                                    src="/images/cover3.jpeg"
                                     alt="Rahman Azizur"
                                     className="w-full h-full object-cover"
                                 />
@@ -123,7 +123,7 @@ const HomePage = () => {
             <section className="border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-6 py-14">
                     <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-5">
-                        Technologies &amp; Tools
+                        Technologies &amp; Tools    
                     </p>
                     <div className="flex flex-wrap gap-2">
                         {skills.map((skill, i) => (

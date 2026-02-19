@@ -13,8 +13,9 @@ const groupBlogsByCategory = (blogs) => {
   }, {});
 };
 
-const BlogPost = ({ params }) => {
-  const blog = getBlogBySlug(params.slug);
+const BlogPost = async ({ params }) => {
+  const { slug } = await params;
+  const blog = getBlogBySlug(slug);
 
   if (!blog) {
     notFound();
@@ -25,7 +26,7 @@ const BlogPost = ({ params }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div 
+      <div
         className="w-full h-64 bg-gradient-to-r from-amber-700 to-blue-600 relative"
       >
         <div className="absolute inset-0 bg-black/20" />
@@ -41,7 +42,7 @@ const BlogPost = ({ params }) => {
         <div className="flex items-center text-sm text-gray-600">
           <Link href="/" className="hover:text-amber-600">Home</Link>
           <ChevronRight className="w-4 h-4 mx-2" />
-          <Link href="/blogs" className="hover:text-amber-600">Blogs</Link>
+          <Link href="/pages/blogs" className="hover:text-amber-600">Blogs</Link>
           <ChevronRight className="w-4 h-4 mx-2" />
           <span className="text-amber-600">{blog.category}</span>
         </div>
@@ -77,14 +78,16 @@ const BlogPost = ({ params }) => {
               </button>
 
               {/* Content */}
-              <div 
+              <div
                 className="prose prose-lg max-w-none
                   prose-headings:text-gray-900 prose-headings:font-bold
-                  prose-p:text-gray-700 prose-p:line-height-relaxed
+                  prose-p:text-gray-700
                   prose-a:text-amber-600 prose-a:no-underline hover:prose-a:underline
                   prose-strong:text-gray-900
-                  prose-code:text-amber-600 prose-code:bg-amber-50 prose-code:px-1 prose-code:rounded
-                  prose-blockquote:border-l-amber-500 prose-blockquote:bg-gray-50 prose-blockquote:py-1"
+                  prose-code:text-amber-700 prose-code:bg-amber-50 prose-code:px-1 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+                  prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-lg prose-pre:overflow-x-auto
+                  prose-blockquote:border-l-amber-500 prose-blockquote:bg-gray-50 prose-blockquote:py-1
+                  prose-table:border-collapse prose-th:border prose-th:border-gray-300 prose-th:bg-gray-100 prose-th:px-4 prose-th:py-2 prose-td:border prose-td:border-gray-300 prose-td:px-4 prose-td:py-2"
                 dangerouslySetInnerHTML={{ __html: blog.content }}
               />
             </div>
@@ -106,9 +109,9 @@ const BlogPost = ({ params }) => {
                     {categoryBlogs.map((catBlog) => (
                       <li key={catBlog.slug}>
                         <Link
-                          href={`/blogs/${catBlog.slug}`}
+                          href={`/pages/blogs/${catBlog.slug}`}
                           className={`block transition-colors ${
-                            catBlog.slug === blog.slug
+                            catBlog.slug === slug
                               ? 'text-amber-600 font-semibold'
                               : 'text-gray-600 hover:text-amber-600'
                           }`}
@@ -131,7 +134,7 @@ const BlogPost = ({ params }) => {
                 {blogs.slice(0, 5).map((recentBlog) => (
                   <Link
                     key={recentBlog.slug}
-                    href={`/blogs/${recentBlog.slug}`}
+                    href={`/pages/blogs/${recentBlog.slug}`}
                     className="block group"
                   >
                     <h3 className="text-gray-800 group-hover:text-amber-600 font-medium mb-1 transition-colors">
