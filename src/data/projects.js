@@ -1722,9 +1722,49 @@ export const projects = [
     ],
     "link": "/pages/artifacts/abroad-bd",
     "github": "https://github.com/ayanchyaziz123/abroad-bd"
+  },
+  {
+    "slug": "exoplanet-classification",
+    "title": "Exoplanet Classification Using Machine Learning",
+    "date": "2025",
+    "content": `
+      <p>This machine learning project focuses on classifying exoplanets based on their detection methods using orbital and physical characteristics sourced from the NASA Exoplanet Archive. The study compares three algorithmic approaches — Random Forest, XGBoost, and Neural Networks (Keras/TensorFlow) — to determine the most effective method for multi-class exoplanet classification.</p>
+
+      <h3>Artifact Description</h3>
+      <h4>Objective</h4>
+      <p>The goal was to build a robust classification pipeline capable of automatically categorizing exoplanets by their discovery method (11 distinct categories including Transit and Radial Velocity) using physical and orbital features such as orbital period, planetary mass, equilibrium temperature, and insolation flux.</p>
+
+      <h4>Process</h4>
+      <p>The workflow began with data collection from the NASA Exoplanet Archive (38,090 records, 100 columns). Key preprocessing steps included KNN imputation for missing values, feature standardization, and exploratory data analysis. Three models were trained and evaluated: Random Forest, XGBoost, and a deep Neural Network. SHAP methodology was used for feature importance analysis on the neural network. Model performance was assessed using accuracy, precision, recall, and F1-scores.</p>
+
+      <h4>Tools and Technologies Used</h4>
+      <ul>
+        <li>Language: Python (Jupyter Notebook)</li>
+        <li>ML Libraries: scikit-learn, XGBoost, Keras/TensorFlow</li>
+        <li>Data Processing: Pandas, NumPy, KNN Imputation</li>
+        <li>Explainability: SHAP</li>
+        <li>Dataset: NASA Exoplanet Archive (2025)</li>
+        <li>Visualization: Matplotlib, Seaborn</li>
+      </ul>
+
+      <h4>Results</h4>
+      <ul>
+        <li>XGBoost: ~95.3% accuracy (best performing model)</li>
+        <li>Random Forest: competitive performance with strong interpretability</li>
+        <li>Neural Network: evaluated with SHAP-based feature importance analysis</li>
+      </ul>
+
+      <h4>Reflection</h4>
+      <p>This project deepened my understanding of handling large real-world scientific datasets with significant missing values and class imbalance. It demonstrated the effectiveness of ensemble methods like XGBoost for structured astronomical data and reinforced the value of model explainability in scientific applications.</p>
+    `,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/NASA-Kepler-Telescope-ExoplanetSizes-20130103.jpg/800px-NASA-Kepler-Telescope-ExoplanetSizes-20130103.jpg",
+    "description": "A comparative ML study classifying exoplanets from the NASA Exoplanet Archive using Random Forest, XGBoost, and Neural Networks. XGBoost achieved ~95.3% accuracy across 11 discovery-method categories.",
+    "technologies": ["Python", "XGBoost", "scikit-learn", "Keras", "TensorFlow", "SHAP", "Pandas", "NumPy"],
+    "link": "/pages/artifacts/exoplanet-classification",
+    "github": "https://github.com/ayanchyaziz123/Exoplanet_Classification"
   }
-  
-  
+
+
 ];
 
 export default projects;

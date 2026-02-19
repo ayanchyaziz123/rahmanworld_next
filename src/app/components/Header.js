@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronRight, Home, BookOpen, Code, User, Mail, Trophy  } from 'lucide-react';
+import { Menu, X, Home, BookOpen, Code, User, Mail, Trophy, FileText } from 'lucide-react';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +11,7 @@ const Header = () => {
 
     const navigationItems = [
         { path: '/', label: 'Home', icon: Home },
+        { path: '/pages/publications', label: 'Publications', icon: FileText },
         { path: '/pages/blogs', label: 'Blogs', icon: BookOpen },
         { path: '/pages/artifacts', label: 'Artifacts', icon: Code },
         { path: '/pages/achievements', label: 'Achievements', icon: Trophy },
@@ -37,18 +38,18 @@ const Header = () => {
 
     return (
         <>
-            <nav 
+            <nav
                 className={`top-0 w-full z-50 transition-all duration-300 ${
-                    scrolled 
-                        ? 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200' 
+                    scrolled
+                        ? 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200'
                         : 'bg-white border-b border-gray-200'
                 }`}
             >
                 <div className="max-w-5xl mx-auto px-6">
                     <div className="flex items-center justify-between h-16">
-                        {/* Logo - matching original style */}
-                        <Link 
-                            href="/" 
+                        {/* Logo */}
+                        <Link
+                            href="/"
                             className="group"
                         >
                             <span className="text-xl font-light text-gray-900 tracking-wide">
@@ -56,8 +57,8 @@ const Header = () => {
                             </span>
                         </Link>
 
-                        {/* Desktop Navigation - minimal style */}
-                        <div className="hidden md:flex items-center space-x-8">
+                        {/* Desktop Navigation */}
+                        <div className="hidden md:flex items-center space-x-7">
                             {navigationItems.map((item) => (
                                 <Link
                                     key={item.path}
@@ -86,10 +87,10 @@ const Header = () => {
 
             {/* Mobile Navigation Overlay */}
             {isOpen && (
-                <div className="fixed inset-0 bg-black/20 z-50 md:hidden" onClick={() => setIsOpen(false)} />
+                <div className="fixed inset-0 bg-black/40 z-50 md:hidden" onClick={() => setIsOpen(false)} />
             )}
 
-            {/* Mobile Navigation Menu - matching original sidebar style */}
+            {/* Mobile Navigation Sidebar */}
             <div
                 className={`fixed top-0 right-0 w-72 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out shadow-xl ${
                     isOpen ? 'translate-x-0' : 'translate-x-full'
@@ -107,7 +108,7 @@ const Header = () => {
                         </button>
                     </div>
 
-                    {/* Mobile Menu Items - matching original link style */}
+                    {/* Mobile Menu Items */}
                     <nav className="flex-1 overflow-y-auto py-6">
                         <div className="space-y-1 px-6">
                             {navigationItems.map((item) => {
@@ -130,7 +131,7 @@ const Header = () => {
                         </div>
                     </nav>
 
-                    {/* Mobile Menu Footer - matching original style */}
+                    {/* Mobile Menu Footer */}
                     <div className="p-6 border-t border-gray-200 bg-slate-50">
                         <div className="text-xs text-gray-500 text-center">
                             AI Software Engineer

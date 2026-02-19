@@ -1,73 +1,226 @@
 import Link from 'next/link';
-import React from 'react';
-import { Rocket, ArrowRight } from 'lucide-react';
-import TargetAudience from '@/app/components/TargetAudience';
+import { Github, Linkedin, Mail, ArrowRight, ExternalLink } from 'lucide-react';
+import { projects } from '@/data/projects';
 
 const HomePage = () => {
+    const skills = [
+        "Python", "JavaScript", "React", "Next.js", "Django",
+        "TensorFlow", "Machine Learning", "AWS", "Docker",
+        "PostgreSQL", "Git", "scikit-learn"
+    ];
+
+    const featuredProjects = projects.slice(0, 3);
+
     return (
-      <>
-        <section className="min-h-screen flex items-center bg-white">
-            <div className="max-w-5xl mx-auto px-6">
-                <div className="py-20">
-                    {/* Content */}
-                    <div className="space-y-8">
-                        <div className="space-y-4">
-                            <h1 className="text-4xl lg:text-5xl font-light text-gray-900 tracking-wide">
-                                Hi, I&apos;m Rahman
+        <div className="min-h-screen bg-white">
+
+            {/* ── Hero ── */}
+            <section className="max-w-5xl mx-auto px-6 py-20 lg:py-28">
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+                    {/* Left: text */}
+                    <div className="flex-1 space-y-6 order-2 lg:order-1 text-center lg:text-left">
+                        <div className="space-y-2">
+                            <p className="text-blue-600 text-xs font-medium tracking-widest uppercase">
+                                AI Software Engineer
+                            </p>
+                            <h1 className="text-5xl lg:text-6xl font-light text-gray-900 tracking-tight leading-tight">
+                                Hi, I&apos;m{' '}
+                                <span className="font-normal">Rahman</span>
                                 <span className="text-blue-600">.</span>
                             </h1>
-                            <h2 className="text-2xl lg:text-3xl text-blue-600 font-normal">
-                                AI Software Engineer
-                            </h2>
-                        </div>
-                        
-                        <div className="prose prose-lg max-w-none">
-                            <p className="text-gray-700 leading-relaxed">
-                                I am Rahman Azizur Ayan. I have a strong interest in machine learning and its applications in astronomy. Here are some of my
-                                <Link href="/research_papers" className="text-blue-600 hover:text-blue-800 underline"> research papers</Link>.
-                                I have also worked on several exciting
-                                <Link href="/projects" className="text-blue-600 hover:text-blue-800 underline"> projects</Link>.
-                                You can check out my
-                                <Link href="/achievements" className="text-blue-600 hover:text-blue-800 underline"> achievements</Link> as well.
-                                Additionally, I have solved over
-                                <Link href="https://leetcode.com/u/Eclipsewolf28/" target="_blank" className="text-blue-600 hover:text-blue-800 underline font-medium"> 500 LeetCode problems</Link>, focusing on data structures and algorithms.
-                                You can also explore my 
-                                <Link href="/about#education" className="text-blue-600 hover:text-blue-800 underline"> educational background</Link> and 
-                                <Link href="/about#experience" className="text-blue-600 hover:text-blue-800 underline"> professional experience</Link>.
-                            </p>
                         </div>
 
-                        <div className="pt-4">
+                        <p className="text-gray-600 text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
+                            AI Software Engineer passionate about machine learning,
+                            astronomy, and building elegant solutions to complex problems.
+                            I bridge the gap between research and production-ready systems.
+                        </p>
+
+                        {/* CTA buttons */}
+                        <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                             <Link
-                                href="/contact" 
-                                className="inline-flex items-center border border-blue-600 text-blue-600 px-6 py-3 text-sm font-medium hover:bg-blue-50 transition-colors duration-200"
+                                href="/pages/about"
+                                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                            >
+                                View Portfolio
+                                <ArrowRight className="w-4 h-4" />
+                            </Link>
+                            <Link
+                                href="/pages/contact"
+                                className="inline-flex items-center border border-gray-300 text-gray-700 px-6 py-3 text-sm font-medium hover:border-blue-600 hover:text-blue-600 transition-colors duration-200"
                             >
                                 Contact Me
                             </Link>
                         </div>
+
+                        {/* Social icons */}
+                        <div className="flex items-center gap-5 justify-center lg:justify-start pt-1">
+                            <a
+                                href="https://www.linkedin.com/in/azizur-rahman-720636165/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 hover:text-blue-600 transition-colors"
+                                aria-label="LinkedIn"
+                            >
+                                <Linkedin className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="https://github.com/ayanchyaziz123"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 hover:text-gray-900 transition-colors"
+                                aria-label="GitHub"
+                            >
+                                <Github className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="mailto:azizurusa22@gmail.com"
+                                className="text-gray-400 hover:text-red-500 transition-colors"
+                                aria-label="Email"
+                            >
+                                <Mail className="w-5 h-5" />
+                            </a>
+                        </div>
                     </div>
 
-                    {/* Quick Stats */}
-                    <div className="mt-16 bg-slate-50 border border-gray-200 p-6">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                            {[
-                                { label: 'Projects Completed', value: '20+' },
-                                { label: 'Technologies Mastered', value: '10+' },
-                                { label: 'Years of Experience', value: '3+' },
-                                { label: 'Satisfied Clients', value: '15+' }
-                            ].map((stat, index) => (
-                                <div key={index} className="space-y-2">
-                                    <div className="text-2xl font-semibold text-gray-900">{stat.value}</div>
-                                    <div className="text-sm text-gray-600">{stat.label}</div>
-                                </div>
-                            ))}
+                    {/* Right: profile photo */}
+                    <div className="relative flex-shrink-0 order-1 lg:order-2">
+                        <div className="w-56 h-56 lg:w-72 lg:h-72 relative">
+                            <div className="absolute inset-0 bg-blue-100 rounded-full translate-x-3 translate-y-3" />
+                            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
+                                <img
+                                    src="/images/cover.jpeg"
+                                    alt="Rahman Azizur"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <TargetAudience/>
-        </>
+            </section>
+
+            {/* ── Stats ── */}
+            <section className="border-t border-b border-gray-100 bg-slate-50">
+                <div className="max-w-5xl mx-auto px-6 py-12">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        {[
+                            { label: 'Projects Completed', value: '50+' },
+                            { label: 'LeetCode Problems', value: '500+' },
+                            { label: 'Years of Experience', value: '3+' },
+                            { label: 'Technologies', value: '15+' },
+                        ].map((stat, i) => (
+                            <div key={i} className="space-y-1">
+                                <div className="text-3xl font-light text-gray-900">{stat.value}</div>
+                                <div className="text-xs text-gray-500 uppercase tracking-wide">{stat.label}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Skills ── */}
+            <section className="border-b border-gray-100">
+                <div className="max-w-5xl mx-auto px-6 py-14">
+                    <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-5">
+                        Technologies &amp; Tools
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                        {skills.map((skill, i) => (
+                            <span
+                                key={i}
+                                className="px-3 py-1.5 bg-white border border-gray-200 text-gray-700 text-sm rounded hover:border-blue-300 hover:text-blue-600 transition-colors duration-200"
+                            >
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Featured Projects ── */}
+            <section className="border-b border-gray-100 bg-white">
+                <div className="max-w-5xl mx-auto px-6 py-16">
+                    <div className="flex items-center justify-between mb-8">
+                        <h2 className="text-2xl font-light text-gray-900">Featured Projects</h2>
+                        <Link
+                            href="/pages/artifacts"
+                            className="text-sm text-blue-600 hover:text-blue-800 flex items-center gap-1"
+                        >
+                            View All <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {featuredProjects.map((project, i) => (
+                            <div
+                                key={i}
+                                className="group border border-gray-200 rounded overflow-hidden hover:border-blue-300 hover:shadow-sm transition-all duration-200"
+                            >
+                                <div className="aspect-video overflow-hidden bg-gray-100">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                </div>
+                                <div className="p-4">
+                                    <h3 className="text-sm font-medium text-gray-900 mb-2 line-clamp-2">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-xs text-gray-500 line-clamp-2">
+                                        {project.description}
+                                    </p>
+                                    <Link
+                                        href={`/pages/artifacts/${project.slug}`}
+                                        className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 mt-3"
+                                    >
+                                        View Project <ExternalLink className="w-3 h-3" />
+                                    </Link>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Research highlight ── */}
+            <section className="bg-slate-50 border-b border-gray-100">
+                <div className="max-w-5xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div>
+                        <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-2">Research</p>
+                        <h2 className="text-2xl font-light text-gray-900 mb-1">Publications &amp; Research</h2>
+                        <p className="text-gray-600 text-sm max-w-sm">
+                            Exploring ML applications in astronomy and applied AI systems.
+                        </p>
+                    </div>
+                    <Link
+                        href="/pages/publications"
+                        className="inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-6 py-3 text-sm font-medium hover:bg-blue-600 hover:text-white transition-all duration-200 shrink-0"
+                    >
+                        View Publications <ArrowRight className="w-4 h-4" />
+                    </Link>
+                </div>
+            </section>
+
+            {/* ── CTA ── */}
+            <section className="bg-white">
+                <div className="max-w-5xl mx-auto px-6 py-20 text-center">
+                    <h2 className="text-3xl font-light text-gray-900 mb-3">
+                        Let&apos;s Work Together
+                    </h2>
+                    <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                        Open to research collaborations, freelance projects, and full-time opportunities.
+                    </p>
+                    <Link
+                        href="/pages/contact"
+                        className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                    >
+                        Get In Touch <ArrowRight className="w-4 h-4" />
+                    </Link>
+                </div>
+            </section>
+        </div>
     );
 };
 
