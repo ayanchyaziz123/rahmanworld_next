@@ -20,22 +20,40 @@ const HomePage = () => {
 
                     {/* Left: text */}
                     <div className="flex-1 space-y-6 order-2 lg:order-1 text-center lg:text-left">
-                        <div className="space-y-2">
-                            <p className="text-blue-600 text-xs font-medium tracking-widest uppercase">
-                                AI Software Engineer
-                            </p>
+                        <div className="space-y-3">
+                            <div className="flex flex-wrap justify-center lg:justify-start gap-2">
+                                <span className="inline-block bg-blue-50 border border-blue-200 text-blue-700 text-xs font-medium px-3 py-1 rounded-full tracking-wide">
+                                    AI/ML Researcher
+                                </span>
+                                <span className="inline-block bg-gray-100 border border-gray-200 text-gray-600 text-xs font-medium px-3 py-1 rounded-full tracking-wide">
+                                    Full-Stack Software Engineer
+                                </span>
+                            </div>
                             <h1 className="text-5xl lg:text-6xl font-light text-gray-900 tracking-tight leading-tight">
-                                Hi, I&apos;m{' '}
+                                Azizur{' '}
                                 <span className="font-normal">Rahman</span>
                                 <span className="text-blue-600">.</span>
                             </h1>
                         </div>
 
-                        <p className="text-gray-600 text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
-                            AI Software Engineer passionate about machine learning,
-                            astronomy, and building elegant solutions to complex problems.
-                            I bridge the gap between research and production-ready systems.
+                        <p className="text-gray-600 text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
+                            Full-Stack Software Engineer and AI/ML Researcher with 3+ years of experience
+                            building scalable web applications and production AI systems. Author of
+                            peer-reviewed publications in machine learning and applied AI. Specializes
+                            in Python, React, Next.js, Django, TensorFlow, and XGBoost.
                         </p>
+
+                        {/* Education badges */}
+                        <div className="flex flex-col gap-1.5 text-sm text-gray-500 max-w-lg mx-auto lg:mx-0">
+                            <div className="flex items-center justify-center lg:justify-start gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
+                                <span>M.Sc. Artificial Intelligence — Indiana Wesleyan University, USA</span>
+                            </div>
+                            <div className="flex items-center justify-center lg:justify-start gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0"></span>
+                                <span>B.Sc. Computer Science & Engineering — Metropolitan University, Bangladesh</span>
+                            </div>
+                        </div>
 
                         {/* CTA buttons */}
                         <div className="flex flex-wrap gap-3 justify-center lg:justify-start">

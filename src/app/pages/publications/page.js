@@ -29,7 +29,7 @@ const publications = [{
         "Housing affordability remains a defining challenge for low- and middle-income renters in New York City. This paper presents an IEEE-standard machine learning pipeline applied to a novel NTA-level panel dataset spanning 239 Neighborhood Tabulation Areas across four NYC boroughs (2012–2022), comprising 2,512 observations and 49 features sourced from the U.S. Census Bureau ACS 5-year estimates, NYC eviction records, and the Zillow Observed Rent Index (ZORI). Four ensemble models — Random Forest, XGBoost, LightGBM, and a Stacking Ensemble — are evaluated using temporal train/val/test splits and 5-fold TimeSeriesSplit cross-validation. XGBoost achieves the best performance (Test R²=0.891, RMSE=0.031). SHAP analysis identifies rent burden at the 30% threshold, renter-to-household income ratio, and median gross rent as the top predictive features. Moran's I spatial autocorrelation test (I=0.241, p=0.038) reveals statistically significant clustering of residuals, motivating future spatially-explicit modeling. Borough-level forecasts project continued affordability deterioration in the Bronx and Brooklyn through 2025.",
     pdfLink: null,
     status: "Pending",
-    github: "https://github.com/ayanchyaziz123/Exoplanet_Classification",
+    github: "https://github.com/ayanchyaziz123/AI-Driven-Housing-Affordability-Forecasting-in-New-York-City",
     keywords: ["Housing Affordability", "XGBoost", "SHAP", "New York City", "NTA", "ACS", "Ensemble Learning", "Spatial Autocorrelation", "Rent Burden", "Time-Series CV"],
 },
 {
