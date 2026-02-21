@@ -777,5 +777,168 @@ print(f"Test Accuracy: {accuracy:.4f}")</code></pre>
 }
 
 
+,
+
+{
+  title: "Understanding R², RMSE, and MAE: Evaluating Regression Models",
+  description: "Learn how to interpret Train R², Test R², Train RMSE, and Test MAE to diagnose overfitting, underfitting, and model quality in regression tasks.",
+  date: "February 21, 2026",
+  category: "Machine Learning",
+  readTime: 10,
+  slug: "regression-metrics-r2-rmse-mae",
+  content: `
+    <p>When building a regression model, accuracy alone is not enough. You need to understand <em>how well</em> your model fits the data, whether it is overfitting or underfitting, and how large its prediction errors are. Four metrics are essential: <strong>Train R²</strong>, <strong>Test R²</strong>, <strong>Train RMSE</strong>, and <strong>Test MAE</strong>.</p>
+
+    <h3>1. R² — Coefficient of Determination</h3>
+    <p>R² measures how much of the variance in the target variable is explained by the model. It ranges from 0 to 1 (can be negative for very bad models).</p>
+
+    <pre><code>R² = 1 - (SS_res / SS_tot)
+
+SS_res = sum((y_actual - y_predicted)²)   # residual sum of squares
+SS_tot = sum((y_actual - y_mean)²)        # total sum of squares</code></pre>
+
+    <table>
+      <thead>
+        <tr><th>R² Value</th><th>Interpretation</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1.00</td><td>Perfect fit — model explains all variance</td></tr>
+        <tr><td>0.90 – 0.99</td><td>Excellent fit</td></tr>
+        <tr><td>0.70 – 0.89</td><td>Good fit</td></tr>
+        <tr><td>0.50 – 0.69</td><td>Moderate fit</td></tr>
+        <tr><td>Below 0.50</td><td>Poor fit — model misses important patterns</td></tr>
+        <tr><td>Negative</td><td>Model is worse than predicting the mean</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Train R² vs Test R²</h3>
+    <p>You always compute R² on both the training and test sets. The gap between them reveals overfitting or underfitting:</p>
+
+    <table>
+      <thead>
+        <tr><th>Train R²</th><th>Test R²</th><th>Diagnosis</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>High (0.95+)</td><td>High (0.90+)</td><td>Great — model generalizes well</td></tr>
+        <tr><td>High (0.95+)</td><td>Low (&lt;0.70)</td><td>Overfitting — model memorized training data</td></tr>
+        <tr><td>Low (&lt;0.70)</td><td>Low (&lt;0.70)</td><td>Underfitting — model too simple</td></tr>
+        <tr><td>Low</td><td>Slightly lower</td><td>Underfitting — need more complexity</td></tr>
+      </tbody>
+    </table>
+
+    <h3>2. RMSE — Root Mean Squared Error</h3>
+    <p>RMSE measures the average magnitude of prediction errors in the same units as the target variable. It penalizes large errors more heavily because of the squaring.</p>
+
+    <pre><code>MSE  = (1/n) * sum((y_actual - y_predicted)²)
+RMSE = sqrt(MSE)</code></pre>
+
+    <p><strong>Key properties:</strong></p>
+    <ul>
+      <li>Same unit as the target (e.g., dollars, meters, degrees)</li>
+      <li>Sensitive to outliers — one large error can inflate RMSE significantly</li>
+      <li>Lower RMSE = better model</li>
+      <li>RMSE = 0 means perfect predictions</li>
+    </ul>
+
+    <p><strong>Train RMSE vs Test RMSE:</strong> If Train RMSE is very low but Test RMSE is high, the model is overfitting. You want both to be low and close to each other.</p>
+
+    <h3>3. MAE — Mean Absolute Error</h3>
+    <p>MAE measures the average absolute difference between actual and predicted values. It is more robust to outliers than RMSE because it does not square the errors.</p>
+
+    <pre><code>MAE = (1/n) * sum(|y_actual - y_predicted|)</code></pre>
+
+    <p><strong>Key properties:</strong></p>
+    <ul>
+      <li>Same unit as the target variable</li>
+      <li>Robust to outliers — treats all errors equally</li>
+      <li>Easier to interpret: "on average, predictions are off by X units"</li>
+      <li>Lower MAE = better model</li>
+    </ul>
+
+    <h3>RMSE vs MAE — Which to Use?</h3>
+    <table>
+      <thead>
+        <tr><th>Metric</th><th>Sensitive to Outliers</th><th>Use When</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>RMSE</td><td>Yes (high penalty)</td><td>Large errors are unacceptable (e.g., medical dosage, finance)</td></tr>
+        <tr><td>MAE</td><td>No (equal penalty)</td><td>Outliers exist and you want a fair average error</td></tr>
+      </tbody>
+    </table>
+
+    <p>Note: RMSE is always &gt;= MAE. If they are very close, your errors are consistent. If RMSE is much larger than MAE, you likely have some very large outlier errors.</p>
+
+    <h3>Python: Computing All Four Metrics</h3>
+    <pre><code>from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
+import numpy as np
+
+# Train predictions
+y_train_pred = model.predict(X_train)
+y_test_pred  = model.predict(X_test)
+
+# R²
+train_r2 = r2_score(y_train, y_train_pred)
+test_r2  = r2_score(y_test,  y_test_pred)
+
+# RMSE
+train_rmse = np.sqrt(mean_squared_error(y_train, y_train_pred))
+test_rmse  = np.sqrt(mean_squared_error(y_test,  y_test_pred))
+
+# MAE
+train_mae = mean_absolute_error(y_train, y_train_pred)
+test_mae  = mean_absolute_error(y_test,  y_test_pred)
+
+print("=" * 40)
+print(f"  Train R²   : {train_r2:.4f}")
+print(f"  Test  R²   : {test_r2:.4f}")
+print(f"  Train RMSE : {train_rmse:.4f}")
+print(f"  Test  RMSE : {test_rmse:.4f}")
+print(f"  Train MAE  : {train_mae:.4f}")
+print(f"  Test  MAE  : {test_mae:.4f}")
+print("=" * 40)</code></pre>
+
+    <h3>Reading the Results — Practical Examples</h3>
+
+    <p><strong>Example 1 — Healthy model:</strong></p>
+    <pre><code>Train R²   : 0.9210
+Test  R²   : 0.8975
+Train RMSE : 4.2100
+Test  RMSE : 4.6300
+Train MAE  : 3.1200
+Test  MAE  : 3.4100</code></pre>
+    <p>Both Train and Test R² are high and close. RMSE and MAE are low and close. This model generalizes well — no overfitting.</p>
+
+    <p><strong>Example 2 — Overfitting:</strong></p>
+    <pre><code>Train R²   : 0.9950
+Test  R²   : 0.6120
+Train RMSE : 1.0200
+Test  RMSE : 18.450
+Train MAE  : 0.8900
+Test  MAE  : 14.200</code></pre>
+    <p>Train R² is near perfect but Test R² drops dramatically. RMSE and MAE explode on test data. The model memorized training data. Fix: reduce model complexity, add regularization, get more data.</p>
+
+    <p><strong>Example 3 — Underfitting:</strong></p>
+    <pre><code>Train R²   : 0.5200
+Test  R²   : 0.4900
+Train RMSE : 22.100
+Test  RMSE : 23.400
+Train MAE  : 17.600
+Test  MAE  : 18.200</code></pre>
+    <p>Both Train and Test R² are low. The model fails on both sets. Fix: use a more complex model, add more features, or do more feature engineering.</p>
+
+    <h3>Quick Reference Checklist</h3>
+    <ul>
+      <li>Is <strong>Test R²</strong> close to Train R²? — If not, overfitting</li>
+      <li>Is <strong>Test R²</strong> above 0.80? — Good generalization</li>
+      <li>Is <strong>Test RMSE</strong> acceptable for your domain? — Compare to the scale of your target</li>
+      <li>Is <strong>Test MAE</strong> much smaller than RMSE? — Indicates presence of large outlier errors</li>
+      <li>Do Train and Test errors both look high? — Underfitting, need more model capacity</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>Always evaluate your regression model with both Train and Test metrics. R² tells you how much variance is explained. RMSE and MAE tell you the actual magnitude of your errors in real units. Together, these four numbers give you a complete picture of your model's performance, generalization ability, and where it is failing.</p>
+  `
+}
+
   ];
   
