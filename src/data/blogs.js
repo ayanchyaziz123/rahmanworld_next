@@ -355,8 +355,427 @@ export const blogs = [
         <p>AI tools are transforming the way software engineers approach coding, debugging, and building applications. By leveraging these AI tools, engineers can automate routine tasks, improve code quality, and work more efficiently. Whether you're a beginner or an expert, these tools can enhance your workflow and help you stay ahead in the fast-evolving tech landscape.</p>
     `,
     "slug": "top-ai-tools-software-engineers"
+},
+
+{
+  title: "Logistic Regression: The Foundation of Classification",
+  description: "A deep dive into logistic regression — how it works, when to use it, and how to implement it in Python with scikit-learn.",
+  date: "February 21, 2026",
+  category: "Machine Learning",
+  readTime: 7,
+  slug: "logistic-regression-explained",
+  content: `
+    <p>Logistic regression is one of the most widely used classification algorithms in machine learning. Despite its name containing "regression," it is primarily used for binary and multiclass classification tasks. It is the go-to baseline model for any classification problem.</p>
+
+    <h3>What is Logistic Regression?</h3>
+    <p>Logistic regression models the probability that an input belongs to a particular class. It applies the <strong>sigmoid function</strong> to a linear combination of input features to squash the output between 0 and 1.</p>
+    <pre><code>P(y=1 | X) = 1 / (1 + e^(-z))
+where z = w0 + w1*x1 + w2*x2 + ... + wn*xn</code></pre>
+
+    <h3>When to Use Logistic Regression</h3>
+    <ul>
+      <li>Binary classification (spam vs not spam, fraud vs legit)</li>
+      <li>When you need probability scores, not just class labels</li>
+      <li>As a baseline before trying complex models</li>
+      <li>When interpretability matters — coefficients show feature importance</li>
+    </ul>
+
+    <h3>Python Implementation with scikit-learn</h3>
+    <pre><code>from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.preprocessing import StandardScaler
+
+# Prepare data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Scale features (important for logistic regression)
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# Train model
+model = LogisticRegression(C=1.0, max_iter=1000)
+model.fit(X_train, y_train)
+
+# Evaluate
+y_pred = model.predict(X_test)
+print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+print(classification_report(y_test, y_pred))</code></pre>
+
+    <h3>Key Hyperparameters</h3>
+    <table>
+      <thead>
+        <tr><th>Parameter</th><th>Description</th><th>Default</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>C</td><td>Inverse of regularization strength. Smaller = more regularization.</td><td>1.0</td></tr>
+        <tr><td>penalty</td><td>Regularization type: 'l1', 'l2', 'elasticnet'</td><td>'l2'</td></tr>
+        <tr><td>solver</td><td>Optimization algorithm: 'lbfgs', 'saga', 'liblinear'</td><td>'lbfgs'</td></tr>
+        <tr><td>max_iter</td><td>Max iterations for convergence</td><td>100</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Advantages and Disadvantages</h3>
+    <p><strong>Advantages:</strong> Fast to train, highly interpretable, works well with linearly separable data, outputs calibrated probabilities.</p>
+    <p><strong>Disadvantages:</strong> Assumes linear decision boundary, sensitive to outliers, poor performance on non-linear problems without feature engineering.</p>
+
+    <h3>Conclusion</h3>
+    <p>Logistic regression remains one of the most important algorithms in a data scientist's toolkit. It is fast, interpretable, and performs surprisingly well on many real-world problems. Always start with logistic regression before moving to more complex models.</p>
+  `
+},
+
+{
+  title: "Decision Trees: Learning by Asking Questions",
+  description: "Understand how decision trees split data using information gain and Gini impurity, with a hands-on Python example.",
+  date: "February 21, 2026",
+  category: "Machine Learning",
+  readTime: 8,
+  slug: "decision-tree-explained",
+  content: `
+    <p>A decision tree is a non-parametric supervised learning algorithm that makes predictions by learning simple decision rules inferred from features. It mimics human decision-making by asking a series of yes/no questions.</p>
+
+    <h3>How Does a Decision Tree Work?</h3>
+    <p>The algorithm recursively splits the dataset into subsets based on the feature that best separates the classes. The "best" split is determined by impurity measures:</p>
+    <ul>
+      <li><strong>Gini Impurity:</strong> Measures how often a randomly chosen element would be incorrectly classified. Range: [0, 0.5]</li>
+      <li><strong>Information Gain (Entropy):</strong> Measures the reduction in entropy after a split. Higher gain = better split.</li>
+    </ul>
+
+    <pre><code>Gini = 1 - sum(p_i^2)
+Entropy = -sum(p_i * log2(p_i))
+Information Gain = Entropy(parent) - weighted_avg(Entropy(children))</code></pre>
+
+    <h3>Python Implementation</h3>
+    <pre><code>from sklearn.tree import DecisionTreeClassifier, export_text
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train decision tree
+model = DecisionTreeClassifier(
+    criterion='gini',      # or 'entropy'
+    max_depth=5,           # prevent overfitting
+    min_samples_split=10,
+    min_samples_leaf=5,
+    random_state=42
+)
+model.fit(X_train, y_train)
+
+# Evaluate
+y_pred = model.predict(X_test)
+print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+
+# Visualize the tree rules
+tree_rules = export_text(model, feature_names=feature_names)
+print(tree_rules)</code></pre>
+
+    <h3>Key Hyperparameters</h3>
+    <table>
+      <thead>
+        <tr><th>Parameter</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>max_depth</td><td>Maximum depth of the tree. Controls overfitting.</td></tr>
+        <tr><td>min_samples_split</td><td>Minimum samples required to split a node.</td></tr>
+        <tr><td>min_samples_leaf</td><td>Minimum samples required at a leaf node.</td></tr>
+        <tr><td>criterion</td><td>'gini' or 'entropy' for split quality.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Overfitting Problem</h3>
+    <p>Decision trees are prone to overfitting — they can memorize the training data perfectly by growing very deep. Solutions include limiting <code>max_depth</code>, using <code>min_samples_leaf</code>, or using ensemble methods like Random Forest.</p>
+
+    <h3>Advantages and Disadvantages</h3>
+    <p><strong>Advantages:</strong> Highly interpretable (can visualize the tree), handles both numerical and categorical data, no feature scaling needed, captures non-linear relationships.</p>
+    <p><strong>Disadvantages:</strong> Prone to overfitting, unstable (small data changes can drastically change the tree), biased toward features with more levels.</p>
+
+    <h3>Conclusion</h3>
+    <p>Decision trees are excellent for understanding how a model makes decisions. They form the building block of powerful ensemble methods like Random Forest and XGBoost. Mastering decision trees is essential before moving to these advanced algorithms.</p>
+  `
+},
+
+{
+  title: "Random Forest: The Power of Ensemble Learning",
+  description: "How Random Forest combines hundreds of decision trees to build a robust, high-accuracy model with reduced overfitting.",
+  date: "February 21, 2026",
+  category: "Machine Learning",
+  readTime: 9,
+  slug: "random-forest-explained",
+  content: `
+    <p>Random Forest is one of the most powerful and versatile machine learning algorithms. It is an ensemble method that builds multiple decision trees and combines their predictions to produce a more accurate and stable result. It is the go-to algorithm for tabular data in many Kaggle competitions.</p>
+
+    <h3>How Does Random Forest Work?</h3>
+    <p>Random Forest uses two key concepts: <strong>Bagging</strong> and <strong>Feature Randomness</strong>.</p>
+    <ul>
+      <li><strong>Bagging (Bootstrap Aggregating):</strong> Each tree is trained on a random bootstrap sample (sampling with replacement) of the training data.</li>
+      <li><strong>Feature Randomness:</strong> At each split, only a random subset of features is considered. This decorrelates the trees and reduces variance.</li>
+      <li><strong>Aggregation:</strong> For classification, the final prediction is the majority vote across all trees. For regression, it is the average.</li>
+    </ul>
+
+    <pre><code>Final Prediction (Classification) = mode(tree_1_pred, tree_2_pred, ..., tree_n_pred)
+Final Prediction (Regression)     = mean(tree_1_pred, tree_2_pred, ..., tree_n_pred)</code></pre>
+
+    <h3>Python Implementation</h3>
+    <pre><code>from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.metrics import accuracy_score, classification_report
+import pandas as pd
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train Random Forest
+model = RandomForestClassifier(
+    n_estimators=200,       # number of trees
+    max_depth=10,
+    max_features='sqrt',    # features per split
+    min_samples_leaf=4,
+    n_jobs=-1,              # use all CPU cores
+    random_state=42
+)
+model.fit(X_train, y_train)
+
+# Evaluate
+y_pred = model.predict(X_test)
+print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+
+# Feature importance
+importance_df = pd.DataFrame({
+    'Feature': feature_names,
+    'Importance': model.feature_importances_
+}).sort_values('Importance', ascending=False)
+print(importance_df.head(10))</code></pre>
+
+    <h3>Feature Importance</h3>
+    <p>Random Forest provides built-in feature importance scores — the average decrease in impurity across all trees for each feature. This makes it a great tool for feature selection.</p>
+
+    <h3>Key Hyperparameters</h3>
+    <table>
+      <thead>
+        <tr><th>Parameter</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>n_estimators</td><td>Number of trees. More trees = lower variance but slower training.</td></tr>
+        <tr><td>max_features</td><td>Features considered per split: 'sqrt' (classification), 'log2', or int.</td></tr>
+        <tr><td>max_depth</td><td>Max depth of each tree. None = fully grown trees.</td></tr>
+        <tr><td>min_samples_leaf</td><td>Controls minimum samples at leaf — prevents overfitting.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Advantages and Disadvantages</h3>
+    <p><strong>Advantages:</strong> High accuracy, robust to outliers and noise, handles missing values well, no feature scaling needed, built-in feature importance.</p>
+    <p><strong>Disadvantages:</strong> Slower to predict than a single tree, harder to interpret than a single decision tree, requires more memory.</p>
+
+    <h3>Conclusion</h3>
+    <p>Random Forest is one of the best off-the-shelf algorithms available. It rarely overfits, requires minimal tuning, and delivers strong performance across a wide range of problems. If you are unsure which algorithm to use, start with Random Forest.</p>
+  `
+},
+
+{
+  title: "XGBoost: The Algorithm That Wins Kaggle Competitions",
+  description: "A comprehensive guide to XGBoost — gradient boosting, regularization, and how to tune it for maximum performance.",
+  date: "February 21, 2026",
+  category: "Machine Learning",
+  readTime: 10,
+  slug: "xgboost-explained",
+  content: `
+    <p>XGBoost (Extreme Gradient Boosting) is the most dominant algorithm in structured/tabular data competitions. It has been used in more winning Kaggle solutions than any other algorithm. It extends gradient boosting with regularization, parallel processing, and handling of missing values.</p>
+
+    <h3>How XGBoost Works</h3>
+    <p>XGBoost is a <strong>gradient boosting</strong> algorithm. Unlike Random Forest (which trains trees in parallel independently), boosting trains trees <em>sequentially</em>, where each new tree corrects the errors of the previous ones.</p>
+
+    <pre><code>Step 1: Start with an initial prediction (e.g., mean of target)
+Step 2: Compute residuals (errors) from current predictions
+Step 3: Fit a new tree to predict the residuals
+Step 4: Update predictions: F_new = F_old + learning_rate * tree_prediction
+Step 5: Repeat until n_estimators trees are built</code></pre>
+
+    <h3>XGBoost vs Regular Gradient Boosting</h3>
+    <p>XGBoost adds several improvements over vanilla gradient boosting:</p>
+    <ul>
+      <li><strong>L1 and L2 regularization</strong> on leaf weights to prevent overfitting</li>
+      <li><strong>Column subsampling</strong> (like Random Forest) for better generalization</li>
+      <li><strong>Parallel tree construction</strong> for speed</li>
+      <li><strong>Built-in missing value handling</strong></li>
+      <li><strong>Pruning</strong> using max_delta_step and gamma</li>
+    </ul>
+
+    <h3>Python Implementation</h3>
+    <pre><code>import xgboost as xgb
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.metrics import accuracy_score, classification_report
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train XGBoost
+model = xgb.XGBClassifier(
+    n_estimators=500,
+    learning_rate=0.05,
+    max_depth=6,
+    subsample=0.8,
+    colsample_bytree=0.8,
+    reg_alpha=0.1,      # L1 regularization
+    reg_lambda=1.0,     # L2 regularization
+    use_label_encoder=False,
+    eval_metric='logloss',
+    random_state=42,
+    n_jobs=-1
+)
+
+# Train with early stopping
+model.fit(
+    X_train, y_train,
+    eval_set=[(X_test, y_test)],
+    early_stopping_rounds=50,
+    verbose=100
+)
+
+y_pred = model.predict(X_test)
+print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+print(classification_report(y_test, y_pred))</code></pre>
+
+    <h3>Key Hyperparameters</h3>
+    <table>
+      <thead>
+        <tr><th>Parameter</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>n_estimators</td><td>Number of boosting rounds (trees).</td></tr>
+        <tr><td>learning_rate</td><td>Step size shrinkage (0.01–0.3). Lower = more trees needed but better generalization.</td></tr>
+        <tr><td>max_depth</td><td>Max tree depth (3–10). Controls complexity.</td></tr>
+        <tr><td>subsample</td><td>Fraction of training data per tree (0.5–1.0).</td></tr>
+        <tr><td>colsample_bytree</td><td>Fraction of features per tree.</td></tr>
+        <tr><td>reg_alpha / reg_lambda</td><td>L1 / L2 regularization coefficients.</td></tr>
+        <tr><td>gamma</td><td>Minimum loss reduction to make a split. Higher = more conservative.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Early Stopping</h3>
+    <p>Use <code>early_stopping_rounds</code> to stop training when validation performance doesn't improve for N consecutive rounds. This prevents overfitting and saves training time.</p>
+
+    <h3>Advantages and Disadvantages</h3>
+    <p><strong>Advantages:</strong> State-of-the-art performance on tabular data, handles missing values natively, built-in regularization, fast with parallel processing, flexible objective functions.</p>
+    <p><strong>Disadvantages:</strong> Many hyperparameters to tune, slower to train than Random Forest, can overfit on small datasets without careful tuning.</p>
+
+    <h3>Conclusion</h3>
+    <p>XGBoost is the most powerful algorithm for structured data. When combined with proper feature engineering and hyperparameter tuning, it consistently delivers top performance. I personally used XGBoost in my recruitment fraud detection research, achieving 99.44% accuracy.</p>
+  `
+},
+
+{
+  title: "Neural Networks: How Deep Learning Actually Works",
+  description: "From perceptrons to deep neural networks — understand forward propagation, backpropagation, activation functions, and build one in Python.",
+  date: "February 21, 2026",
+  category: "Deep Learning",
+  readTime: 12,
+  slug: "neural-networks-explained",
+  content: `
+    <p>Neural networks are the backbone of modern AI — from image recognition and natural language processing to autonomous driving and game playing. Understanding how they work is essential for any AI/ML practitioner.</p>
+
+    <h3>What is a Neural Network?</h3>
+    <p>A neural network is a computational model inspired by the human brain. It consists of layers of interconnected nodes (neurons). Each neuron takes inputs, applies a weighted sum, adds a bias, passes through an activation function, and outputs a value.</p>
+
+    <pre><code>output = activation(w1*x1 + w2*x2 + ... + wn*xn + bias)</code></pre>
+
+    <h3>Architecture</h3>
+    <ul>
+      <li><strong>Input Layer:</strong> Receives raw features (one neuron per feature)</li>
+      <li><strong>Hidden Layers:</strong> Learn intermediate representations. More layers = deeper network = more complex patterns</li>
+      <li><strong>Output Layer:</strong> Produces final prediction (sigmoid for binary, softmax for multiclass, linear for regression)</li>
+    </ul>
+
+    <h3>Activation Functions</h3>
+    <table>
+      <thead>
+        <tr><th>Function</th><th>Formula</th><th>Use Case</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ReLU</td><td>max(0, x)</td><td>Default for hidden layers</td></tr>
+        <tr><td>Sigmoid</td><td>1/(1+e^-x)</td><td>Binary output layer</td></tr>
+        <tr><td>Softmax</td><td>e^x / sum(e^x)</td><td>Multiclass output layer</td></tr>
+        <tr><td>Tanh</td><td>(e^x - e^-x)/(e^x + e^-x)</td><td>Hidden layers, RNNs</td></tr>
+        <tr><td>Leaky ReLU</td><td>max(0.01x, x)</td><td>Avoid dying ReLU problem</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Forward and Backward Propagation</h3>
+    <p><strong>Forward Propagation:</strong> Input flows through the network layer by layer to produce a prediction.</p>
+    <p><strong>Backpropagation:</strong> The prediction error is computed (using a loss function), then gradients are calculated and propagated backwards through the network using the chain rule. Weights are updated using gradient descent.</p>
+
+    <pre><code>Loss = -sum(y * log(y_pred))   # Cross-entropy for classification
+Gradient = dLoss/dWeight        # Via chain rule
+Weight_new = Weight_old - learning_rate * Gradient</code></pre>
+
+    <h3>Building a Neural Network in Python (TensorFlow/Keras)</h3>
+    <pre><code>import tensorflow as tf
+from tensorflow.keras import layers, models
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Build model
+model = models.Sequential([
+    layers.Dense(128, activation='relu', input_shape=(X.shape[1],)),
+    layers.BatchNormalization(),
+    layers.Dropout(0.3),
+    layers.Dense(64, activation='relu'),
+    layers.BatchNormalization(),
+    layers.Dropout(0.2),
+    layers.Dense(32, activation='relu'),
+    layers.Dense(1, activation='sigmoid')  # binary classification
+])
+
+# Compile
+model.compile(
+    optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+    loss='binary_crossentropy',
+    metrics=['accuracy']
+)
+
+model.summary()
+
+# Train
+history = model.fit(
+    X_train, y_train,
+    validation_split=0.2,
+    epochs=100,
+    batch_size=32,
+    callbacks=[
+        tf.keras.callbacks.EarlyStopping(patience=10, restore_best_weights=True)
+    ]
+)
+
+# Evaluate
+loss, accuracy = model.evaluate(X_test, y_test)
+print(f"Test Accuracy: {accuracy:.4f}")</code></pre>
+
+    <h3>Regularization Techniques</h3>
+    <ul>
+      <li><strong>Dropout:</strong> Randomly disables neurons during training to prevent co-adaptation</li>
+      <li><strong>Batch Normalization:</strong> Normalizes layer inputs to stabilize and speed up training</li>
+      <li><strong>L2 Regularization (Weight Decay):</strong> Penalizes large weights to keep the model simple</li>
+      <li><strong>Early Stopping:</strong> Stops training when validation loss stops improving</li>
+    </ul>
+
+    <h3>When to Use Neural Networks</h3>
+    <ul>
+      <li>Image classification and object detection (CNNs)</li>
+      <li>Natural language processing (Transformers, RNNs)</li>
+      <li>Speech recognition and generation</li>
+      <li>When you have very large datasets (10k+ samples)</li>
+      <li>When features are raw (pixels, text, audio) rather than tabular</li>
+    </ul>
+
+    <h3>Advantages and Disadvantages</h3>
+    <p><strong>Advantages:</strong> Can learn extremely complex patterns, universal function approximator, state-of-the-art on image/text/audio data, automatic feature learning.</p>
+    <p><strong>Disadvantages:</strong> Requires large amounts of data, computationally expensive, black-box (low interpretability), many hyperparameters to tune, prone to overfitting on small datasets.</p>
+
+    <h3>Conclusion</h3>
+    <p>Neural networks are the foundation of modern deep learning and AI. While they require more data and computation than traditional ML algorithms, they are unmatched for unstructured data like images and text. Understanding their internals — forward pass, backpropagation, activation functions — is essential for building and debugging real AI systems.</p>
+  `
 }
 
-  
+
   ];
   

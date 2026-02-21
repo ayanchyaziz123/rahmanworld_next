@@ -10,9 +10,9 @@ const Profile = () => {
 
                     {/* Profile Image */}
                     <div className="flex-shrink-0">
-                        <div className="w-32 h-32 lg:w-36 lg:h-36 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <div className="w-44 h-44 lg:w-56 lg:h-56 rounded-full overflow-hidden border-4 border-white shadow-lg">
                             <img
-                                src="/images/cover3.jpeg"
+                                src="/images/cover6.jpeg"
                                 alt="Azizur Rahman"
                                 className="w-full h-full object-cover"
                             />

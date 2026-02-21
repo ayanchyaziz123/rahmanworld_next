@@ -108,7 +108,7 @@ const HomePage = () => {
                             <div className="absolute inset-0 bg-blue-100 rounded-full translate-x-3 translate-y-3" />
                             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
                                 <img
-                                    src="/images/cover3.jpeg"
+                                    src="/images/cover6.jpeg"
                                     alt="Rahman Azizur"
                                     className="w-full h-full object-cover"
                                 />
