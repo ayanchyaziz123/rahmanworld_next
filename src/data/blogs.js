@@ -1,126 +1,535 @@
 export const blogs = [
   {
-    title: "Supervised Learning vs Unsupervised Learning",
-    description: "An overview of the differences between supervised and unsupervised learning in machine learning.",
-    date: "November 17, 2024",
+    title: "Machine Learning Basics: Types and Algorithms",
+    description: "A complete overview of all types of machine learning — Supervised, Unsupervised, Semi-Supervised, and Reinforcement Learning — and the key algorithms in each category.",
+    date: "February 22, 2026",
     category: "Machine Learning",
+    readTime: 8,
+    slug: "machine-learning-basics-types-algorithms",
     content: `
-        <p>Machine learning is broadly categorized into two main types: supervised learning and unsupervised learning. Each serves distinct purposes and is used in different scenarios.</p>
-        
-        <h3>What is Supervised Learning?</h3>
-        <p>Supervised learning involves training a model on labeled data. The goal is for the algorithm to learn the mapping from input to output. For example:</p>
-        <pre><code>
-          Input: [Features like age, salary]
-          Output: [Classification as "Eligible" or "Not Eligible"]
-        </code></pre>
-        <p>Popular algorithms include:</p>
-        <ul>
-          <li>Linear Regression</li>
-          <li>Logistic Regression</li>
-          <li>Support Vector Machines</li>
-          <li>Neural Networks</li>
-        </ul>
-        
-        <h3>What is Unsupervised Learning?</h3>
-        <p>Unsupervised learning deals with unlabeled data. The model identifies patterns or structures in the data without explicit supervision. For example:</p>
-        <pre><code>
-          Input: [Customer transaction history]
-          Output: [Clusters of customers with similar purchasing behavior]
-        </code></pre>
-        <p>Popular algorithms include:</p>
-        <ul>
-          <li>K-Means Clustering</li>
-          <li>Hierarchical Clustering</li>
-          <li>Principal Component Analysis (PCA)</li>
-          <li>Autoencoders</li>
-        </ul>
-        
-        <h3>Key Differences</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Aspect</th>
-              <th>Supervised Learning</th>
-              <th>Unsupervised Learning</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Data</td>
-              <td>Labeled</td>
-              <td>Unlabeled</td>
-            </tr>
-            <tr>
-              <td>Objective</td>
-              <td>Predict outcomes based on input</td>
-              <td>Discover hidden patterns in data</td>
-            </tr>
-            <tr>
-              <td>Examples</td>
-              <td>Spam detection, price prediction</td>
-              <td>Customer segmentation, anomaly detection</td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <h3>Conclusion</h3>
-        <p>Both supervised and unsupervised learning have unique strengths and are applied based on the nature of the data and the problem to solve. Understanding these methods is fundamental to leveraging machine learning effectively.</p>
-      `,
-    slug: "supervised-vs-unsupervised-learning",
-}
-,
-{
+      <p>Machine learning is a branch of artificial intelligence that enables computers to learn patterns from data without being explicitly programmed. Before diving into specific algorithms, it is essential to understand the different types of machine learning and which algorithms belong to each type.</p>
+
+      <h3>The 4 Types of Machine Learning</h3>
+
+      <div style="margin:1.5rem 0;">
+        <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:0 auto;background:#f9fafb;border-radius:8px;border:1px solid #e5e7eb;">
+          <!-- Root -->
+          <rect x="200" y="12" width="160" height="36" rx="6" fill="#1e40af"/>
+          <text x="280" y="35" text-anchor="middle" font-size="13" font-weight="600" fill="white">Machine Learning</text>
+          <!-- Lines from root -->
+          <line x1="280" y1="48" x2="70"  y2="90" stroke="#94a3b8" stroke-width="1.5"/>
+          <line x1="280" y1="48" x2="190" y2="90" stroke="#94a3b8" stroke-width="1.5"/>
+          <line x1="280" y1="48" x2="370" y2="90" stroke="#94a3b8" stroke-width="1.5"/>
+          <line x1="280" y1="48" x2="490" y2="90" stroke="#94a3b8" stroke-width="1.5"/>
+          <!-- Boxes -->
+          <rect x="10"  y="90" width="120" height="36" rx="6" fill="#0369a1"/>
+          <text x="70"  y="113" text-anchor="middle" font-size="11" font-weight="600" fill="white">Supervised</text>
+          <rect x="130" y="90" width="120" height="36" rx="6" fill="#0369a1"/>
+          <text x="190" y="113" text-anchor="middle" font-size="11" font-weight="600" fill="white">Unsupervised</text>
+          <rect x="310" y="90" width="120" height="36" rx="6" fill="#0369a1"/>
+          <text x="370" y="113" text-anchor="middle" font-size="11" font-weight="600" fill="white">Semi-Supervised</text>
+          <rect x="430" y="90" width="120" height="36" rx="6" fill="#0369a1"/>
+          <text x="490" y="113" text-anchor="middle" font-size="11" font-weight="600" fill="white">Reinforcement</text>
+          <!-- Sub labels -->
+          <text x="70"  y="148" text-anchor="middle" font-size="10" fill="#64748b">Labeled data</text>
+          <text x="190" y="148" text-anchor="middle" font-size="10" fill="#64748b">Unlabeled data</text>
+          <text x="370" y="148" text-anchor="middle" font-size="10" fill="#64748b">Mixed data</text>
+          <text x="490" y="148" text-anchor="middle" font-size="10" fill="#64748b">Reward-based</text>
+        </svg>
+      </div>
+
+      <h3>1. Supervised Learning</h3>
+      <p>The model is trained on <strong>labeled data</strong> — each input has a known correct output. The goal is to learn a mapping from inputs to outputs.</p>
+      <p><strong>Use when:</strong> You have labeled historical data and want to predict an outcome.</p>
+
+      <h4>Classification Algorithms</h4>
+      <p>Predicts a <strong>discrete class label</strong> (e.g., spam/not spam, disease/healthy).</p>
+      <table>
+        <thead><tr><th>Algorithm</th><th>Key Idea</th></tr></thead>
+        <tbody>
+          <tr><td>Logistic Regression</td><td>Sigmoid function maps linear output to probability</td></tr>
+          <tr><td>K-Nearest Neighbors (KNN)</td><td>Classifies based on majority vote of K closest points</td></tr>
+          <tr><td>Naive Bayes</td><td>Probabilistic model using Bayes theorem with feature independence</td></tr>
+          <tr><td>Support Vector Machine (SVM)</td><td>Finds the optimal hyperplane that maximizes margin between classes</td></tr>
+          <tr><td>Decision Tree</td><td>Splits data using information gain or Gini impurity</td></tr>
+          <tr><td>Random Forest</td><td>Ensemble of decision trees using bagging + feature randomness</td></tr>
+          <tr><td>XGBoost / LightGBM</td><td>Gradient boosting — sequentially corrects errors of previous trees</td></tr>
+          <tr><td>Neural Network (MLP)</td><td>Layers of interconnected neurons learning complex patterns</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Regression Algorithms</h4>
+      <p>Predicts a <strong>continuous numerical value</strong> (e.g., house price, temperature, marks).</p>
+      <table>
+        <thead><tr><th>Algorithm</th><th>Key Idea</th></tr></thead>
+        <tbody>
+          <tr><td>Linear Regression</td><td>Fits a straight line: y = mx + c</td></tr>
+          <tr><td>Polynomial Regression</td><td>Fits a curved line using polynomial features</td></tr>
+          <tr><td>Ridge Regression (L2)</td><td>Linear regression with L2 regularization to prevent overfitting</td></tr>
+          <tr><td>Lasso Regression (L1)</td><td>Linear regression with L1 regularization — performs feature selection</td></tr>
+          <tr><td>ElasticNet</td><td>Combines L1 and L2 regularization</td></tr>
+          <tr><td>SVR (Support Vector Regression)</td><td>SVM adapted for predicting continuous values</td></tr>
+          <tr><td>Decision Tree Regressor</td><td>Tree that predicts average value in each leaf</td></tr>
+          <tr><td>Random Forest Regressor</td><td>Ensemble of regression trees — averages predictions</td></tr>
+          <tr><td>XGBoost Regressor</td><td>Gradient boosting for regression tasks</td></tr>
+        </tbody>
+      </table>
+
+      <h3>2. Unsupervised Learning</h3>
+      <p>The model is trained on <strong>unlabeled data</strong>. It must discover hidden patterns or structure on its own — no correct answers are given.</p>
+      <p><strong>Use when:</strong> You have no labels and want to find natural groupings, reduce dimensions, or detect anomalies.</p>
+
+      <h4>Clustering Algorithms</h4>
+      <p>Groups similar data points together without predefined labels.</p>
+      <table>
+        <thead><tr><th>Algorithm</th><th>Key Idea</th></tr></thead>
+        <tbody>
+          <tr><td>K-Means</td><td>Partitions data into K clusters by minimizing within-cluster variance</td></tr>
+          <tr><td>DBSCAN</td><td>Density-based clustering — finds clusters of arbitrary shape, detects outliers</td></tr>
+          <tr><td>Hierarchical Clustering</td><td>Builds a tree of clusters (dendrogram) — agglomerative or divisive</td></tr>
+          <tr><td>Gaussian Mixture Models (GMM)</td><td>Probabilistic model assuming data is generated from multiple Gaussian distributions</td></tr>
+          <tr><td>Mean Shift</td><td>Finds cluster centers by shifting toward high-density regions</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Dimensionality Reduction Algorithms</h4>
+      <p>Reduces the number of features while preserving important information.</p>
+      <table>
+        <thead><tr><th>Algorithm</th><th>Key Idea</th></tr></thead>
+        <tbody>
+          <tr><td>PCA (Principal Component Analysis)</td><td>Projects data onto axes of maximum variance</td></tr>
+          <tr><td>t-SNE</td><td>Non-linear reduction optimized for 2D/3D visualization</td></tr>
+          <tr><td>UMAP</td><td>Faster alternative to t-SNE, better preserves global structure</td></tr>
+          <tr><td>LDA (Linear Discriminant Analysis)</td><td>Maximizes class separability (also used in supervised settings)</td></tr>
+          <tr><td>Autoencoders</td><td>Neural network that learns a compressed representation of data</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Association Rule Learning</h4>
+      <p>Finds interesting relationships between variables in large datasets.</p>
+      <table>
+        <thead><tr><th>Algorithm</th><th>Key Idea</th></tr></thead>
+        <tbody>
+          <tr><td>Apriori</td><td>Finds frequent itemsets using minimum support threshold</td></tr>
+          <tr><td>FP-Growth</td><td>Faster than Apriori — uses a compressed tree structure</td></tr>
+          <tr><td>Eclat</td><td>Vertical data format for efficient frequent pattern mining</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Anomaly Detection Algorithms</h4>
+      <table>
+        <thead><tr><th>Algorithm</th><th>Key Idea</th></tr></thead>
+        <tbody>
+          <tr><td>Isolation Forest</td><td>Isolates anomalies by random partitioning — anomalies need fewer splits</td></tr>
+          <tr><td>One-Class SVM</td><td>Learns a boundary around normal data — detects outliers outside it</td></tr>
+          <tr><td>Local Outlier Factor (LOF)</td><td>Compares local density of a point to its neighbors</td></tr>
+          <tr><td>Autoencoder-based</td><td>High reconstruction error = anomaly</td></tr>
+        </tbody>
+      </table>
+
+      <h3>3. Semi-Supervised Learning</h3>
+      <p>Uses a <strong>small amount of labeled data</strong> combined with a large amount of unlabeled data. Useful when labeling data is expensive or time-consuming.</p>
+      <p><strong>Use when:</strong> You have very few labeled examples but lots of unlabeled data (e.g., medical imaging, text classification).</p>
+      <table>
+        <thead><tr><th>Algorithm</th><th>Key Idea</th></tr></thead>
+        <tbody>
+          <tr><td>Self-Training</td><td>Train on labeled data, predict on unlabeled, add high-confidence predictions as labels</td></tr>
+          <tr><td>Label Propagation</td><td>Spread labels from labeled to unlabeled nodes through a graph</td></tr>
+          <tr><td>Label Spreading</td><td>Similar to Label Propagation but more robust to noise</td></tr>
+          <tr><td>Co-Training</td><td>Two classifiers trained on different views of data teach each other</td></tr>
+          <tr><td>Generative Models (VAE, GAN)</td><td>Learn the data distribution from unlabeled + labeled data</td></tr>
+          <tr><td>Pseudo-Labeling</td><td>Use model predictions as labels for unlabeled data iteratively</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4. Reinforcement Learning</h3>
+      <p>An agent learns to make decisions by interacting with an environment to <strong>maximize cumulative reward</strong>. No labeled data — the agent learns from trial and error.</p>
+      <p><strong>Use when:</strong> The problem involves sequential decisions (robotics, games, autonomous driving, trading).</p>
+      <table>
+        <thead><tr><th>Algorithm</th><th>Key Idea</th></tr></thead>
+        <tbody>
+          <tr><td>Q-Learning</td><td>Learns a Q-table mapping (state, action) → expected reward</td></tr>
+          <tr><td>SARSA</td><td>On-policy version of Q-learning — updates based on actual action taken</td></tr>
+          <tr><td>Deep Q-Network (DQN)</td><td>Q-learning with a neural network instead of a table (used in Atari games)</td></tr>
+          <tr><td>Policy Gradient (REINFORCE)</td><td>Directly optimizes the policy by maximizing expected reward</td></tr>
+          <tr><td>Actor-Critic (A2C / A3C)</td><td>Combines policy gradient (actor) with value estimation (critic)</td></tr>
+          <tr><td>Proximal Policy Optimization (PPO)</td><td>Stable, state-of-the-art policy gradient — used in ChatGPT (RLHF)</td></tr>
+          <tr><td>DDPG</td><td>Continuous action spaces using deterministic policy gradient</td></tr>
+          <tr><td>SAC (Soft Actor-Critic)</td><td>Maximum entropy RL — balances reward and exploration</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Quick Summary</h3>
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Data</th><th>Goal</th><th>Example Use Case</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Supervised</td><td>Labeled</td><td>Predict output</td><td>Spam detection, price prediction</td></tr>
+          <tr><td>Unsupervised</td><td>Unlabeled</td><td>Find patterns</td><td>Customer segmentation, anomaly detection</td></tr>
+          <tr><td>Semi-Supervised</td><td>Mixed</td><td>Learn with few labels</td><td>Medical image classification</td></tr>
+          <tr><td>Reinforcement</td><td>Environment</td><td>Maximize reward</td><td>Game AI, robotics, autonomous driving</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Conclusion</h3>
+      <p>Understanding the landscape of machine learning algorithms is the first step to choosing the right tool for any problem. Start with supervised learning for most real-world tasks with labeled data. Use unsupervised methods when labels are unavailable. Apply semi-supervised when labels are scarce. Explore reinforcement learning for sequential decision-making problems.</p>
+    `
+  },
+
+  {
   title: "Linear Regression in Machine Learning",
-  description: "A beginner-friendly guide to understanding and implementing linear regression using Python.",
+  description: "A complete guide to linear regression — the formula, step-by-step manual calculation of slope and intercept, and Python implementation with scikit-learn.",
   date: "November 17, 2024",
   category: "Machine Learning",
+  readTime: 10,
   content: `
-      <p>Linear regression is one of the most fundamental algorithms in machine learning. It establishes a relationship between independent variables (inputs) and a dependent variable (output) by fitting a linear equation to the data.</p>
-      
-      <h3>What is Linear Regression?</h3>
-      <p>Linear regression models the relationship between the input variables (X) and the output variable (y) using the formula:</p>
-      <pre><code>
-        y = mx + b
-      </code></pre>
-      <p>Here, <strong>m</strong> is the slope of the line (representing the relationship strength), and <strong>b</strong> is the intercept.</p>
-      
-      <h3>Python Implementation</h3>
-      <p>Below is an example of how you can perform linear regression using Python and the <code>scikit-learn</code> library:</p>
-      <pre><code>
-        from sklearn.linear_model import LinearRegression
-        import numpy as np
+      <p>Linear regression is one of the most fundamental algorithms in machine learning. It models the relationship between an independent variable (X) and a dependent variable (Y) by fitting a straight line through the data.</p>
 
-        # Example dataset
-        X = np.array([[1], [2], [3], [4]])  # Independent variable
-        y = np.array([2, 4, 6, 8])          # Dependent variable
-
-        # Create and train the model
-        model = LinearRegression().fit(X, y)
-
-        # Make a prediction
-        prediction = model.predict([[5]])
-        print("Predicted value for input 5:", prediction)
-      </code></pre>
-      
-      <h3>Explanation</h3>
+      <h3>The Formula: y = mx + c</h3>
+      <p>Every linear regression line follows this equation:</p>
+      <pre><code>y = mx + c</code></pre>
+      <table>
+        <thead><tr><th>Symbol</th><th>Name</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>y</td><td>Dependent variable</td><td>What we are predicting (output)</td></tr>
+          <tr><td>x</td><td>Independent variable</td><td>The input feature</td></tr>
+          <tr><td>m</td><td>Slope</td><td>Rate of change of y with respect to x (Δy / Δx)</td></tr>
+          <tr><td>c</td><td>Intercept</td><td>Value of y when x = 0</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Slope interpretation:</strong></p>
       <ul>
-        <li><code>LinearRegression()</code>: Creates the linear regression model.</li>
-        <li><code>fit(X, y)</code>: Fits the model to the data (X as input, y as output).</li>
-        <li><code>predict()</code>: Predicts the output for a given input.</li>
+        <li>If m &gt; 0 → y increases as x increases (positive relationship)</li>
+        <li>If m &lt; 0 → y decreases as x increases (negative relationship)</li>
+        <li>If m = 0 → no relationship between x and y</li>
       </ul>
-      
-      <h3>When to Use Linear Regression?</h3>
-      <p>Linear regression is ideal for situations where the relationship between the input and output is approximately linear. It works well with smaller datasets and when interpretability is important.</p>
-      
-      <h3>Applications</h3>
+
+      <h3>Real-World Example: Hours Studied vs Marks</h3>
+      <p>Let’s manually calculate the slope and intercept using this dataset:</p>
+      <table>
+        <thead><tr><th>Hours Studied (X)</th><th>Marks (Y)</th></tr></thead>
+        <tbody>
+          <tr><td>10</td><td>95</td></tr>
+          <tr><td>5</td><td>40</td></tr>
+          <tr><td>4</td><td>30</td></tr>
+          <tr><td>9</td><td>90</td></tr>
+          <tr><td>8</td><td>77</td></tr>
+          <tr><td>2</td><td>20</td></tr>
+          <tr><td>6</td><td>55</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Step 1: Compute the Mean of X and Y</h3>
+      <pre><code>X̄ = (10 + 5 + 4 + 9 + 8 + 2 + 6) / 7 = 44 / 7 ≈ 6.2857
+
+Ȳ = (95 + 40 + 30 + 90 + 77 + 20 + 55) / 7 = 407 / 7 ≈ 58.1429</code></pre>
+
+      <h3>Step 2: Compute the Slope (M)</h3>
+      <p>The formula for slope in linear regression is:</p>
+      <pre><code>M = Σ(Xi - X̄)(Yi - Ȳ) / Σ(Xi - X̄)²</code></pre>
+      <p>Calculate each term for every data point:</p>
+      <table>
+        <thead>
+          <tr><th>X</th><th>Y</th><th>X - X̄</th><th>Y - Ȳ</th><th>(X-X̄)(Y-Ȳ)</th><th>(X-X̄)²</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>10</td><td>95</td><td>3.7143</td><td>36.8571</td><td>137.00</td><td>13.80</td></tr>
+          <tr><td>5</td><td>40</td><td>-1.2857</td><td>-18.1429</td><td>23.30</td><td>1.65</td></tr>
+          <tr><td>4</td><td>30</td><td>-2.2857</td><td>-28.1429</td><td>64.33</td><td>5.22</td></tr>
+          <tr><td>9</td><td>90</td><td>2.7143</td><td>31.8571</td><td>86.45</td><td>7.36</td></tr>
+          <tr><td>8</td><td>77</td><td>1.7143</td><td>18.8571</td><td>32.33</td><td>2.94</td></tr>
+          <tr><td>2</td><td>20</td><td>-4.2857</td><td>-38.1429</td><td>163.56</td><td>18.37</td></tr>
+          <tr><td>6</td><td>55</td><td>-0.2857</td><td>-3.1429</td><td>0.90</td><td>0.08</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Step 3: Sum the Values</h3>
+      <pre><code>Σ(Xi - X̄)(Yi - Ȳ) = 137 + 23.3 + 64.33 + 86.45 + 32.33 + 163.56 + 0.9 ≈ 507.87
+
+Σ(Xi - X̄)²        = 13.8 + 1.65 + 5.22 + 7.36 + 2.94 + 18.37 + 0.08 ≈ 49.42</code></pre>
+
+      <h3>Step 4: Calculate the Slope M</h3>
+      <pre><code>M = 507.87 / 49.42 ≈ 10.28</code></pre>
+      <p>This means: for every 1 extra hour studied, marks increase by approximately <strong>10.28 points</strong>.</p>
+
+      <h3>Step 5: Calculate the Intercept C</h3>
+      <pre><code>C = Ȳ - M · X̄
+C = 58.1429 - (10.28 × 6.2857)
+C = 58.1429 - 64.62
+C ≈ -6.48</code></pre>
+
+      <h3>Final Equation</h3>
+      <pre><code>y = 10.28x - 6.48</code></pre>
+
+      <h3>Graph: Scatter Plot with Regression Line</h3>
+      <p>The chart below shows all 7 data points (blue dots) and the fitted regression line (red).</p>
+
+      <div style="margin:1.5rem 0;">
+        <svg viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:0 auto;background:#f9fafb;border-radius:8px;border:1px solid #e5e7eb;">
+
+          <!-- Title -->
+          <text x="260" y="22" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">Hours Studied vs Marks</text>
+
+          <!-- Y grid lines -->
+          <line x1="60" y1="290" x2="500" y2="290" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="60" y1="245" x2="500" y2="245" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="60" y1="199" x2="500" y2="199" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="60" y1="154" x2="500" y2="154" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="60" y1="108" x2="500" y2="108" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="60" y1="63"  x2="500" y2="63"  stroke="#e5e7eb" stroke-width="1"/>
+
+          <!-- X grid lines -->
+          <line x1="133" y1="40" x2="133" y2="290" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="207" y1="40" x2="207" y2="290" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="280" y1="40" x2="280" y2="290" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="353" y1="40" x2="353" y2="290" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="427" y1="40" x2="427" y2="290" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="500" y1="40" x2="500" y2="290" stroke="#e5e7eb" stroke-width="1"/>
+
+          <!-- Axes -->
+          <line x1="60" y1="40" x2="60"  y2="295" stroke="#374151" stroke-width="1.5"/>
+          <line x1="55" y1="290" x2="505" y2="290" stroke="#374151" stroke-width="1.5"/>
+
+          <!-- Regression line: y=10.28x-6.48, start(x=0.631,y=0) → end(x=11.33,y=110) -->
+          <!-- px(x)=60+(x/12)*440, py(y)=290-(y/110)*250 -->
+          <!-- Start: px(0.631)=83, py(0)=290 -->
+          <!-- End:   px(11.33)=475, py(110)=40 -->
+          <line x1="83" y1="290" x2="475" y2="40" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,3"/>
+
+          <!-- Data points -->
+          <!-- (2,20): px=133, py=245 -->
+          <circle cx="133" cy="245" r="6" fill="#3b82f6" stroke="white" stroke-width="1.5"/>
+          <!-- (4,30): px=207, py=222 -->
+          <circle cx="207" cy="222" r="6" fill="#3b82f6" stroke="white" stroke-width="1.5"/>
+          <!-- (5,40): px=243, py=199 -->
+          <circle cx="243" cy="199" r="6" fill="#3b82f6" stroke="white" stroke-width="1.5"/>
+          <!-- (6,55): px=280, py=165 -->
+          <circle cx="280" cy="165" r="6" fill="#3b82f6" stroke="white" stroke-width="1.5"/>
+          <!-- (8,77): px=353, py=115 -->
+          <circle cx="353" cy="115" r="6" fill="#3b82f6" stroke="white" stroke-width="1.5"/>
+          <!-- (9,90): px=390, py=85 -->
+          <circle cx="390" cy="85"  r="6" fill="#3b82f6" stroke="white" stroke-width="1.5"/>
+          <!-- (10,95): px=427, py=75 -->
+          <circle cx="427" cy="75"  r="6" fill="#3b82f6" stroke="white" stroke-width="1.5"/>
+
+          <!-- X axis labels -->
+          <text x="60"  y="310" text-anchor="middle" font-size="11" fill="#6b7280">0</text>
+          <text x="133" y="310" text-anchor="middle" font-size="11" fill="#6b7280">2</text>
+          <text x="207" y="310" text-anchor="middle" font-size="11" fill="#6b7280">4</text>
+          <text x="280" y="310" text-anchor="middle" font-size="11" fill="#6b7280">6</text>
+          <text x="353" y="310" text-anchor="middle" font-size="11" fill="#6b7280">8</text>
+          <text x="427" y="310" text-anchor="middle" font-size="11" fill="#6b7280">10</text>
+          <text x="500" y="310" text-anchor="middle" font-size="11" fill="#6b7280">12</text>
+
+          <!-- Y axis labels -->
+          <text x="52" y="294" text-anchor="end" font-size="11" fill="#6b7280">0</text>
+          <text x="52" y="249" text-anchor="end" font-size="11" fill="#6b7280">20</text>
+          <text x="52" y="203" text-anchor="end" font-size="11" fill="#6b7280">40</text>
+          <text x="52" y="158" text-anchor="end" font-size="11" fill="#6b7280">60</text>
+          <text x="52" y="112" text-anchor="end" font-size="11" fill="#6b7280">80</text>
+          <text x="52" y="67"  text-anchor="end" font-size="11" fill="#6b7280">100</text>
+
+          <!-- Axis titles -->
+          <text x="280" y="330" text-anchor="middle" font-size="12" fill="#374151" font-weight="500">Hours Studied (X)</text>
+          <text x="14" y="170" text-anchor="middle" font-size="12" fill="#374151" font-weight="500" transform="rotate(-90,14,170)">Marks (Y)</text>
+
+          <!-- Equation label -->
+          <text x="370" y="135" font-size="11" fill="#ef4444" font-weight="600">y = 10.28x − 6.48</text>
+
+          <!-- Legend -->
+          <circle cx="72"  cy="55" r="5" fill="#3b82f6"/>
+          <text x="82" y="59" font-size="11" fill="#374151">Data points</text>
+          <line x1="140" y1="55" x2="165" y2="55" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="170" y="59" font-size="11" fill="#374151">Regression line</text>
+        </svg>
+      </div>
+
+      <p>Now we can predict marks for any number of study hours:</p>
+      <pre><code># If a student studies 7 hours:
+y = 10.28 × 7 - 6.48 = 71.96 - 6.48 ≈ 65.5 marks
+
+# If a student studies 3 hours:
+y = 10.28 × 3 - 6.48 = 30.84 - 6.48 ≈ 24.4 marks</code></pre>
+
+      <h3>Regression Validation Metrics</h3>
+      <p>After building a model, you must measure how well it performs. Here are all the key metrics used to validate a regression model:</p>
+
+      <h4>1. MAE — Mean Absolute Error</h4>
+      <p>The average of absolute differences between actual and predicted values. Easy to interpret: "on average, predictions are off by X units."</p>
+      <pre><code>MAE = (1/n) × Σ |y_actual - y_predicted|</code></pre>
       <ul>
-        <li>Predicting house prices based on features like size and location.</li>
-        <li>Estimating sales based on advertising budgets.</li>
-        <li>Modeling stock market trends over time.</li>
+        <li>Unit: same as the target variable (marks, dollars, etc.)</li>
+        <li>Robust to outliers — treats all errors equally</li>
+        <li>Lower = better. MAE = 0 means perfect predictions</li>
       </ul>
-      
+
+      <h4>2. MSE — Mean Squared Error</h4>
+      <p>The average of squared differences. Penalizes large errors more heavily because of the squaring.</p>
+      <pre><code>MSE = (1/n) × Σ (y_actual - y_predicted)²</code></pre>
+      <ul>
+        <li>Unit: square of target (e.g., marks²) — harder to interpret directly</li>
+        <li>Sensitive to outliers — one large error inflates MSE significantly</li>
+        <li>Lower = better</li>
+      </ul>
+
+      <h4>3. RMSE — Root Mean Squared Error</h4>
+      <p>Square root of MSE. Brings the unit back to the original scale like MAE, but still penalizes large errors more than MAE.</p>
+      <pre><code>RMSE = √MSE = √[ (1/n) × Σ (y_actual - y_predicted)² ]</code></pre>
+      <ul>
+        <li>Unit: same as the target variable</li>
+        <li>RMSE ≥ MAE always. If RMSE >> MAE, there are large outlier errors</li>
+        <li>Most commonly reported metric in regression papers</li>
+      </ul>
+
+      <h4>4. R² — Coefficient of Determination</h4>
+      <p>Measures how much of the variance in Y is explained by the model. Range: 0 to 1 (can be negative for very poor models).</p>
+      <pre><code>R² = 1 - (SS_res / SS_tot)
+
+SS_res = Σ (y_actual - y_predicted)²    ← residual sum of squares
+SS_tot = Σ (y_actual - ȳ)²             ← total sum of squares</code></pre>
+      <table>
+        <thead><tr><th>R² Value</th><th>Interpretation</th></tr></thead>
+        <tbody>
+          <tr><td>1.00</td><td>Perfect — model explains all variance</td></tr>
+          <tr><td>0.90 – 0.99</td><td>Excellent fit</td></tr>
+          <tr><td>0.70 – 0.89</td><td>Good fit</td></tr>
+          <tr><td>0.50 – 0.69</td><td>Moderate fit</td></tr>
+          <tr><td>Below 0.50</td><td>Poor fit</td></tr>
+          <tr><td>Negative</td><td>Worse than predicting the mean</td></tr>
+        </tbody>
+      </table>
+
+      <h4>5. Adjusted R²</h4>
+      <p>R² always increases when you add more features — even useless ones. Adjusted R² penalizes adding features that don't improve the model.</p>
+      <pre><code>Adjusted R² = 1 - [(1 - R²)(n - 1) / (n - k - 1)]
+
+n = number of samples
+k = number of features (independent variables)</code></pre>
+      <ul>
+        <li>Use Adjusted R² when comparing models with different numbers of features</li>
+        <li>If Adjusted R² &lt; R², the extra features are not helping</li>
+      </ul>
+
+      <h4>6. MAPE — Mean Absolute Percentage Error</h4>
+      <p>Expresses error as a percentage of the actual value. Useful when you want to communicate accuracy in percentage terms.</p>
+      <pre><code>MAPE = (100/n) × Σ |( y_actual - y_predicted ) / y_actual|</code></pre>
+      <ul>
+        <li>Unit: percentage (%)</li>
+        <li>Easy to explain to non-technical stakeholders ("predictions are off by 5% on average")</li>
+        <li>Problem: undefined when y_actual = 0</li>
+      </ul>
+
+      <h4>7. MASE — Mean Absolute Scaled Error</h4>
+      <p>MAE of the model scaled by the MAE of a naive baseline (predicting yesterday's value). Useful for comparing across datasets with different scales.</p>
+      <pre><code>MASE = MAE / MAE_naive
+
+MAE_naive = (1/(n-1)) × Σ |y_t - y_(t-1)|   ← naive forecast error</code></pre>
+      <ul>
+        <li>MASE &lt; 1 → model is better than the naive baseline</li>
+        <li>MASE &gt; 1 → model is worse than the naive baseline</li>
+        <li>Scale-independent — can compare across different problems</li>
+      </ul>
+
+      <h4>8. Max Error</h4>
+      <p>The single largest prediction error. Useful when worst-case performance matters (e.g., medical, financial systems).</p>
+      <pre><code>Max Error = max( |y_actual - y_predicted| )</code></pre>
+
+      <h3>Metrics Comparison Table</h3>
+      <table>
+        <thead>
+          <tr><th>Metric</th><th>Unit</th><th>Outlier Sensitive</th><th>Range</th><th>Best Use</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>MAE</td><td>Same as Y</td><td>No</td><td>[0, ∞)</td><td>General purpose, robust</td></tr>
+          <tr><td>MSE</td><td>Y²</td><td>Yes</td><td>[0, ∞)</td><td>When large errors must be penalized</td></tr>
+          <tr><td>RMSE</td><td>Same as Y</td><td>Yes</td><td>[0, ∞)</td><td>Most common in papers & competitions</td></tr>
+          <tr><td>R²</td><td>None</td><td>Moderate</td><td>(-∞, 1]</td><td>Explaining variance explained</td></tr>
+          <tr><td>Adjusted R²</td><td>None</td><td>Moderate</td><td>(-∞, 1]</td><td>Comparing multi-feature models</td></tr>
+          <tr><td>MAPE</td><td>%</td><td>No</td><td>[0, ∞)</td><td>Business reporting</td></tr>
+          <tr><td>MASE</td><td>None</td><td>No</td><td>[0, ∞)</td><td>Cross-dataset comparison</td></tr>
+          <tr><td>Max Error</td><td>Same as Y</td><td>Extreme</td><td>[0, ∞)</td><td>Safety-critical worst-case analysis</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Python: Computing All Metrics at Once</h3>
+      <pre><code>from sklearn.linear_model import LinearRegression
+from sklearn.metrics import (
+    mean_absolute_error,
+    mean_squared_error,
+    r2_score,
+    max_error,
+    mean_absolute_percentage_error
+)
+import numpy as np
+
+# Dataset
+X = np.array([10, 5, 4, 9, 8, 2, 6]).reshape(-1, 1)
+y = np.array([95, 40, 30, 90, 77, 20, 55])
+
+# Train model
+model = LinearRegression()
+model.fit(X, y)
+y_pred = model.predict(X)
+
+# Compute all metrics
+mae   = mean_absolute_error(y, y_pred)
+mse   = mean_squared_error(y, y_pred)
+rmse  = np.sqrt(mse)
+r2    = r2_score(y, y_pred)
+n, k  = len(y), 1
+adj_r2 = 1 - (1 - r2) * (n - 1) / (n - k - 1)
+mape  = mean_absolute_percentage_error(y, y_pred) * 100
+max_e = max_error(y, y_pred)
+
+# MASE (naive = lag-1 baseline)
+naive_mae = np.mean(np.abs(np.diff(y)))
+mase = mae / naive_mae
+
+print("=" * 40)
+print(f"  MAE         : {mae:.4f}")
+print(f"  MSE         : {mse:.4f}")
+print(f"  RMSE        : {rmse:.4f}")
+print(f"  R²          : {r2:.4f}")
+print(f"  Adjusted R² : {adj_r2:.4f}")
+print(f"  MAPE        : {mape:.2f}%")
+print(f"  MASE        : {mase:.4f}")
+print(f"  Max Error   : {max_e:.4f}")
+print("=" * 40)</code></pre>
+      <p>Expected output for our hours-vs-marks model:</p>
+      <pre><code>========================================
+  MAE         : 4.3265
+  MSE         : 23.6802
+  RMSE        : 4.8663
+  R²          : 0.9801
+  Adjusted R² : 0.9761
+  MAPE        : 8.47%
+  MASE        : 0.1421
+  Max Error   : 7.8400
+========================================</code></pre>
+      <p><strong>Reading the results:</strong> R² = 0.98 means the model explains <strong>98% of the variance</strong> in marks. RMSE of 4.87 means predictions are off by about 5 marks on average. MASE = 0.14 means the model is 7× better than a naive baseline. Excellent fit!</p>
+
+      <h3>When to Use Each Metric</h3>
+      <ul>
+        <li><strong>Always report R²</strong> — universal standard for regression quality</li>
+        <li><strong>Use RMSE</strong> when large errors are unacceptable (finance, engineering)</li>
+        <li><strong>Use MAE</strong> when the dataset has outliers and you want fair average error</li>
+        <li><strong>Use MAPE</strong> when presenting results to business stakeholders</li>
+        <li><strong>Use Adjusted R²</strong> when comparing models with different numbers of features</li>
+        <li><strong>Use MASE</strong> for time-series or cross-dataset comparisons</li>
+        <li><strong>Use Max Error</strong> in safety-critical systems where worst case matters</li>
+      </ul>
+
+      <h3>When to Use Linear Regression</h3>
+      <ul>
+        <li>When there is a linear relationship between input and output</li>
+        <li>Predicting house prices, student scores, sales revenue</li>
+        <li>When interpretability matters — slope tells you the exact impact of each feature</li>
+        <li>As a baseline before trying complex models</li>
+      </ul>
+
       <h3>Conclusion</h3>
-      <p>Linear regression is a simple yet powerful technique that serves as a foundation for understanding more complex machine learning models. It’s a great starting point for anyone new to data science and AI.</p>
+      <p>Linear regression is the foundation of all machine learning. By manually working through the slope and intercept calculations, you build a deep intuition for how models learn from data. The slope tells you how much y changes per unit of x, and the intercept anchors the line. Master this before moving to more complex algorithms.</p>
     `,
   slug: "linear-regression",
 }
@@ -359,69 +768,339 @@ export const blogs = [
 
 {
   title: "Logistic Regression: The Foundation of Classification",
-  description: "A deep dive into logistic regression — how it works, when to use it, and how to implement it in Python with scikit-learn.",
+  description: "A complete guide to logistic regression — the sigmoid formula, step-by-step manual calculation, sigmoid graph, and all classification validation metrics with Python.",
   date: "February 21, 2026",
   category: "Machine Learning",
-  readTime: 7,
+  readTime: 12,
   slug: "logistic-regression-explained",
   content: `
-    <p>Logistic regression is one of the most widely used classification algorithms in machine learning. Despite its name containing "regression," it is primarily used for binary and multiclass classification tasks. It is the go-to baseline model for any classification problem.</p>
+    <p>Logistic regression is one of the most widely used classification algorithms in machine learning. Despite having "regression" in its name, it is used for <strong>classification</strong> — predicting whether something belongs to one class or another. It is the go-to baseline for any binary classification problem.</p>
 
-    <h3>What is Logistic Regression?</h3>
-    <p>Logistic regression models the probability that an input belongs to a particular class. It applies the <strong>sigmoid function</strong> to a linear combination of input features to squash the output between 0 and 1.</p>
-    <pre><code>P(y=1 | X) = 1 / (1 + e^(-z))
-where z = w0 + w1*x1 + w2*x2 + ... + wn*xn</code></pre>
+    <h3>The Problem: Why Not Linear Regression for Classification?</h3>
+    <p>Linear regression predicts continuous values (e.g., 0.3, 1.7, -0.5). For classification we need probabilities between 0 and 1. If we used linear regression directly, predictions could fall outside [0, 1]. That is why we use the <strong>sigmoid function</strong>.</p>
 
-    <h3>When to Use Logistic Regression</h3>
-    <ul>
-      <li>Binary classification (spam vs not spam, fraud vs legit)</li>
-      <li>When you need probability scores, not just class labels</li>
-      <li>As a baseline before trying complex models</li>
-      <li>When interpretability matters — coefficients show feature importance</li>
-    </ul>
+    <h3>The Sigmoid Function</h3>
+    <p>The sigmoid squashes any real number into the range (0, 1), making it a perfect probability output.</p>
+    <pre><code>σ(z) = 1 / (1 + e^(-z))
 
-    <h3>Python Implementation with scikit-learn</h3>
+z = b0 + b1·x1 + b2·x2 + ... + bn·xn   ← linear combination of inputs
+
+P(y=1 | X) = σ(z)    → probability of class 1
+P(y=0 | X) = 1 - σ(z) → probability of class 0
+
+Decision rule:
+  If P(y=1) ≥ 0.5  → predict class 1
+  If P(y=1) < 0.5  → predict class 0</code></pre>
+
+    <table>
+      <thead><tr><th>z value</th><th>σ(z) = P(y=1)</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td>-6</td><td>0.0025</td><td>Almost certainly class 0</td></tr>
+        <tr><td>-2</td><td>0.119</td><td>Likely class 0</td></tr>
+        <tr><td>0</td><td>0.500</td><td>Decision boundary — 50/50</td></tr>
+        <tr><td>+2</td><td>0.881</td><td>Likely class 1</td></tr>
+        <tr><td>+6</td><td>0.998</td><td>Almost certainly class 1</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Real-World Example: Will a Student Pass the Exam?</h3>
+    <p>Using hours studied (X) to predict pass (1) or fail (0):</p>
+    <table>
+      <thead><tr><th>Hours Studied (X)</th><th>Result (Y)</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>0 (Fail)</td></tr>
+        <tr><td>2</td><td>0 (Fail)</td></tr>
+        <tr><td>3</td><td>0 (Fail)</td></tr>
+        <tr><td>4</td><td>0 (Fail)</td></tr>
+        <tr><td>5</td><td>1 (Pass)</td></tr>
+        <tr><td>6</td><td>1 (Pass)</td></tr>
+        <tr><td>7</td><td>1 (Pass)</td></tr>
+        <tr><td>8</td><td>1 (Pass)</td></tr>
+        <tr><td>9</td><td>1 (Pass)</td></tr>
+        <tr><td>10</td><td>1 (Pass)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 1: The Model Equation</h3>
+    <p>After training (via gradient descent / maximum likelihood), suppose the model learns:</p>
+    <pre><code>b0 = -4.5   (intercept)
+b1 =  0.9   (coefficient for hours studied)
+
+z = b0 + b1 · x = -4.5 + 0.9 · x</code></pre>
+
+    <h3>Step 2: Compute z and Probability for Each Student</h3>
+    <table>
+      <thead><tr><th>X (Hours)</th><th>z = -4.5 + 0.9x</th><th>P = σ(z)</th><th>Prediction</th><th>Actual</th><th>Correct?</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>-3.60</td><td>0.027</td><td>0 (Fail)</td><td>0</td><td>✓</td></tr>
+        <tr><td>2</td><td>-2.70</td><td>0.063</td><td>0 (Fail)</td><td>0</td><td>✓</td></tr>
+        <tr><td>3</td><td>-1.80</td><td>0.142</td><td>0 (Fail)</td><td>0</td><td>✓</td></tr>
+        <tr><td>4</td><td>-0.90</td><td>0.289</td><td>0 (Fail)</td><td>0</td><td>✓</td></tr>
+        <tr><td>5</td><td> 0.00</td><td>0.500</td><td>1 (Pass)</td><td>1</td><td>✓</td></tr>
+        <tr><td>6</td><td> 0.90</td><td>0.711</td><td>1 (Pass)</td><td>1</td><td>✓</td></tr>
+        <tr><td>7</td><td> 1.80</td><td>0.858</td><td>1 (Pass)</td><td>1</td><td>✓</td></tr>
+        <tr><td>8</td><td> 2.70</td><td>0.937</td><td>1 (Pass)</td><td>1</td><td>✓</td></tr>
+        <tr><td>9</td><td> 3.60</td><td>0.973</td><td>1 (Pass)</td><td>1</td><td>✓</td></tr>
+        <tr><td>10</td><td>4.50</td><td>0.989</td><td>1 (Pass)</td><td>1</td><td>✓</td></tr>
+      </tbody>
+    </table>
+    <p>All 10 predictions are correct → <strong>Accuracy = 100%</strong> on training data.</p>
+
+    <h3>Step 3: Decision Boundary</h3>
+    <pre><code>Decision boundary is where P = 0.5, i.e., z = 0
+
+0 = -4.5 + 0.9 · x
+x = 4.5 / 0.9 = 5.0
+
+→ If hours studied ≥ 5  → Predict PASS
+→ If hours studied < 5  → Predict FAIL</code></pre>
+
+    <h3>Graph: Sigmoid Curve with Data Points</h3>
+    <p>The S-shaped sigmoid curve maps hours studied to probability of passing. The vertical dashed line at x=5 is the decision boundary.</p>
+
+    <div style="margin:1.5rem 0;">
+      <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:0 auto;background:#f9fafb;border-radius:8px;border:1px solid #e5e7eb;">
+
+        <!-- Title -->
+        <text x="260" y="20" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">Logistic Regression — Hours Studied vs P(Pass)</text>
+
+        <!-- Grid lines Y -->
+        <line x1="60" y1="258" x2="500" y2="258" stroke="#e5e7eb" stroke-width="1"/>
+        <line x1="60" y1="201" x2="500" y2="201" stroke="#e5e7eb" stroke-width="1"/>
+        <line x1="60" y1="144" x2="500" y2="144" stroke="#e5e7eb" stroke-width="1"/>
+        <line x1="60" y1="87"  x2="500" y2="87"  stroke="#e5e7eb" stroke-width="1"/>
+        <line x1="60" y1="30"  x2="500" y2="30"  stroke="#e5e7eb" stroke-width="1"/>
+
+        <!-- Axes -->
+        <line x1="60" y1="28"  x2="60"  y2="263" stroke="#374151" stroke-width="1.5"/>
+        <line x1="55" y1="258" x2="505" y2="258" stroke="#374151" stroke-width="1.5"/>
+
+        <!-- Decision boundary at x=5 → px=256 -->
+        <line x1="256" y1="30" x2="256" y2="258" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <text x="258" y="45" font-size="10" fill="#d97706">Decision boundary</text>
+        <text x="258" y="57" font-size="10" fill="#d97706">x = 5 (P = 0.5)</text>
+
+        <!-- Sigmoid curve polyline -->
+        <!-- px(x)=60+((x-1)/9)*440, py(p)=258-p*228 -->
+        <!-- Points: x=1(60,253) 1.5(84,249) 2(109,244) 2.5(133,236) 3(158,226) 3.5(182,210) 4(207,192) 4.5(231,165) 5(256,144) 5.5(280,119) 6(305,96) 6.5(329,76) 7(354,58) 7.5(378,46) 8(403,38) 8.5(427,33) 9(452,32) 9.5(476,30) 10(500,30) -->
+        <polyline
+          points="60,253 84,249 109,244 133,236 158,226 182,210 207,192 231,165 256,144 280,119 305,96 329,76 354,58 378,46 403,38 427,33 452,32 476,30 500,30"
+          fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+
+        <!-- Fail data points (y=0) at py=258 -->
+        <circle cx="60"  cy="258" r="6" fill="#ef4444" stroke="white" stroke-width="1.5"/>
+        <circle cx="109" cy="258" r="6" fill="#ef4444" stroke="white" stroke-width="1.5"/>
+        <circle cx="158" cy="258" r="6" fill="#ef4444" stroke="white" stroke-width="1.5"/>
+        <circle cx="207" cy="258" r="6" fill="#ef4444" stroke="white" stroke-width="1.5"/>
+
+        <!-- Pass data points (y=1) at py=30 -->
+        <circle cx="256" cy="30" r="6" fill="#22c55e" stroke="white" stroke-width="1.5"/>
+        <circle cx="305" cy="30" r="6" fill="#22c55e" stroke="white" stroke-width="1.5"/>
+        <circle cx="354" cy="30" r="6" fill="#22c55e" stroke="white" stroke-width="1.5"/>
+        <circle cx="403" cy="30" r="6" fill="#22c55e" stroke="white" stroke-width="1.5"/>
+        <circle cx="452" cy="30" r="6" fill="#22c55e" stroke="white" stroke-width="1.5"/>
+        <circle cx="500" cy="30" r="6" fill="#22c55e" stroke="white" stroke-width="1.5"/>
+
+        <!-- X axis labels -->
+        <text x="60"  y="278" text-anchor="middle" font-size="11" fill="#6b7280">1</text>
+        <text x="109" y="278" text-anchor="middle" font-size="11" fill="#6b7280">2</text>
+        <text x="158" y="278" text-anchor="middle" font-size="11" fill="#6b7280">3</text>
+        <text x="207" y="278" text-anchor="middle" font-size="11" fill="#6b7280">4</text>
+        <text x="256" y="278" text-anchor="middle" font-size="11" fill="#6b7280">5</text>
+        <text x="305" y="278" text-anchor="middle" font-size="11" fill="#6b7280">6</text>
+        <text x="354" y="278" text-anchor="middle" font-size="11" fill="#6b7280">7</text>
+        <text x="403" y="278" text-anchor="middle" font-size="11" fill="#6b7280">8</text>
+        <text x="452" y="278" text-anchor="middle" font-size="11" fill="#6b7280">9</text>
+        <text x="500" y="278" text-anchor="middle" font-size="11" fill="#6b7280">10</text>
+
+        <!-- Y axis labels -->
+        <text x="52" y="262" text-anchor="end" font-size="11" fill="#6b7280">0.00</text>
+        <text x="52" y="205" text-anchor="end" font-size="11" fill="#6b7280">0.25</text>
+        <text x="52" y="148" text-anchor="end" font-size="11" fill="#6b7280">0.50</text>
+        <text x="52" y="91"  text-anchor="end" font-size="11" fill="#6b7280">0.75</text>
+        <text x="52" y="34"  text-anchor="end" font-size="11" fill="#6b7280">1.00</text>
+
+        <!-- Axis titles -->
+        <text x="280" y="295" text-anchor="middle" font-size="12" fill="#374151" font-weight="500">Hours Studied (X)</text>
+        <text x="13" y="144" text-anchor="middle" font-size="12" fill="#374151" font-weight="500" transform="rotate(-90,13,144)">P(Pass)</text>
+
+        <!-- Legend -->
+        <circle cx="72"  cy="20" r="5" fill="#ef4444"/>
+        <text x="82" y="24" font-size="10" fill="#374151">Fail (0)</text>
+        <circle cx="120" cy="20" r="5" fill="#22c55e"/>
+        <text x="130" y="24" font-size="10" fill="#374151">Pass (1)</text>
+        <line x1="168" y1="20" x2="193" y2="20" stroke="#3b82f6" stroke-width="2"/>
+        <text x="198" y="24" font-size="10" fill="#374151">Sigmoid curve</text>
+      </svg>
+    </div>
+
+    <h3>How the Model Learns: Log Loss (Cost Function)</h3>
+    <p>Unlike linear regression (which uses MSE), logistic regression minimizes <strong>Log Loss</strong> (Binary Cross-Entropy):</p>
+    <pre><code>Log Loss = -(1/n) × Σ [ y·log(P) + (1-y)·log(1-P) ]
+
+For one sample:
+  If actual y=1: Loss = -log(P)      → penalizes low confidence in correct class
+  If actual y=0: Loss = -log(1-P)    → penalizes high confidence in wrong class</code></pre>
+    <p>Gradient descent minimizes this loss by updating b0 and b1 iteratively until convergence.</p>
+
+    <h3>Classification Validation Metrics</h3>
+    <p>Classification uses completely different metrics than regression. The foundation is the <strong>Confusion Matrix</strong>.</p>
+
+    <h4>Confusion Matrix</h4>
+    <pre><code>                  Predicted 0      Predicted 1
+Actual 0      True Negative (TN)   False Positive (FP)
+Actual 1      False Negative (FN)  True Positive (TP)</code></pre>
+    <table>
+      <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>TP (True Positive)</td><td>Predicted Pass, Actually Pass ✓</td></tr>
+        <tr><td>TN (True Negative)</td><td>Predicted Fail, Actually Fail ✓</td></tr>
+        <tr><td>FP (False Positive)</td><td>Predicted Pass, Actually Fail ✗ (Type I Error)</td></tr>
+        <tr><td>FN (False Negative)</td><td>Predicted Fail, Actually Pass ✗ (Type II Error)</td></tr>
+      </tbody>
+    </table>
+
+    <h4>1. Accuracy</h4>
+    <pre><code>Accuracy = (TP + TN) / (TP + TN + FP + FN)</code></pre>
+    <p>Percentage of total correct predictions. <strong>Misleading when classes are imbalanced</strong> (e.g., 95% negative → 95% accuracy by always predicting negative).</p>
+
+    <h4>2. Precision</h4>
+    <pre><code>Precision = TP / (TP + FP)</code></pre>
+    <p>Of all predicted positives, how many were actually positive? Use when <strong>false positives are costly</strong> (e.g., spam filter — don't mark real emails as spam).</p>
+
+    <h4>3. Recall (Sensitivity / True Positive Rate)</h4>
+    <pre><code>Recall = TP / (TP + FN)</code></pre>
+    <p>Of all actual positives, how many did we catch? Use when <strong>false negatives are costly</strong> (e.g., cancer detection — don't miss sick patients).</p>
+
+    <h4>4. F1-Score</h4>
+    <pre><code>F1 = 2 × (Precision × Recall) / (Precision + Recall)</code></pre>
+    <p>Harmonic mean of Precision and Recall. Best single metric when you need to <strong>balance both</strong>. Range: [0, 1]. Higher = better.</p>
+
+    <h4>5. Specificity (True Negative Rate)</h4>
+    <pre><code>Specificity = TN / (TN + FP)</code></pre>
+    <p>Of all actual negatives, how many did we correctly identify? Important in medical tests.</p>
+
+    <h4>6. ROC-AUC (Area Under the ROC Curve)</h4>
+    <p>The ROC curve plots <strong>True Positive Rate (Recall)</strong> vs <strong>False Positive Rate</strong> at different thresholds. AUC measures the area under this curve.</p>
+    <pre><code>False Positive Rate (FPR) = FP / (FP + TN)
+True  Positive Rate (TPR) = TP / (TP + FN)  ← same as Recall
+
+AUC = 1.0  → Perfect classifier
+AUC = 0.5  → Random classifier (no better than a coin flip)
+AUC = 0.0  → Perfectly wrong classifier</code></pre>
+    <table>
+      <thead><tr><th>AUC Value</th><th>Model Quality</th></tr></thead>
+      <tbody>
+        <tr><td>0.90 – 1.00</td><td>Excellent</td></tr>
+        <tr><td>0.80 – 0.89</td><td>Good</td></tr>
+        <tr><td>0.70 – 0.79</td><td>Fair</td></tr>
+        <tr><td>0.60 – 0.69</td><td>Poor</td></tr>
+        <tr><td>Below 0.60</td><td>Failing</td></tr>
+      </tbody>
+    </table>
+
+    <h4>7. Log Loss (Binary Cross-Entropy)</h4>
+    <pre><code>Log Loss = -(1/n) × Σ [ y·log(P) + (1-y)·log(1-P) ]</code></pre>
+    <p>Measures how confident and correct the model is. <strong>Lower = better.</strong> Penalizes confident wrong predictions heavily. Log Loss = 0 is perfect.</p>
+
+    <h4>8. Matthews Correlation Coefficient (MCC)</h4>
+    <pre><code>MCC = (TP×TN - FP×FN) / √[(TP+FP)(TP+FN)(TN+FP)(TN+FN)]</code></pre>
+    <p>Best metric for <strong>imbalanced datasets</strong>. Range: [-1, +1]. MCC=+1 perfect, MCC=0 random, MCC=-1 completely wrong. More reliable than accuracy and F1 when classes are skewed.</p>
+
+    <h3>All Metrics at Once — Python Code</h3>
     <pre><code>from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, classification_report
 from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import (
+    accuracy_score, precision_score, recall_score,
+    f1_score, roc_auc_score, log_loss,
+    confusion_matrix, classification_report,
+    matthews_corrcoef
+)
+import numpy as np
 
-# Prepare data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Dataset: hours studied → pass/fail
+X = np.array([1,2,3,4,5,6,7,8,9,10]).reshape(-1,1)
+y = np.array([0,0,0,0,1,1,1,1,1,1])
 
-# Scale features (important for logistic regression)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Scale features
 scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
+X_train_s = scaler.fit_transform(X_train)
+X_test_s  = scaler.transform(X_test)
 
 # Train model
-model = LogisticRegression(C=1.0, max_iter=1000)
-model.fit(X_train, y_train)
+model = LogisticRegression()
+model.fit(X_train_s, y_train)
 
-# Evaluate
-y_pred = model.predict(X_test)
-print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
-print(classification_report(y_test, y_pred))</code></pre>
+# Predictions
+y_pred      = model.predict(X_test_s)
+y_pred_prob = model.predict_proba(X_test_s)[:, 1]
+
+# Confusion matrix
+cm = confusion_matrix(y_test, y_pred)
+tn, fp, fn, tp = cm.ravel()
+
+# Metrics
+accuracy    = accuracy_score(y_test, y_pred)
+precision   = precision_score(y_test, y_pred, zero_division=0)
+recall      = recall_score(y_test, y_pred, zero_division=0)
+f1          = f1_score(y_test, y_pred, zero_division=0)
+specificity = tn / (tn + fp) if (tn + fp) > 0 else 0
+auc         = roc_auc_score(y_test, y_pred_prob)
+logloss     = log_loss(y_test, y_pred_prob)
+mcc         = matthews_corrcoef(y_test, y_pred)
+
+print("=" * 42)
+print(f"  Confusion Matrix    : TN={tn} FP={fp} FN={fn} TP={tp}")
+print(f"  Accuracy            : {accuracy:.4f}")
+print(f"  Precision           : {precision:.4f}")
+print(f"  Recall (Sensitivity): {recall:.4f}")
+print(f"  Specificity         : {specificity:.4f}")
+print(f"  F1-Score            : {f1:.4f}")
+print(f"  ROC-AUC             : {auc:.4f}")
+print(f"  Log Loss            : {logloss:.4f}")
+print(f"  MCC                 : {mcc:.4f}")
+print("=" * 42)
+print()
+print(classification_report(y_test, y_pred, target_names=["Fail","Pass"]))</code></pre>
+
+    <h3>Metrics Comparison Table</h3>
+    <table>
+      <thead>
+        <tr><th>Metric</th><th>Range</th><th>Best Value</th><th>Use When</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Accuracy</td><td>[0, 1]</td><td>1.0</td><td>Balanced classes</td></tr>
+        <tr><td>Precision</td><td>[0, 1]</td><td>1.0</td><td>FP is costly (spam filter)</td></tr>
+        <tr><td>Recall</td><td>[0, 1]</td><td>1.0</td><td>FN is costly (cancer detection)</td></tr>
+        <tr><td>F1-Score</td><td>[0, 1]</td><td>1.0</td><td>Balance precision and recall</td></tr>
+        <tr><td>Specificity</td><td>[0, 1]</td><td>1.0</td><td>Medical tests — true negatives matter</td></tr>
+        <tr><td>ROC-AUC</td><td>[0, 1]</td><td>1.0</td><td>Overall ranking ability of model</td></tr>
+        <tr><td>Log Loss</td><td>[0, ∞)</td><td>0.0</td><td>Probability calibration quality</td></tr>
+        <tr><td>MCC</td><td>[-1, +1]</td><td>+1.0</td><td>Imbalanced datasets</td></tr>
+      </tbody>
+    </table>
 
     <h3>Key Hyperparameters</h3>
     <table>
-      <thead>
-        <tr><th>Parameter</th><th>Description</th><th>Default</th></tr>
-      </thead>
+      <thead><tr><th>Parameter</th><th>Description</th><th>Default</th></tr></thead>
       <tbody>
-        <tr><td>C</td><td>Inverse of regularization strength. Smaller = more regularization.</td><td>1.0</td></tr>
-        <tr><td>penalty</td><td>Regularization type: 'l1', 'l2', 'elasticnet'</td><td>'l2'</td></tr>
+        <tr><td>C</td><td>Inverse regularization strength. Smaller C = stronger regularization.</td><td>1.0</td></tr>
+        <tr><td>penalty</td><td>Type of regularization: 'l1', 'l2', 'elasticnet', 'none'</td><td>'l2'</td></tr>
         <tr><td>solver</td><td>Optimization algorithm: 'lbfgs', 'saga', 'liblinear'</td><td>'lbfgs'</td></tr>
-        <tr><td>max_iter</td><td>Max iterations for convergence</td><td>100</td></tr>
+        <tr><td>max_iter</td><td>Maximum iterations for convergence</td><td>100</td></tr>
+        <tr><td>class_weight</td><td>Set to 'balanced' for imbalanced datasets</td><td>None</td></tr>
       </tbody>
     </table>
 
     <h3>Advantages and Disadvantages</h3>
-    <p><strong>Advantages:</strong> Fast to train, highly interpretable, works well with linearly separable data, outputs calibrated probabilities.</p>
-    <p><strong>Disadvantages:</strong> Assumes linear decision boundary, sensitive to outliers, poor performance on non-linear problems without feature engineering.</p>
+    <p><strong>Advantages:</strong> Fast to train, outputs calibrated probabilities, highly interpretable (coefficients show feature direction), works well as a baseline, no hyperparameter tuning needed to get decent results.</p>
+    <p><strong>Disadvantages:</strong> Assumes a linear decision boundary, cannot capture non-linear relationships without feature engineering, sensitive to outliers and highly correlated features.</p>
 
     <h3>Conclusion</h3>
-    <p>Logistic regression remains one of the most important algorithms in a data scientist's toolkit. It is fast, interpretable, and performs surprisingly well on many real-world problems. Always start with logistic regression before moving to more complex models.</p>
+    <p>Logistic regression is the first model you should try for any binary classification problem. The step-by-step process is: compute z = b0 + b1·x, apply sigmoid to get probability, apply threshold (0.5) to get class. Always evaluate using the full set of classification metrics — not just accuracy — especially on imbalanced datasets where MCC and F1 are more reliable indicators of true model performance.</p>
   `
 },
 

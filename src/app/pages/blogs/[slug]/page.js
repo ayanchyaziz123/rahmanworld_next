@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { blogs } from '@/data/blogs';
+import { blogs } from '@/data/blogs/index';
 import Link from 'next/link';
 import { Calendar, Clock, Tag, ChevronRight, Share2 } from 'lucide-react';
 

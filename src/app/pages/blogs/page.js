@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
-import { blogs } from '../../../data/blogs';
+import { blogs } from '../../../data/blogs/index';
 
 const BlogsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
