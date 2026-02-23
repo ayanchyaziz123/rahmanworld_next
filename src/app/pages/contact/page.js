@@ -21,7 +21,6 @@ const ContactPage = () => {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-5xl mx-auto px-6">
         <div className="max-w-2xl mx-auto">
-          {/* Header */}
           <div className="bg-white mb-8">
             <header className="mb-6">
               <h1 className="text-3xl font-light text-gray-900 border-b border-gray-200 pb-3">

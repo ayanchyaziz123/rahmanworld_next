@@ -74,24 +74,24 @@ export default function PublicationsPage() {
 
     return (
         <div className="min-h-screen bg-white">
-            <div className="max-w-5xl mx-auto px-6 py-16">
+            <div className="max-w-5xl mx-auto px-3 sm:px-6 py-5 sm:py-10">
 
                 {/* ── Page header ── */}
-                <header className="mb-12 border-b border-gray-200 pb-8">
+                <header className="mb-4 sm:mb-8 border-b border-gray-200 pb-3 sm:pb-5">
                     <p className="text-xs font-medium tracking-widest uppercase text-blue-600 mb-3">
                         Academic Contributions
                     </p>
-                    <h1 className="text-4xl font-light text-gray-900 mb-3">
+                    <h1 className="text-2xl sm:text-4xl font-light text-gray-900 mb-3">
                         Publications
                     </h1>
-                    <p className="text-gray-600 text-lg max-w-2xl leading-relaxed">
+                    <p className="text-gray-600 text-sm sm:text-lg max-w-2xl leading-relaxed">
                         Research at the intersection of machine learning, AI systems,
                         and applied sciences — from astronomy to healthcare diagnostics.
                     </p>
                 </header>
 
                 {/* ── Category filter ── */}
-                <div className="flex flex-wrap gap-2 mb-10">
+                <div className="flex flex-wrap gap-2 mb-5 sm:mb-7">
                     {categories.map((cat) => (
                         <button
                             key={cat}
@@ -108,13 +108,13 @@ export default function PublicationsPage() {
                 </div>
 
                 {/* ── Publications list ── */}
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                     {filtered.map((pub, i) => (
                         <article
                             key={i}
-                            className="border border-gray-200 p-6 hover:border-blue-200 hover:shadow-sm transition-all duration-200"
+                            className="border border-gray-200 p-4 sm:p-6 hover:border-blue-200 hover:shadow-sm transition-all duration-200"
                         >
-                            <div className="flex flex-col md:flex-row md:items-start gap-6">
+                            <div className="flex flex-col md:flex-row md:items-start gap-4 sm:gap-6">
 
                                 {/* Main content */}
                                 <div className="flex-1">
@@ -204,7 +204,7 @@ export default function PublicationsPage() {
                 </div>
 
                 {/* ── Collaborate CTA ── */}
-                <div className="mt-16 bg-slate-50 border border-gray-200 p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="mt-8 sm:mt-12 bg-slate-50 border border-gray-200 p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
                         <h3 className="text-lg font-medium text-gray-900 mb-1">
                             Interested in Research Collaboration?

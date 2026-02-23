@@ -54,7 +54,7 @@ const ResearchPublications = () => {
             </span>
           </h1>
           <p className="text-gray-700 text-xl leading-relaxed max-w-3xl mx-auto">
-            Exploring innovative research at the intersection of technology, machine learning, and ethical AI development. 
+            Exploring innovative research at the intersection of technology, machine learning, and ethical AI development.
             Dedicated to pushing the boundaries of technological innovation.
           </p>
         </div>

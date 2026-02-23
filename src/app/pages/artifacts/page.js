@@ -1,5 +1,5 @@
-import { projects } from "@/data/projects"; // Import the project data
-import Project from "@/app/components/Artifact"; // Ensure your Project component is properly imported
+import { projects } from "@/data/projects";
+import Project from "@/app/components/Artifact";
 
 const ProjectsPage = () => {
   const additionalProjects = [

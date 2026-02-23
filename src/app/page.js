@@ -15,11 +15,11 @@ const HomePage = () => {
         <div className="min-h-screen bg-white">
 
             {/* ── Hero ── */}
-            <section className="max-w-5xl mx-auto px-6 py-20 lg:py-28">
-                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <section className="max-w-5xl mx-auto px-3 sm:px-6 py-8 lg:py-14">
+                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
 
                     {/* Left: text */}
-                    <div className="flex-1 space-y-6 order-2 lg:order-1 text-center lg:text-left">
+                    <div className="flex-1 space-y-4 order-2 lg:order-1 text-center lg:text-left">
                         <div className="space-y-3">
                             <div className="flex flex-wrap justify-center lg:justify-start gap-2">
                                 <span className="inline-block bg-blue-50 border border-blue-200 text-blue-700 text-xs font-medium px-3 py-1 rounded-full tracking-wide">
@@ -104,7 +104,7 @@ const HomePage = () => {
 
                     {/* Right: profile photo */}
                     <div className="relative flex-shrink-0 order-1 lg:order-2">
-                        <div className="w-56 h-56 lg:w-72 lg:h-72 relative">
+                        <div className="w-44 h-44 lg:w-60 lg:h-60 relative">
                             <div className="absolute inset-0 bg-blue-100 rounded-full translate-x-3 translate-y-3" />
                             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
                                 <img
@@ -120,7 +120,7 @@ const HomePage = () => {
 
             {/* ── Stats ── */}
             <section className="border-t border-b border-gray-100 bg-slate-50">
-                <div className="max-w-5xl mx-auto px-6 py-12">
+                <div className="max-w-5xl mx-auto px-3 sm:px-6 py-6 sm:py-10">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                         {[
                             { label: 'Projects Completed', value: '50+' },
@@ -139,7 +139,7 @@ const HomePage = () => {
 
             {/* ── Skills ── */}
             <section className="border-b border-gray-100">
-                <div className="max-w-5xl mx-auto px-6 py-14">
+                <div className="max-w-5xl mx-auto px-3 sm:px-6 py-6 sm:py-10">
                     <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-5">
                         Technologies &amp; Tools    
                     </p>
@@ -158,8 +158,8 @@ const HomePage = () => {
 
             {/* ── Featured Projects ── */}
             <section className="border-b border-gray-100 bg-white">
-                <div className="max-w-5xl mx-auto px-6 py-16">
-                    <div className="flex items-center justify-between mb-8">
+                <div className="max-w-5xl mx-auto px-3 sm:px-6 py-6 sm:py-12">
+                    <div className="flex items-center justify-between mb-5">
                         <h2 className="text-2xl font-light text-gray-900">Featured Projects</h2>
                         <Link
                             href="/pages/artifacts"
@@ -204,7 +204,7 @@ const HomePage = () => {
 
             {/* ── Research highlight ── */}
             <section className="bg-slate-50 border-b border-gray-100">
-                <div className="max-w-5xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="max-w-5xl mx-auto px-3 sm:px-6 py-6 sm:py-10 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div>
                         <p className="text-xs font-medium tracking-widest uppercase text-gray-400 mb-2">Research</p>
                         <h2 className="text-2xl font-light text-gray-900 mb-1">Publications &amp; Research</h2>
@@ -223,11 +223,11 @@ const HomePage = () => {
 
             {/* ── CTA ── */}
             <section className="bg-white">
-                <div className="max-w-5xl mx-auto px-6 py-20 text-center">
+                <div className="max-w-5xl mx-auto px-3 sm:px-6 py-10 sm:py-16 text-center">
                     <h2 className="text-3xl font-light text-gray-900 mb-3">
                         Let&apos;s Work Together
                     </h2>
-                    <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    <p className="text-gray-600 mb-5 max-w-md mx-auto">
                         Open to research collaborations, freelance projects, and full-time opportunities.
                     </p>
                     <Link

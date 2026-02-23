@@ -15,3 +15,26 @@
     border-radius: 0;
     font-size: 0.9em;
 }
+
+/* ── Mobile responsive blog content ── */
+
+/* Tables scroll horizontally on small screens */
+.prose table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+/* SVG diagrams never overflow their card */
+.prose svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Code blocks scroll, never stretch the page */
+.prose pre {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+}
