@@ -35,7 +35,7 @@ const publications = [{
 },
 {
     title: "Exoplanet Classification Using Machine Learning: A Comparative Study of Random Forest, XGBoost, and Neural Networks",
-    authors: ["Azizur Rahman"],
+    authors: ["Azizur Rahman, Nakib Uddin"],
     year: 2025,
     venue: "NASA Exoplanet Archive Research",
     venueShort: "NASA 2025",
