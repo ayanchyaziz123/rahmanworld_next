@@ -11,7 +11,7 @@ const publications = [{
     venueShort: "IJCA 2024",
     category: "Machine Learning",
     abstract:
-        "Through the exponent rise in online recruitment services, the job hunting process has been simplified to a great extent, but has also created a breed of online job ads, which are extremely dangerous to job seekers in terms of data security and finances. This research paper is a comparative and in-depth analysis of Machine Learning (ML), Deep Learning (DL), and Transformer-based architectures in detecting fraudulent job postings automatically. Using a dataset of 17,883 records with SMOTE to address class imbalance, we compared classifiers including Random Forest, SVM, XGBoost, BERT, and RoBERTa. XGBoost delivered the best results of 99.44% accuracy and 0.99 F1-score, followed by Random Forest (99.37%) and RoBERTa (99.04%).",
+        "The rise of online recruitment has introduced a surge of fraudulent job postings that threaten job seekers' data security and finances. This study comparatively evaluates ML, Deep Learning, and Transformer-based models on 17,883 records with SMOTE to handle class imbalance. Classifiers including Random Forest, SVM, XGBoost, BERT, and RoBERTa were benchmarked. XGBoost achieved the best performance with 99.44% accuracy and 0.99 F1-score, outperforming all deep learning baselines.",
     pdfLink: null,
     status: "Published",
     pdfLink: "/papers/Enhancing Online Recruitment Fraud Detection.pdf",
@@ -26,7 +26,7 @@ const publications = [{
     venueShort: "IEEE 2025",
     category: "Machine Learning",
     abstract:
-        "Over 52% of NYC renter households are cost-burdened, with ~30% severely so. This study develops a neighborhood-level explainable ML framework to forecast housing affordability across 239 NTAs using a panel of 2,512 observations (2012–2022). Integrating 46 features from ACS 5-year estimates, NYC eviction records, and ZORI, three gradient-boosted ensemble models — Random Forest, XGBoost, and LightGBM — are benchmarked under strict temporal splits with 5-fold TimeSeriesSplit cross-validation. LightGBM achieves the highest performance (Test R²=0.926, RMSE=0.035). SHAP analysis identifies rent burden, vacancy rate, and rent-to-income ratio as dominant drivers. Spatial diagnostics (Moran's I) confirm significant residual clustering. A 14-instrument policy matrix is proposed to support borough-differentiated zoning, voucher strategies, and anticipatory resource allocation.",
+        "Over 52% of NYC renter households are cost-burdened, highlighting an urgent need for data-driven affordability forecasting. This study builds a neighborhood-level explainable ML framework across 239 NTAs (2012–2022) using 46 features from ACS, eviction records, and ZORI. LightGBM achieves the best performance (R²=0.926, RMSE=0.035) under strict temporal cross-validation. SHAP analysis pinpoints rent burden and vacancy rate as dominant drivers, and a 14-instrument policy matrix guides borough-level interventions.",
     pdfLink: null,
     status: "Pending",
     pdfLink: "/papers/IEEE_Housing_Paper_Full.pdf",
@@ -41,12 +41,26 @@ const publications = [{
     venueShort: "NASA 2025",
     category: "AI & Astronomy",
     abstract:
-        "This study presents a machine learning pipeline for classifying exoplanets by their detection method using orbital and physical characteristics from the NASA Exoplanet Archive (38,090 records, 100 features). Key features include orbital period, planetary mass, equilibrium temperature, and insolation flux. After KNN imputation and feature standardization, three models were evaluated: Random Forest, XGBoost, and a Keras/TensorFlow Neural Network. XGBoost achieved the highest accuracy of ~95.3% across 11 discovery-method categories. SHAP analysis was applied for feature importance interpretation.",
+        "This study builds a machine learning pipeline to classify exoplanets by detection method using 38,090 records and 100 orbital and physical features from the NASA Exoplanet Archive. After KNN imputation and standardization, Random Forest, XGBoost, and a Neural Network were compared across 11 discovery categories. XGBoost achieved the highest accuracy of ~95.3%. SHAP analysis was applied to interpret key feature contributions to classification decisions.",
     pdfLink: null,
     status: "Working",
     keywords: ["Exoplanet", "NASA Exoplanet Archive", "XGBoost", "Random Forest", "Neural Networks", "SHAP", "Astronomy"],
     github: "https://github.com/ayanchyaziz123/Exoplanet_Classification",
 },
+    {
+        title: "Comparative Analysis of Machine Learning Algorithms for Alzheimer's Disease Pre-Screening Using Clinical and Lifestyle Data",
+        authors: ["Azizur Rahman"],
+        year: 2025,
+        venue: "Springer Conference on Intelligent Systems and Computing",
+        venueShort: "Springer 2025",
+        category: "Healthcare AI",
+        abstract:
+            "Current Alzheimer's Disease diagnostics rely on expensive neuroimaging and invasive procedures, limiting accessibility for large-scale screening. This study benchmarks 18 ML algorithms on 2,149 patients with 33 clinical and lifestyle features including MMSE scores, BMI, cholesterol, and sleep quality. The Bagging Classifier achieved the best performance with 95.81% accuracy and 96.25% ROC-AUC, outperforming Gradient Boosting (95.35%) and Logistic Regression (81.40%). Results support accessible tabular data as an effective first-line AD risk stratification tool in primary care.",
+        pdfLink: null,
+        status: "Pending",
+        keywords: ["Alzheimer's Disease", "Machine Learning", "Ensemble Methods", "Bagging Classifier", "XGBoost", "Gradient Boosting", "Clinical Decision Support", "Comparative Study", "Binary Classification"],
+        github: "https://github.com/ayanchyaziz123/A-Multi-Stage-Ensemble-Framework-for-Pre-Clinical-Alzheimer-s-Screening-paper-and-code/blob/main/paper.pdf",
+    },
     {
         title: "Precision Maternal Health: Robust High Risk Pregnancy Prediction Via Ensemble Learning and Explainable AI",
         authors: ["Azizur Rahman"],
@@ -55,7 +69,7 @@ const publications = [{
         venueShort: "IJCA 2025",
         category: "Healthcare AI",
         abstract:
-            "This paper presents a robust machine learning framework for predicting high-risk pregnancies using ensemble learning and Explainable AI (XAI) techniques. By leveraging clinical and demographic features from maternal health datasets, the study compares multiple ensemble models to identify expectant mothers at elevated risk of adverse outcomes. SHAP-based explainability is applied to provide clinically interpretable predictions, bridging the gap between model performance and healthcare practitioner trust. The framework aims to support early intervention strategies and precision maternal care.",
+            "This study presents a machine learning framework for identifying high-risk pregnancies using ensemble learning and Explainable AI. Clinical and demographic features from maternal health datasets are used to train and compare multiple ensemble models for adverse outcome prediction. SHAP-based explanations provide clinically interpretable outputs to support practitioner trust. The framework targets early intervention and precision care in resource-constrained maternal health settings.",
         pdfLink: null,
         status: "Pending",
         keywords: ["Maternal Health", "High-Risk Pregnancy", "Ensemble Learning", "Explainable AI", "SHAP", "Healthcare ML", "Precision Medicine"],
@@ -63,7 +77,7 @@ const publications = [{
     },
 ];
 
-const categories = ['All', 'Machine Learning', 'Computer Vision', 'AI & Astronomy'];
+const categories = ['All', 'Machine Learning', 'Healthcare AI', 'Computer Vision', 'AI & Astronomy'];
 
 export default function PublicationsPage() {
     const [active, setActive] = useState('All');
